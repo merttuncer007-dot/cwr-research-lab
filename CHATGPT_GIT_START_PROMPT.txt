@@ -1,0 +1,9 @@
+CWR Research Lab'i GitLab'dan eklentisiz yükle.
+
+Bağlı GitLab kaynağında `merttuncer07/cwr-research-lab` projesinin `main` dalını aç. İlk ve kanonik giriş dosyası `CHATGPT_START_HERE.md` dosyasıdır. Dosyayı tamamen oku ve içindeki Mandatory load order, source-of-truth, integrity ve initialization response kurallarını uygula.
+
+Doğrudan bağlantı:
+https://gitlab.com/merttuncer07/cwr-research-lab/-/raw/main/CHATGPT_START_HERE.md
+
+Erişemezsen içeriği okumuş gibi davranma. Hangi erişimin başarısız olduğunu söyle ve yalnız gerekli dosyaları benden iste. Başarılıysan araştırmaya başlamadan önce protokoldeki `CWR LAB LOADED` raporunu ver.
+

@@ -1,5 +1,19 @@
 # Start a New GPT/Codex Session
 
+## ChatGPT: GitLab'dan eklentisiz yükleme
+
+Yeni ChatGPT sohbetine repo kökündeki `CHATGPT_GIT_START_PROMPT.txt` içeriğini
+gönderin. ChatGPT önce `CHATGPT_START_HERE.md` dosyasını, ardından orada yazan
+zorunlu kanonik dosyaları GitLab `main` dalından yükler. Başarılı yüklemenin
+kanıtı `CWR LAB LOADED` raporudur; erişemediği dosyayı okumuş saymasına izin
+verilmez.
+
+Tek giriş bağlantısı:
+
+`https://gitlab.com/merttuncer07/cwr-research-lab/-/raw/main/CHATGPT_START_HERE.md`
+
+## Yerel Codex/GPT oturumu
+
 Yeni oturumda bu klasörü çalışma alanı olarak açın ve modele şunu söyleyin:
 
 > Bu klasördeki CWR laboratuvarını kaldığı yerden devral. Önce `AGENTS.md`, `LAB_KERNEL.md`, `LAB_STATE.md` ve `exports/NEXT_SESSION_CONTEXT.md` dosyalarını oku. Ardından `./lab.ps1 doctor` çalıştır. Sohbet geçmişini source-of-truth sayma; SQLite ve hash'li artifacts kanoniktir. Registry'nin fiziksel kopyası BP-212'de bittiği için BP-213–220'yi yalnız transcript-confirmed/missing-artifact statüsüyle kullan. Sonraki ID BP-221, frontier rank-two PSD scalar-sign reachability. Yeni wave başlamadan `LAB_WAVE_PROTOCOL.md` sözleşmesini uygula.

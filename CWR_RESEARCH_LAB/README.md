@@ -51,3 +51,12 @@ Makrolar/autonomous waves bu sürümde varsayılan olarak kapalıdır. Önce det
 ## ChatGPT ve Codex plugin bağlantısı
 
 Repo kökündeki `plugins/cwr-research-lab/` paketi bu laboratuvara salt-okunur MCP erişimi verir. Codex için yerel stdio, ChatGPT için aynı araçları sunan Streamable HTTP taşıması bulunur. Plugin araştırma kaydı üretmez, veritabanını değiştirmez ve GitLab'a otomatik push yapmaz; `gitlab_backup_status` yalnız yerel yedek durumunu denetler.
+
+## ChatGPT için eklentisiz GitLab açılışı
+
+Yeni bir ChatGPT sohbetinde repo kökündeki `CHATGPT_GIT_START_PROMPT.txt`
+metnini kullanın. Bu prompt `CHATGPT_START_HERE.md` kanonik yükleyicisine gider;
+ChatGPT yalnız gerekli kernel, state ve session-context dosyalarını `main`
+dalından sırayla okur ve başlamadan önce doğrulanabilir `CWR LAB LOADED` raporu
+verir. GitLab erişimi yoksa protokol fail-closed davranır ve okunmamış içeriği
+varmış gibi göstermez.
