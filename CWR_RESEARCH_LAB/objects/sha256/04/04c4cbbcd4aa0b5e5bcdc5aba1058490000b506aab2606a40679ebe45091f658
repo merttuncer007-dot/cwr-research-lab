@@ -1,0 +1,13 @@
+CW-002D finite-time word certificate
+
+Delta = 2.302585092994
+tau = 0.519493853296
+alpha = 0.300000
+target epsilon = 0.01
+required contracting occurrences q_epsilon = 7
+blocks for binomial failure <= 0.05: B = 37
+binomial failure bound = 0.043967166755
+success confidence >= 0.956032833245
+
+Separate random-history projective test:
+see cwr_cw002d_subrectangular_word_check.txt

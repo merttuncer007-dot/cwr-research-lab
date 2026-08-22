@@ -1,0 +1,678 @@
+# COLD WAR RENAISSANCE — CW-002C
+## Perron–Frobenius–Wielandt × Birkhoff × nonlinear filtering × Le Cam
+### Intermittent/block projective contraction with sparse transitions
+Date: 2026-08-22
+Status: PROVISIONAL EXACT SYNTHESIS; FILTER-STABILITY ENGINES CLASSICAL
+
+## 1. Problem inherited from CW-002B
+
+CW-002B gave a history-uniform future-information horizon under the strong assumption
+
+\[
+T_{ij}>0
+\]
+
+at every one-step transition.
+
+That assumption is unrealistic for many finite-state systems.
+
+A sparse transition graph may forbid many one-step moves while still becoming fully mixing over several steps.
+
+The correct 20th-century interaction is:
+
+\[
+\boxed{
+\text{Perron–Frobenius/Wielandt primitivity}
+\times
+\text{Birkhoff projective contraction}
+\times
+\text{nonlinear filtering}
+\times
+\text{Le Cam deficiency}.
+}
+\]
+
+The resulting theorem removes one-step positivity.
+
+---
+
+# 2. Primitive sparse transition matrices
+
+Let
+
+\[
+T\in[0,1]^{m\times m}
+\]
+
+be row-stochastic and nonnegative.
+
+It is **primitive** if some power is strictly positive:
+
+\[
+\exists L\ge1:
+\qquad
+T^L>0.
+\]
+
+Define the exponent of primitivity
+
+\[
+\gamma(T)
+=
+\min\{L:T^L>0\}.
+\]
+
+Wielandt's classical sharp support-size bound gives
+
+\[
+\boxed{
+\gamma(T)
+\le
+(m-1)^2+1.
+}
+\]
+
+Thus a primitive support graph has a universally bounded number of steps before all state pairs communicate with positive probability.
+
+This is classical Perron–Frobenius/Wielandt theory.
+
+---
+
+# 3. Observation-weighted block transfer matrices
+
+At each time \(s\), let the realized observation likelihood vector be strictly positive:
+
+\[
+g_s(j)>0
+\qquad
+\forall j.
+\]
+
+Write
+
+\[
+D_s=\operatorname{diag}(g_s).
+\]
+
+For a block of length \(L\), define
+
+\[
+\boxed{
+A_{a:a+L}
+=
+T D_{a+1}
+T D_{a+2}
+\cdots
+T D_{a+L}.
+}
+\]
+
+If
+
+\[
+T^L>0,
+\]
+
+then every such block matrix is strictly positive.
+
+### Proof
+
+The \((i,j)\) entry of \(A_{a:a+L}\) is a sum over length-\(L\) state paths from \(i\) to \(j\):
+
+\[
+\sum_{i=i_0,\ldots,i_L=j}
+\prod_{r=1}^L
+T_{i_{r-1}i_r}
+g_{a+r}(i_r).
+\]
+
+Every likelihood factor is positive.
+
+Since \((T^L)_{ij}>0\), at least one such path has strictly positive transition product.
+
+Therefore the corresponding weighted path term is positive.
+
+Hence every entry of the block matrix is positive.
+
+QED.
+
+### Meaning
+
+One-step structural zeros do not prevent projective contraction.
+
+The correct object is the first **positive observation-weighted block**.
+
+---
+
+# 4. Exact realized-history block contraction
+
+Split a realized history into full blocks of length \(L=\gamma(T)\):
+
+\[
+A_1(h),A_2(h),\ldots,A_q(h),
+\qquad
+q=\left\lfloor\frac nL\right\rfloor.
+\]
+
+Each \(A_b(h)\) is strictly positive.
+
+Let
+
+\[
+\Delta_b(h)
+=
+\Delta(A_b(h)),
+\]
+
+\[
+\tau_b(h)
+=
+\tanh\left(\frac{\Delta_b(h)}4\right).
+\]
+
+The first positive block sends point-mass initial states into the interior of the probability cone.
+
+Therefore
+
+\[
+d_H(
+\pi_L^{x,h},
+\pi_L^{x',h}
+)
+\le
+\Delta_1(h).
+\]
+
+Each later positive block gives Birkhoff contraction:
+
+\[
+d_H(
+\pi_{bL}^{x,h},
+\pi_{bL}^{x',h}
+)
+\le
+\tau_b(h)
+d_H(
+\pi_{(b-1)L}^{x,h},
+\pi_{(b-1)L}^{x',h}
+).
+\]
+
+Hence:
+
+### Theorem CW-002C.1 — Realized block-product forgetting
+
+For every realized positive-likelihood observation history and \(q\ge1\),
+
+\[
+\boxed{
+d_H(
+\pi_{qL}^{x,h},
+\pi_{qL}^{x',h}
+)
+\le
+\Delta_1(h)
+\prod_{b=2}^{q}\tau_b(h).
+}
+\]
+
+If \(n=qL+r\) with \(0\le r<L\), the remaining positive linear filter updates are Hilbert-nonexpansive on the cone interior, so the same upper bound remains valid at time \(n\).
+
+Thus define
+
+\[
+\boxed{
+H_n(h)
+=
+\Delta_1(h)
+\prod_{b=2}^{\lfloor n/L\rfloor}
+\tau_b(h).
+}
+\]
+
+Then
+
+\[
+d_H(
+\pi_n^{x,h},
+\pi_n^{x',h}
+)
+\le
+H_n(h).
+\]
+
+This is a data-dependent pathwise certificate.
+
+No global likelihood-ratio bound is needed to compute \(H_n(h)\) from a realized history.
+
+---
+
+# 5. Realized-history Le Cam future horizon
+
+The Hilbert-to-TV inequality gives
+
+\[
+TV(
+\pi_n^{x,h},
+\pi_n^{x',h}
+)
+\le
+\tanh\left(\frac{H_n(h)}4\right).
+\]
+
+As in CW-002B, the entire future observation tail is a downstream kernel from the current latent state.
+
+Therefore its pairwise row diameter cannot exceed the current posterior diameter.
+
+For an \(m\)-state initial experiment, the null Chebyshev radius is at most \((1-1/m)\) times that diameter.
+
+### Theorem CW-002C.2 — Data-dependent future-tail deficiency certificate
+
+For the conditional experiment
+
+\[
+E_{n,h}:
+x
+\mapsto
+\operatorname{Law}(Y_{n+1:\infty}\mid h,X_0=x),
+\]
+
+\[
+\boxed{
+r(E_{n,h})
+\le
+\left(1-\frac1m\right)
+\tanh\left(
+\frac{H_n(h)}4
+\right).
+}
+\]
+
+This holds for every realized history with strictly positive likelihood factors.
+
+### Adaptive stopping rule
+
+Define
+
+\[
+B_n(h)
+=
+\left(1-\frac1m\right)
+\tanh\left(
+\frac{H_n(h)}4
+\right).
+\]
+
+Then
+
+\[
+\boxed{
+\tau_\varepsilon
+=
+\inf\{n:B_n(h_n)\le\varepsilon\}
+}
+\]
+
+is a history-adaptive residual-information stopping rule at block endpoints.
+
+When it triggers, the entire infinite future has at most \(\varepsilon\) normalized decision value about the initial state under the Le Cam comparison interpretation.
+
+This is stronger operationally than a fixed worst-case horizon because the actual observations determine the realized Birkhoff coefficients.
+
+---
+
+# 6. Uniform theorem under bounded observation dynamic range
+
+For an ex-ante history-uniform bound, assume each realized likelihood vector obeys
+
+\[
+\frac{\max_j g_s(j)}{\min_j g_s(j)}
+\le
+R
+<\infty.
+\]
+
+Let
+
+\[
+L=\gamma(T),
+\qquad
+\Delta_L=\Delta(T^L).
+\]
+
+For a length-\(L\) block, define
+
+\[
+m_s=\min_j g_s(j),
+\qquad
+M_s=\max_j g_s(j).
+\]
+
+Every block entry satisfies
+
+\[
+\left(\prod_{s=1}^L m_s\right)
+(T^L)_{ij}
+\le
+(A_b)_{ij}
+\le
+\left(\prod_{s=1}^L M_s\right)
+(T^L)_{ij}.
+\]
+
+Hence every projective cross-ratio is bounded by the corresponding cross-ratio of \(T^L\) times
+
+\[
+\left(
+\prod_{s=1}^L
+\frac{M_s}{m_s}
+\right)^2.
+\]
+
+Therefore
+
+\[
+\boxed{
+\Delta(A_b)
+\le
+\Delta_L
++
+2\sum_{s=1}^L
+\log\frac{M_s}{m_s}.
+}
+\]
+
+Under the uniform dynamic-range bound,
+
+\[
+\boxed{
+\Delta(A_b)
+\le
+\bar\Delta_L
+:=
+\Delta(T^L)+2L\log R.
+}
+\]
+
+Define
+
+\[
+\boxed{
+\bar\tau_L
+=
+\tanh\left(\frac{\bar\Delta_L}{4}\right)
+<1.
+}
+\]
+
+---
+
+# 7. Uniform sparse-transition pathwise horizon
+
+### Theorem CW-002C.3 — Primitive-block history-uniform forgetting
+
+For every positive-likelihood observation history and every
+
+\[
+n\ge L,
+\qquad
+q=\left\lfloor\frac nL\right\rfloor,
+\]
+
+\[
+\boxed{
+d_H(
+\pi_n^{x,h},
+\pi_n^{x',h}
+)
+\le
+\bar\Delta_L
+\bar\tau_L^{q-1}.
+}
+\]
+
+Consequently,
+
+\[
+\boxed{
+r(E_{n,h})
+\le
+\left(1-\frac1m\right)
+\tanh
+\left[
+\frac{
+\bar\Delta_L
+\bar\tau_L^{q-1}
+}{4}
+\right]
+\qquad
+\forall h.
+}
+\]
+
+Thus one-step positivity is unnecessary.
+
+Primitive support plus bounded positive observation dynamic range suffices for a deterministic pathwise Le Cam horizon.
+
+---
+
+# 8. Wielandt structural delay bound
+
+Since
+
+\[
+L=\gamma(T)
+\le
+(m-1)^2+1,
+\]
+
+the first guaranteed positive block occurs no later than the classical Wielandt exponent bound.
+
+Thus graph/support structure alone gives an upper bound on the waiting time before projective contraction becomes available:
+
+\[
+\boxed{
+L_{\mathrm{first}}
+\le
+(m-1)^2+1.
+}
+\]
+
+The numerical contraction rate after that point still depends on:
+
+- transition weights through \(\Delta(T^L)\);
+- observation dynamic range through \(R\).
+
+### Interpretation
+
+Wielandt's 1950 primitive-matrix exponent becomes a **worst-case information-memory activation delay** when combined with Birkhoff filtering and Le Cam decision theory.
+
+The original theorem is classical; this interpretation is a CWR synthesis candidate.
+
+---
+
+# 9. Numerical destructive check
+
+A sparse primitive transition matrix was tested:
+
+\[
+T=
+\begin{pmatrix}
+0&1&0\\
+0&0&1\\
+1/2&1/2&0
+\end{pmatrix}.
+\]
+
+It is not one-step positive.
+
+Its primitive exponent is
+
+\[
+\boxed{L=5}.
+\]
+
+Indeed
+
+\[
+T^5
+=
+\begin{pmatrix}
+1/4&1/4&1/2\\
+1/4&1/2&1/4\\
+1/8&3/8&1/2
+\end{pmatrix}
+>0.
+\]
+
+With observation dynamic range bounded by
+
+\[
+R=3,
+\]
+
+1500 random likelihood histories were generated for each block count.
+
+No violation occurred for the uniform Hilbert or TV bounds.
+
+The uniform cross-ratio bound was deliberately loose, but it remained valid despite the structural zeros in \(T\).
+
+This confirms the theorem's role: a certificate rather than an estimate of typical contraction speed.
+
+---
+
+# 10. Literature collision and historical lineage
+
+## Perron / Frobenius
+
+Nonnegative irreducible/primitive matrix structure is classical.
+
+## Wielandt 1950
+
+Wielandt introduced the sharp primitive-exponent bound
+
+\[
+\gamma(T)\le(m-1)^2+1.
+\]
+
+His original 1950 paper announced the bound; Hans Schneider later published the proof found in Wielandt's notebooks.
+
+## Seneta
+
+Nonnegative matrices, inhomogeneous products, stochastic matrices, and coefficients of ergodicity are developed systematically.
+
+## Atar–Zeitouni / Budhiraja–Ocone / Le Gland–Oudjane
+
+Hilbert/projective contraction and mixing-kernel techniques for nonlinear-filter stability are established.
+
+Le Gland–Oudjane explicitly formulate "mixing kernels" using two-sided domination by a reference measure and derive products of contraction factors.
+
+## Kaijser 1975 / Kochman–Reeds
+
+The finite-HMM literature already handles structural zeros through products of stepping matrices.
+
+Kaijser's Condition A requires the existence of a nonzero subrectangular product; later work uses rank-one closure conditions.
+
+This is more general than primitive-transition + positive-likelihood blocks.
+
+### Autocorrection
+
+Therefore:
+
+\[
+\boxed{
+\text{primitive-block filtering is not the maximal zero-pattern theorem}.
+}
+\]
+
+It is a clean exact intermediate regime.
+
+The next frontier is the genuinely observation-dependent condition:
+
+\[
+\boxed{
+\text{subrectangular / rank-one stepping-matrix products}
+\to
+\text{quantitative projective contraction}
+\to
+\text{future-tail Le Cam deficiency}.
+}
+\]
+
+That is CWR-BP-090 below.
+
+---
+
+# 11. Important distinction: existence versus frequency of contracting blocks
+
+Kaijser-type conditions often say that **some** observation word produces a subrectangular/rank-contracting product.
+
+For a quantitative stopping theorem, existence alone is insufficient.
+
+We need one of:
+
+1. deterministic recurrence of contracting words;
+2. a lower probability bound on seeing a contracting word;
+3. almost-sure frequency/Lyapunov information for contracting products;
+4. a realized-history certificate using each encountered block.
+
+This creates a natural bridge to:
+
+- Furstenberg–Kesten random matrix products;
+- renewal theory;
+- large deviations;
+- Wald stopping.
+
+The next research problem is therefore not merely "can the filter forget?"
+
+It is:
+
+> how fast can the **decision value of the future tail** be certified to disappear from the observed product sequence?
+
+---
+
+# Verdict
+
+CW-002B survives structural zeros after blockification.
+
+For primitive \(T\), positive observation likelihoods, and \(L=\gamma(T)\),
+
+\[
+\boxed{
+H_n(h)
+=
+\Delta(A_1(h))
+\prod_{b=2}^{\lfloor n/L\rfloor}
+\tau(A_b(h))
+}
+\]
+
+is a realized-history projective memory certificate, yielding
+
+\[
+\boxed{
+r(E_{n,h})
+\le
+\left(1-\frac1m\right)
+\tanh\left(\frac{H_n(h)}4\right).
+}
+\]
+
+If likelihood dynamic range is uniformly bounded by \(R\),
+
+\[
+\boxed{
+r(E_{n,h})
+\le
+\left(1-\frac1m\right)
+\tanh\left[
+\frac{
+(\Delta(T^L)+2L\log R)
+\,
+\tanh((\Delta(T^L)+2L\log R)/4)^{\lfloor n/L\rfloor-1}
+}{4}
+\right].
+}
+\]
+
+The next frontier is subrectangular/rank-one observation-word contraction, which is strictly broader than primitive-transition positivity.

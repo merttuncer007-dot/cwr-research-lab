@@ -1,0 +1,294 @@
+# COLD WAR RENAISSANCE — CW-002G
+## Leaktight automata × absorbing-target synchronization × support/limit Booleanization
+Date: 2026-08-22
+Status: EXACT IDENTIFICATION; CORE ALGORITHM CLASSICAL
+
+## 1. Absorbing-target synchronization is exactly a PFA value problem
+
+Let \(\Sigma=\{P_a:a\in A\}\) be rational row-stochastic matrices on a finite state set \(Q\).
+
+Fix:
+
+- an initial distribution \(p\);
+- a distinguished target state \(z\);
+- assume \(z\) is absorbing for every generator:
+  \[
+  e_zP_a=e_z.
+  \]
+
+Define
+
+\[
+v_z(\Sigma,p)
+=
+\inf_{w\in A^\ast}
+TV(pP_w,e_z).
+\]
+
+Because the second distribution remains the point mass \(e_z\),
+
+\[
+TV(r,e_z)=1-r(z)
+\]
+
+for every probability distribution \(r\).
+
+Therefore
+
+\[
+\boxed{
+v_z(\Sigma,p)
+=
+1-
+\sup_{w\in A^\ast}(pP_w)(z).
+}
+\]
+
+Thus an absorbing-target synchronization problem is literally the value problem of a probabilistic automaton with initial distribution \(p\) and accepting set \(\{z\}\).
+
+Consequences:
+
+\[
+\boxed{
+v_z=0
+\iff
+\operatorname{val}(\mathcal A)=1.
+}
+\]
+
+More generally, for every \(\varepsilon\in(0,1)\),
+
+\[
+\boxed{
+\exists w:\ TV(pP_w,e_z)<\varepsilon
+\iff
+\exists w:\ (pP_w)(z)>1-\varepsilon.
+}
+\]
+
+So PFA value/cutpoint theory is not merely analogous to one synchronization problem; it is exactly the same problem under this absorbing-target contract.
+
+---
+
+## 2. Leaktightness gives a decidable synchronization island
+
+Fijalkow–Gimbert–Kelmendi–Oualhadj prove that the value-1 problem is decidable, in fact PSPACE-complete over the full class, when the probabilistic automaton is leaktight.
+
+Therefore:
+
+### Theorem CW-002G.1 — Leaktight absorbing-target synchronization
+
+If the absorbing-target PFA \((Q,A,P,p,\{z\})\) is leaktight, then deciding
+
+\[
+\boxed{
+\inf_wTV(pP_w,e_z)=0
+}
+\]
+
+is decidable in PSPACE.
+
+The Markov monoid supplies a finite asymptotic certificate.
+
+No claim is made here that the absorbing-singleton-target restriction itself is PSPACE-hard.
+
+---
+
+## 3. Value-1 witnesses become synchronization witnesses
+
+A limit-word \(u:Q^2\to\{0,1\}\) is a value-1 witness when every asymptotically surviving state reachable from the initial state is accepting.
+
+For the singleton accepting set \(\{z\}\), this reduces to
+
+\[
+\boxed{
+u(p,t)=1
+\Longrightarrow
+t=z
+}
+\]
+
+in the obvious initial-state version.
+
+Thus, in absorbing-target language, a Markov-monoid witness is an asymptotic support certificate saying:
+
+> every state carrying nonvanishing mass after the witnessing word sequence has collapsed into the target.
+
+For leaktight automata, completeness of the Markov monoid makes this certificate necessary as well as sufficient.
+
+---
+
+## 4. What a leak really is: support Booleanization fails to commute with a limit
+
+The extended Markov monoid tracks two Boolean relations:
+
+- \(u(s,t)=1\): transition probability has a strictly positive limit;
+- \(u^+(s,t)=1\): transition probability remains positive for every finite member of the realizing sequence.
+
+For a convergent sequence of stochastic products \(P_n\to P\), these are the two operations
+
+\[
+u
+=
+\mathbf 1_{\{P>0\}},
+\]
+
+and schematically
+
+\[
+u^+
+=
+\mathbf 1_{\{P_n>0\text{ for all }n\}}.
+\]
+
+Always,
+
+\[
+u\le u^+,
+\]
+
+but equality can fail because
+
+\[
+x_n>0\ \forall n,
+\qquad
+x_n\to0.
+\]
+
+A leak witness is exactly a recurrent edge for which
+
+\[
+\boxed{
+u(r,q)=0,
+\qquad
+u^+(r,q)=1.
+}
+\]
+
+In words:
+
+> the Boolean support says the edge is present at every finite stage, while the actual asymptotic stochastic weight says the edge disappears.
+
+Fijalkow et al.'s algebraic characterization is:
+
+\[
+\boxed{
+\mathcal A\text{ is leaktight}
+\iff
+\text{its extended Markov monoid contains no leak witness}.
+}
+\]
+
+Hence leaktightness can be read as exclusion of a particular **recurrent support/limit noncommutation defect**.
+
+This is an exact restatement of the classical definition, but it explains the support-versus-weight phase transition found in CW-002E.
+
+---
+
+## 5. Stabilization \(u^\#\) is an asymptotic-support regularizer
+
+For an idempotent Boolean limit-word \(u\), the Markov monoid iteration is
+
+\[
+\boxed{
+u^\#(s,t)=1
+\iff
+u(s,t)=1
+\text{ and }t\text{ is }u\text{-recurrent}.
+}
+\]
+
+So \(u^\#\) deletes edges that lead only to transient states.
+
+This is precisely the Boolean support expected after iterating the stochastic behavior for increasingly long times.
+
+Thus the \(\#\)-operation can be interpreted as a finite algebraic regularization of naïve support:
+
+\[
+\text{finite support}
+\longrightarrow
+\text{asymptotically recurrent support}.
+\]
+
+The extended monoid then keeps \(u^+\) as a memory of finite positive edges so that disappearing "leak" edges are not silently forgotten.
+
+---
+
+## 6. Why ordinary Boolean support is insufficient
+
+CW-002E found:
+
+- global all-row synchronization to zero can be decided from finite Boolean support products;
+- designated-pair synchronization can be undecidable.
+
+Leaktight theory explains the mechanism.
+
+Boolean multiplication remembers only:
+
+\[
+P_w(i,j)>0?
+\]
+
+It cannot distinguish
+
+\[
+10^{-3},10^{-100},10^{-10^{10}}
+\]
+
+from one another.
+
+Value-1 behavior depends precisely on probabilities that may remain positive at every finite stage yet vanish asymptotically.
+
+Leaks formalize this pathology.
+
+Thus the support abstraction fails not because it is wrong at finite time, but because
+
+\[
+\boxed{
+\operatorname{supp}(\lim P_n)
+\ne
+\lim \operatorname{supp}(P_n)
+}
+\]
+
+in the relevant asymptotic sense.
+
+Leaktightness is a structural regime where the stabilization-monoid correction is complete enough to recover the value-1 answer.
+
+---
+
+## 7. Connection to profinite completion
+
+Fijalkow's prostochastic framework later recasts value-1 as an emptiness problem in a profinite/topological completion of the free stochastic word monoid.
+
+This suggests three distinct synchronization completions:
+
+1. Boolean support semigroup — exact finite reachability, too coarse for vanishing weights;
+2. Markov/stabilization monoid — finite asymptotic abstraction, complete on leaktight systems;
+3. prostochastic/profinite completion — topological limit object for arbitrary word sequences.
+
+This mirrors the broader CWR principle:
+
+\[
+\boxed{
+\text{when finite objects fail to contain limits, enlarge the semantic category before declaring the problem nonexistent}.
+}
+\]
+
+---
+
+# Verdict
+
+Absorbing-target stochastic synchronization is exactly a probabilistic-automaton value problem.
+
+Leaktightness is therefore not merely transferable to synchronization; it already is an intrinsic decidability condition for that synchronization contract.
+
+Its conceptual content can be summarized as:
+
+\[
+\boxed{
+\text{exclude recurrent positive edges that survive every finite support but vanish in the limit}.
+}
+\]
+
+The next question is to generalize this "support-limit defect" criterion from a single absorbing target to arbitrary designated-pair coalescence.

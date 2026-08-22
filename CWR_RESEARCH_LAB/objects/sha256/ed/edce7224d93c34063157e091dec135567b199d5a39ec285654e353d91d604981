@@ -1,0 +1,29 @@
+CWR CW-002O two-step sign inversion under PSD reversible switching
+
+Source SPD matrices:
+A =
+Matrix([[1, -2], [-2, 5]])
+C =
+Matrix([[1, 0], [0, 4]])
+x^T A C x = -1
+
+epsilon = 1/40
+S1 = J + epsilon Phi(A):
+Matrix([[21/80, 11/40, 9/40, 19/80], [11/40, 5/16, 3/16, 9/40], [9/40, 3/16, 5/16, 11/40], [19/80, 9/40, 11/40, 21/80]])
+S2 = J + epsilon Phi(C):
+Matrix([[9/32, 43/160, 37/160, 7/32], [43/160, 9/32, 7/32, 37/160], [37/160, 7/32, 9/32, 43/160], [7/32, 37/160, 43/160, 9/32]])
+
+eigenvalues(S1) = {1: 1, 3/40 - sqrt(2)/20: 1, sqrt(2)/20 + 3/40: 1, 0: 1}
+eigenvalues(S2) = {1: 1, 1/10: 1, 1/40: 1, 0: 1}
+
+initial distribution mu = Matrix([[21/100, 27/100, 23/100, 29/100]])
+observable f = Matrix([[3/10, 3/5, 2/5, 7/10]])
+
+one-step deviation mu S1 f - 1/2 = 1/10000
+two-step deviation mu S1 S2 f - 1/2 = -1/800000
+predicted two-step deviation = -1/800000
+same-kernel two-step deviation mu S1^2 f - 1/2 = 1/400000
+
+Each kernel is strictly positive, symmetric, doubly stochastic, and positive semidefinite.
+The matched initial/observable tangent direction has nonnegative one-kernel quadratic response,
+but two noncommuting PSD reversible kernels can flip it below the stationary baseline.

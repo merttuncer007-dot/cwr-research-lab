@@ -1,0 +1,483 @@
+# COLD WAR RENAISSANCE — SOURCE / READING LEDGER FOR CHAT HANDOFF
+Date: 2026-08-22
+Purpose: Preserve not only the theorem registry, but the *reading state* that produced it.
+
+## 0. How the next chat must use this file
+
+This ledger does NOT mean "pretend the next chat personally read every source."
+
+It means:
+
+1. The next chat inherits the exact claims, collision corrections, ownership boundaries, and source map already established by this lab.
+2. It must not restart literature search from zero.
+3. Before making a NEW theorem/novelty claim that materially depends on a source, reopen that source (or the relevant research note that quotes/records it) and verify the exact statement.
+4. Never upgrade a "search did not find" result into novelty evidence.
+5. Never say a book was read cover-to-cover.
+6. Treat all current CWR claims as PROVISIONAL unless their registry status says otherwise.
+
+The authoritative state files are:
+- `CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md`
+- `COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md`
+- this source ledger
+- latest wave note `CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md`
+
+Next new byproduct ID: `CWR-BP-213`.
+
+---
+
+# 1. CW-001 — Statistical experiments / Blackwell / Le Cam / order completion
+
+## Erik Torgersen — *Comparison of Statistical Experiments* (1991)
+Role in lab:
+- historical/authoritative map of comparison theory;
+- generalized decision rules and transitions;
+- vector lattices, L/M-spaces, generalized experiments;
+- deficiencies/randomization criterion;
+- experiment functionals and conical measures;
+- majorization/dilations;
+- local comparison/Fisher-order material.
+
+Claims already extracted in the lab:
+- ordinary randomizations are inadequate in full generality; Le Cam transitions repair this;
+- generalized variables/experiments are introduced to handle weak-compactness pathologies;
+- representable experiment functionals and conical-measure representations are classical;
+- deficiency has multiple equivalent decision-risk/randomization interpretations;
+- products/mixtures and finite-parameter representations are classical.
+
+Important ownership rule:
+Do NOT claim "generalized experiment completion" as new. The unresolved CWR question is the precise relation between:
+(1) MacNeille order completion,
+(2) Le Cam generalized experiments/transitions,
+(3) deficiency/topological completion.
+
+## Lucien Le Cam — “Sufficiency and Approximate Sufficiency” (1964)
+Role:
+- primary source for transitions/approximate sufficiency/Riesz-lattice approach.
+Previously established:
+- Le Cam comparison theory enlarges randomizations to transitions;
+- later sources summarize L-space / M-space structure.
+
+Ownership rule:
+The lab must distinguish *adding objects/cuts* (MacNeille) from *enlarging admissible morphisms/transitions* (Le Cam).
+
+## Bertschinger & Rauh (2014), Blackwell order non-lattice paper
+Role:
+- explicit finite-state non-lattice witness.
+Claims already verified:
+- binary-state Blackwell order is a lattice;
+- for more than two states, meets/joins fail in general;
+- their 3-state example has a zonotope intersection with triangular faces and hence no representing channel.
+CWR use:
+- explicit nonprincipal MacNeille cut;
+- exact representability test for completed common-information objects.
+
+## Dedekind–MacNeille completion references
+Role:
+- order-theoretic engine.
+Established:
+\[
+DM(P)=\{A\subseteq P:A=L(U(A))\}
+\]
+with embedding \(x\mapsto\downarrow x\);
+preserves existing meets/joins and is the minimal complete-lattice completion in the standard sense.
+CWR result:
+for Blackwell classes,
+\[
+j(E_1)\wedge\cdots\wedge j(E_p)=\bigcap_i\downarrow E_i,
+\]
+and a genuine meet exists iff that cut is principal.
+
+## Justin Farmer (2026), “Geometric Characterization of the Blackwell Order”
+Role:
+- high-priority contemporary collision.
+What was actually known:
+- abstract mentions lower contour sets and “completions” for two/three states.
+What was NOT established:
+- the exact theorem/construction could not be audited from the blocked full text.
+Rule:
+Do not infer Farmer’s exact construction from the abstract.
+
+---
+
+# 2. CW-002 — Dobrushin / filtering / decision horizons
+
+## Dobrushin contraction theory
+Role:
+- total-variation contraction and submultiplicativity.
+CWR theorem built from it:
+\[
+r(E_t)\le(1-1/n)\eta(T_{0:t})
+\]
+for the entire future observation tail, with reset-kernel sharpness.
+Ownership:
+Dobrushin contraction is classical; the Le Cam future-tail decision formulation remains a synthesis under collision audit.
+
+## Birkhoff (projective contraction)
+Role:
+- Hilbert metric contraction for positive operators.
+Key formula used:
+\[
+\tau(A)=\tanh(\Delta(A)/4).
+\]
+CWR use:
+history-uniform filter forgetting because diagonal likelihood scaling and normalization are projectively harmless.
+
+## Atar–Zeitouni (1997)
+Role:
+- direct prior art for nonlinear-filter exponential stability / memory length using Birkhoff contraction.
+Ownership correction:
+“Hilbert metric gives pathwise filter forgetting” is classical.
+
+## Budhiraja–Ocone
+Role:
+- Hilbert/Birkhoff machinery in discrete-time filter stability.
+Ownership:
+classical filter-stability engine.
+
+## McDonald–Yüksel (2019/2020)
+Role:
+- Dobrushin-style filter stability combining transition and observation coefficients;
+- controlled extensions.
+Ownership:
+expectation-level TV filter-contraction machinery is classical.
+
+---
+
+# 3. Primitive / sparse / subrectangular filtering
+
+## Perron–Frobenius / Wielandt
+Role:
+- primitive nonnegative matrices;
+- exponent of primitivity.
+Established classical bound:
+\[
+\gamma(T)\le(n-1)^2+1.
+\]
+CWR interpretation:
+“information-memory activation delay” is a reinterpretation, not a new matrix theorem.
+
+## Seneta
+Role:
+- nonnegative/stochastic matrices, coefficients of ergodicity, products.
+Ownership:
+classical background for support/contraction products.
+
+## Kaijser (1975)
+Role:
+- Condition A / subrectangular stepping-matrix product for HMM filter convergence.
+Ownership correction:
+the generic “subrectangular observation word causes contraction/filter forgetting” mechanism is classical.
+
+## Kochman–Reeds (2006)
+Role:
+- simpler/stronger proof around Kaijser unique ergodicity; rank-one closure line.
+Ownership:
+classical.
+
+## Chigansky–van Handel (2010)
+Role:
+- necessary/sufficient qualitative resolution of Blackwell’s HMM unique-ergodicity problem.
+Ownership correction:
+do NOT frame qualitative finite/countable-state filter unique ergodicity as an open historical problem.
+
+## Shuval–Tal (2018/2024 line)
+Role:
+- explicit Birkhoff coefficients for nonzero subrectangular matrices;
+- multiplicative contraction through repeated contracting occurrences separated by arbitrary nonnegative factors;
+- nonoverlapping occurrence counting;
+- conditional mutual-information decay.
+Ownership correction:
+CWR-BP-090’s generic projective occurrence-product engine is classical.
+Remaining CWR endpoint:
+translate occurrence counts to conditional *entire-future Le Cam deficiency* / all-loss stopping.
+
+---
+
+# 4. Probabilistic automata / synchronization / undecidability
+
+## Rabin (1963), probabilistic automata
+Role:
+- foundational probabilistic automata;
+- cut points / isolated cut points;
+- “actual automata” (strictly positive transition probabilities);
+- stability/definiteness phenomena.
+CWR interpretation:
+positivity alone is not the decisive boundary; isolation/margin matters.
+
+## Gimbert–Oualhadj
+Role:
+- value-1 problem undecidability.
+CWR exact reduction:
+designated-pair TV synchronization value
+\[
+v_{\rm pair}=1-\operatorname{val}(\mathcal A)
+\]
+for the constructed gadget.
+Consequence:
+pair synchronization to zero is undecidable in general.
+
+## Classical PFA cut-point emptiness
+Role:
+- fixed-threshold undecidability (e.g. cutpoint \(1/2\)).
+CWR consequence:
+fixed-accuracy designated-pair TV synchronization is undecidable;
+therefore no recursive general witness-length/reset bound.
+
+## Fijalkow–Gimbert–Kelmendi–Oualhadj — leaktight automata / Markov monoid
+Role:
+- leaktight class;
+- extended Markov monoid;
+- leak witnesses;
+- value-1 decidability/PSPACE result.
+CWR interpretation:
+a leak is a recurrent support/limit Booleanization defect:
+finite-stage positivity persists but limiting probability vanishes.
+Exact CWR deduction:
+finite strictly-positive PFA families are leaktight because every product entry has a uniform positive floor.
+
+## Profinite / prostochastic line
+Role:
+- topological completion viewpoint for stochastic words/value problems.
+CWR use:
+comparison among Boolean support, stabilization monoid, and topological/profinite completions.
+
+---
+
+# 5. Rote 2025 — central zero-margin collision
+
+## Günter Rote (MFCS 2025), undecidability for positive/doubly-stochastic PFAs
+This is one of the most important modern collisions in the current lab.
+
+Claims already used:
+- undecidability survives for small positive doubly-stochastic PFAs at the stationary cutpoint;
+- a 7-state positive doubly-stochastic construction with cutpoint \(1/7\);
+- fixed positive doubly-stochastic generators with only initial distribution varying in the stronger fixed-system form;
+- separate binary positive constructions;
+- positivity transformation of the form
+  \[
+  D_i=(1-\alpha)J+\alpha C_i
+  \]
+  preserving a signed computational signal multiplied by \(\alpha^{|w|}\).
+
+CWR deductions:
+- stationary-cutpoint singularity;
+- vanishing-signal computation;
+- leaktightness does not prevent zero-margin undecidability;
+- trivial support + exponential mixing can coexist with undecidable transient sign reachability;
+- one fixed system can be globally mixing while its basin-side exact transient predicate is undecidable.
+
+Ownership:
+Rote owns the core PFA undecidability and mixing-shell mechanism.
+CWR may claim only exact deductions/reformulations after collision audit.
+
+---
+
+# 6. Linear recurrences / orbit problems / Markov-chain arithmetic
+
+## Vahanwala (2024), Skolem/Positivity completeness of ergodic Markov chains
+Role:
+- direct collision with the lab’s “contractive shell embeds signed recurrence” mechanism.
+Published construction:
+\[
+M=S+D,\qquad SD=DS=0,\qquad M^n=S+D^n,
+\]
+with a disturbance entry proportional to an LRS term times an exponential scaling.
+CWR correction:
+generic contractive-shell LRS embedding is prior art.
+CWR exact deduction:
+with uniform stationary \(S=J\), the construction is in fact doubly stochastic because \(D\) has zero row and column sums.
+
+## Kannan–Lipton Orbit Problem
+Role:
+- point orbit reachability for a single rational linear operator is polynomial-time decidable.
+CWR structural contrast:
+point targets can be easier than halfspace sign targets.
+
+## Ouaknine–Worrell — LRS Positivity / Ultimate Positivity
+Claims used:
+- general Positivity decidable through low order (order \(\le5\));
+- order 6 touches deep Diophantine approximation obstacles;
+- simple-root Positivity decidable through higher order;
+- simple Ultimate Positivity decidable more generally.
+CWR use:
+general nonreversible bistochastic stationary-cutpoint state-count frontier.
+
+## De les Coves–Graf–Klingler–Netzer (2025)
+Major correction:
+Positivity is decidable for LRS whose characteristic roots are all real, in arbitrary order.
+CWR consequence:
+for a *single reversible rational Markov chain*, strict halfspace crossing is decidable in arbitrary dimension.
+
+## Akshay et al. (STACS 2020 line)
+Role:
+- decidable Skolem fragments for roots of real algebraic numbers.
+CWR consequence:
+single reversible rational Markov-chain exact hyperplane hitting is decidable.
+
+## George Kenison (2022), stochastic reachability
+Important direct collision correction:
+Kenison explicitly states decidability of the stochastic reachability problem when the matrix comes from a reversible Markov chain.
+CWR ownership:
+CWR-BP-160 exact-equality reversible reachability is direct classical prior art, not merely a transfer.
+
+---
+
+# 7. Reversibility / symmetric switching
+
+## Classical reversible-chain spectral theorem
+Role:
+detailed balance implies similarity to a real symmetric matrix.
+CWR consequence:
+one reversible generator has real spectrum, eliminating genuinely complex phase arithmetic.
+
+## Gibson (1976), symmetric doubly-stochastic factorization over a field
+Role:
+- algebraic factorization collision.
+Important limitation:
+“doubly stochastic over a field” does NOT automatically mean nonnegative Markov kernels in the needed probabilistic sense.
+Rule:
+do not use Gibson as a direct positive-stochastic simulation theorem without proving nonnegativity.
+
+## Bell / commutative PFA line
+Role:
+- warning that commutativity alone does not automatically restore cutpoint decidability in PFA settings.
+CWR frontier:
+the potentially special class is *commuting + common self-adjoint/reversible*, not merely commuting.
+
+## Turakainen / Hirvensalo survey line
+Collision:
+binary doubly-stochastic PFA undecidability is classical.
+CWR correction:
+do not claim “binary + bistochastic + undecidable” as new.
+Current narrower candidate:
+two *fixed* positive doubly-stochastic matrices with only initial distribution variable, via the CWR phase-code corollary, remains under collision audit.
+
+---
+
+# 8. Hadamard / tangent algebra / symmetric semigroups
+
+## Hadamard inverse-eigenvalue constructions
+Role:
+Hadamard matrices are classically used to construct symmetric doubly-stochastic matrices with prescribed spectra.
+Collision:
+the general use of \(H D H^\top\)-type stochasticization is not new.
+
+CWR exact construction:
+choose nonconstant Hadamard columns \(B\) with
+\[
+B^\top B=mI,\qquad B^\top\mathbf1=0,
+\]
+and define
+\[
+\Phi(A)=m^{-1}BAB^\top.
+\]
+Then:
+\[
+\Phi(A)\Phi(C)=\Phi(AC),\qquad \Phi(A)^\top=\Phi(A^\top).
+\]
+For symmetric source generators:
+\[
+S_i=J+\varepsilon\Phi(A_i)
+\]
+are positive symmetric doubly-stochastic and
+\[
+S_w=J+\varepsilon^{|w|}\Phi(A_w).
+\]
+
+Current core frontier:
+**SYM-SCALAR-SIGN** and stronger **PSD-SYM-SCALAR-SIGN**.
+
+---
+
+# 9. Positive semidefinite products / Jordan product
+
+## Classical PSD / positive-definite product facts
+Used in CW-002N/O:
+- two positive-definite symmetric factors have positive real spectrum;
+- three factors can already exhibit richer/complex spectral behavior.
+
+## Wigner–Yanase / Jordan anticommutator observation
+Role:
+even when \(A,B\succ0\), the Jordan/anticommutator
+\[
+AB+BA
+\]
+need not be positive definite.
+
+CWR use:
+for a matched tangent observable,
+\[
+g^\top S_1S_2g
+=
+g^\top\frac{S_1S_2+S_2S_1}{2}g,
+\]
+so a two-step sign inversion is exactly a negative Jordan-product direction.
+
+## CW-002O exact state
+- one PSD reversible step cannot invert matched sign;
+- commuting PSD reversible family cannot invert matched sign at any word length;
+- two noncommuting PSD reversible steps can invert it;
+- Jordan sign defect appears at length 2;
+- complex spectral phase in the positive-definite class appears later (length 3 in the current witness).
+
+Current frontier:
+**PSD-SYM-SCALAR-SIGN**  
+Given rational symmetric PSD generators \(A_i\) and rational \(x,y\), determine whether some product has a prescribed scalar sign.
+
+---
+
+# 10. Continuous-time line
+
+## Continuous Skolem / exponential-polynomial literature
+Role:
+warning that real spectrum in continuous time does not automatically give the same blanket decidability as discrete real-root LRS Positivity.
+
+CWR exact unconditional island:
+if reversible CTMC decay rates are rationally commensurate, substitute
+\[
+z=e^{-\beta t/q}
+\]
+to turn scalar threshold questions into polynomial sign/root problems.
+
+Rule:
+do not claim general reversible-CTMC exact zero/hitting decidability without a fresh source audit.
+
+---
+
+# 11. Source ownership / correction ledger
+
+The next chat must retain these corrections:
+
+- Blackwell non-lattice: classical Bertschinger–Rauh.
+- Generic “complete the Blackwell order” idea: order completion is classical; CWR’s exact statistical interface needs audit.
+- Hilbert/Birkhoff filter forgetting: classical.
+- Subrectangular-word contraction: classical Kaijser/Shuval–Tal line.
+- HMM qualitative unique ergodicity: solved; do not reopen as historical open problem.
+- Binary bistochastic PFA undecidability: classical.
+- Contractive-shell LRS-in-Markov embedding: Vahanwala prior art.
+- Reversible exact equality reachability: direct Kenison prior art.
+- Real-root LRS Positivity arbitrary-order decidability: 2025 correction; reversibility removes the old low-dimensional frontier.
+- Hadamard stochastic inverse-eigenvalue constructions: classical.
+- Jordan-product nonpositivity for positive matrices: classical obstruction.
+
+What remains research-worthy is the *interaction theorem*, exact restriction, phase boundary, or complexity classification after these ownership corrections.
+
+---
+
+# 12. Immediate reading protocol in the new chat
+
+When continuing from CWR-BP-213:
+
+1. Read `CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md`.
+2. Read canonical registry entries CWR-BP-191 through CWR-BP-212.
+3. Read `CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md`.
+4. Read `CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md`.
+5. Use this ledger to avoid repeating already-settled literature searches.
+6. Then perform a *fresh targeted* collision audit for:
+   - symmetric matrix semigroup scalar sign reachability;
+   - PSD generator versions;
+   - mortality / zero-in-corner / vector reachability / semigroup membership under symmetry;
+   - block symmetrization and Jordan-algebra reductions.
+7. Append every new result starting at `CWR-BP-213`.
+
+The next chat should not "trust memory" for a new bibliographic theorem. It should use this ledger as the map and reopen the source or note before extending it.

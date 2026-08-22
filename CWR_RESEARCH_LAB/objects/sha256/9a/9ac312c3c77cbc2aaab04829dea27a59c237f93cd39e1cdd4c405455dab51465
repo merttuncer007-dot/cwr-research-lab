@@ -1,0 +1,50 @@
+# CWR / DCSG LAB — NEW CHAT START HERE
+
+Bu dosya yeni sohbette ilk okunacak dosyadır.
+
+## Talimat
+
+Önce şu iki dosyayı authoritative state olarak oku:
+
+1. `CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md`
+2. `COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md`
+3. `CWR_SOURCE_READING_LEDGER_2026-08-22.md`
+
+Lab'ı sıfırdan başlatma. Registry append-only'dir; hiçbir eski theorem, failure, collision, byproduct veya counterexample silinmez.
+
+**Bir sonraki yeni ID: `CWR-BP-213`.**
+
+Aktif frontier:
+
+`CW-002O sonrası — rational symmetric / PSD matrix-semigroup scalar sign reachability`
+
+Özellikle:
+
+- CWR-BP-198: symmetric matrix-semigroup scalar-sign frontier
+- CWR-BP-211: PSD symmetric-semigroup scalar-sign frontier
+- CWR-BP-212: composition-stable stochastic symmetries
+
+Hemen devam et:
+1. rational symmetric / PSD matrix semigroups için scalar sign reachability'nin exact literature status'ünü audit et;
+2. mortality, zero-in-corner, vector reachability, matrix-semigroup membership ve PFA reductions'ı symmetry/PSD korunarak test et;
+3. theorem/counterexample üret;
+4. bütün yeni byproduct'ları `CWR-BP-213`'ten başlayarak canonical registry'ye append et;
+5. novelty claim yapmadan önce dedicated collision search yap.
+
+## Son tamamlanmış wave
+
+`CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md`
+
+Önemli sonuçlar:
+- Kenison 2022 reversible exact-equality reachability collision correction.
+- Matched tangent observable:
+  `mu S_w f - b = delta gamma g^T S_w g`.
+- Commuting PSD reversible generators: matched crossing aşağı yönde imkânsız.
+- Noncommuting PSD reversible generators: iki adımda sign inversion mümkün.
+- Two-step criterion Jordan product:
+  `g^T S1 S2 g = g^T (S1S2+S2S1)/2 g`.
+- PSD-SYM-SCALAR-SIGN hâlâ aktif frontier.
+
+## Yeni sohbette gönderebileceğin tek cümle
+
+> Bu dosyalar önceki CWR/DCSG labının authoritative continuation state'idir. Handoff'u, source-reading ledger'ı ve canonical registry'yi oku; yeni ID CWR-BP-213'ten başla ve CW-002O sonrası symmetric/PSD matrix-semigroup scalar-sign frontier'ından doğrudan devam et. Registry append-only kalsın ve bütün dosyaları koru.

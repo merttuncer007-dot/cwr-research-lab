@@ -1,0 +1,25 @@
+CWR CW-002I mixing-shell embedding sanity check
+
+n = 3
+alpha = 0.12
+minimum generator entry eta = 0.249333333333
+max generator Dobrushin coefficient rho = 0.168000000000
+
+Identity tested for every binary word up to length 8:
+  (u+v) D_w = u + alpha^|w| v C_w
+max identity error = 1.665e-16
+minimum entry over all tested nonempty products = 0.249333333333
+any missing support entry? False
+
+k | max |mu D_w f - u f| | max alpha^k |v C_w f|
+ 1 | 2.688000000000e-02 | 2.688000000000e-02
+ 2 | 4.515840000000e-03 | 4.515840000000e-03
+ 3 | 7.586611199999e-04 | 7.586611200000e-04
+ 4 | 1.274550681600e-04 | 1.274550681600e-04
+ 5 | 2.141245145082e-05 | 2.141245145088e-05
+ 6 | 3.597291843738e-06 | 3.597291843748e-06
+ 7 | 6.043450297422e-07 | 6.043450297496e-07
+ 8 | 1.015299649909e-07 | 1.015299649979e-07
+
+All nonempty positive-shell products have full support.
+The scalar deviation shrinks radially by alpha^k while its sign is inherited exactly from the signed core v C_w f.

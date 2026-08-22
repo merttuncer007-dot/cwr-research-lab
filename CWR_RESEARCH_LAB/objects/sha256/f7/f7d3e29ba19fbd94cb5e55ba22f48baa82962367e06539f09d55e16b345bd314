@@ -1,0 +1,9 @@
+CWR LAB SAFETY BUNDLE MANIFEST
+handoff: CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md
+registry canonical: COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md
+registry latest snapshot: COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md
+bundle: CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip
+bundle sha256: bd810cfb8e11d17f138862b8615819c5d15ea4d19bea681773fb8450f800b140
+file count in bundle: 56
+latest byproduct id: CWR-BP-212
+next byproduct id: CWR-BP-213

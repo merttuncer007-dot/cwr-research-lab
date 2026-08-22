@@ -1,0 +1,29 @@
+CWR CW-002J tangent-order sanity check
+
+Positive doubly stochastic M =
+Matrix([[2/5, 1/5, 1/5, 1/5], [1/5, 2/5, 1/5, 1/5], [1/5, 1/5, 7/20, 1/4], [1/5, 1/5, 1/4, 7/20]])
+
+D = M - J; restriction to the 3-dimensional zero-sum tangent subspace:
+Matrix([[1/5, 0, 0], [0, 1/5, 0], [-1/20, -1/20, 1/10]])
+
+Characteristic polynomial of tangent restriction: x**3 - x**2/2 + 2*x/25 - 1/250
+
+Sequence d_t = (M^t)_{11} - 1/4, t=1..12:
+d_1 = 3/20
+d_2 = 3/100
+d_3 = 3/500
+d_4 = 3/2500
+d_5 = 3/12500
+d_6 = 3/62500
+d_7 = 3/312500
+d_8 = 3/1562500
+d_9 = 3/7812500
+d_10 = 3/39062500
+d_11 = 3/195312500
+d_12 = 3/976562500
+
+Cayley-Hamilton recurrence residuals:
+0, 0, 0, 0, 0, 0, 0, 0, 0
+
+All residuals are exactly zero.
+This verifies on a rational example that stationary-coordinate deviations of an n-state doubly stochastic chain evolve in the (n-1)-dimensional zero-sum tangent subspace.

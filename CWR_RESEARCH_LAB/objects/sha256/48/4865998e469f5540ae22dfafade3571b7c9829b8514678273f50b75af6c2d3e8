@@ -1,0 +1,26 @@
+CWR CW-002H stationary-cutpoint margin sanity check
+
+Toy family: two positive doubly stochastic 3x3 matrices.
+common stationary baseline u·f = 0.333333333333
+rho = max Dobrushin coefficient = 0.450000000000
+TV(pi,u) = 0.466666666667
+chosen margin gamma = 0.080000000000
+finite-horizon bound N = 3
+
+k | min reward | max reward | max abs deviation | rho^k TV(pi,u)
+ 0 | 0.800000000000 | 0.800000000000 | 0.466666666667 | 0.466666666667
+ 1 | 0.450000000000 | 0.520000000000 | 0.186666666667 | 0.210000000000
+ 2 | 0.366000000000 | 0.408000000000 | 0.074666666667 | 0.094500000000
+ 3 | 0.343250000000 | 0.363200000000 | 0.029866666667 | 0.042525000000
+ 4 | 0.336495000000 | 0.345280000000 | 0.011946666667 | 0.019136250000
+ 5 | 0.334368750000 | 0.338112000000 | 0.004778666667 | 0.008611312500
+ 6 | 0.333677150000 | 0.335244800000 | 0.001911466667 | 0.003875090625
+ 7 | 0.333448293750 | 0.334097920000 | 0.000764586667 | 0.001743790781
+ 8 | 0.333371903625 | 0.333639168000 | 0.000305834667 | 0.000784705852
+ 9 | 0.333346295656 | 0.333455667200 | 0.000122333867 | 0.000353117633
+10 | 0.333337693129 | 0.333382266880 | 0.000048933547 | 0.000158902935
+
+upper cutpoint lambda+ = 0.413333333333
+lower cutpoint lambda- = 0.253333333333
+Once rho^k TV(pi,u) < gamma, every word of length k or greater lies on the stationary side of both off-baseline thresholds.
+This checks the finite-horizon margin theorem; it is not related to Rote's undecidability construction.

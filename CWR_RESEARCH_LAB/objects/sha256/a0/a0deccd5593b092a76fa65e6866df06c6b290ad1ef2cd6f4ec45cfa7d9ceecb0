@@ -1,0 +1,629 @@
+# COLD WAR RENAISSANCE — CW-002
+## Dobrushin × Le Cam × Wald/Sequential Decision
+### A sharp universal future-information horizon
+Date: 2026-08-22
+Status: PROVISIONAL EXACT THEOREM; COLLISION AUDIT OPEN
+
+## 1. Research question
+
+The historical ingredients:
+
+- Dobrushin: contraction/forgetting for Markov kernels;
+- Wald: sequential decision and stopping;
+- Le Cam: deficiency as worst-case decision loss from replacing one experiment by another;
+- hidden-Markov/filtering theory: future observations are downstream of the current latent state.
+
+Question:
+
+> If a latent Markov process forgets its initial state at Dobrushin rate \(\rho<1\), how much decision-relevant information about the initial state can the **entire future observation tail** still contain after delay \(t\)?
+
+The target is not an incremental heuristic. We seek an exact worst-case decision-theoretic bound.
+
+---
+
+## 2. Setup
+
+Let the initial state be
+
+\[
+X_0\in\mathcal X,
+\qquad
+|\mathcal X|=n<\infty.
+\]
+
+Let the latent chain be possibly time-inhomogeneous:
+
+\[
+X_0
+\xrightarrow{T_0}
+X_1
+\xrightarrow{T_1}
+\cdots
+\xrightarrow{T_{t-1}}
+X_t.
+\]
+
+Write
+
+\[
+T_{0:t}
+=
+T_0T_1\cdots T_{t-1}.
+\]
+
+Let
+
+\[
+\eta(T)
+=
+\sup_{x,x'}
+\operatorname{TV}
+(
+T(\cdot|x),
+T(\cdot|x')
+)
+\]
+
+be the total-variation Dobrushin contraction coefficient.
+
+Then
+
+\[
+\eta(TS)
+\le
+\eta(T)\eta(S).
+\]
+
+From time \(t\) onward, allow an arbitrary future observation mechanism consistent with the Markov structure.
+
+All future observations, actions-independent exogenous emissions, or even the entire infinite future observable path can be summarized by one Markov kernel
+
+\[
+G_t:
+\mathcal X
+\rightsquigarrow
+\mathcal Y_{t:\infty}
+\]
+
+from the current latent state \(X_t\) to the future observation tail.
+
+The statistical experiment about \(X_0\) available from that entire tail is
+
+\[
+\boxed{
+E_t
+=
+T_{0:t}G_t.
+}
+\]
+
+No assumption on the informativeness of \(G_t\) is required.
+
+---
+
+## 3. Null deficiency / residual decision information
+
+Let \(N_q\) be a null experiment whose output distribution \(q\) is independent of the initial state.
+
+Define the distance of experiment \(E\) from null information by
+
+\[
+\boxed{
+r(E)
+=
+\inf_q
+\sup_{x\in\mathcal X}
+\operatorname{TV}
+(
+E(\cdot|x),
+q
+).
+}
+\]
+
+For finite experiments this is exactly the one-sided Le Cam simulation deficiency of a null experiment relative to \(E\), under the standard total-variation formulation:
+
+\[
+r(E)
+=
+\inf_{N\text{ null}}
+\delta(N,E).
+\]
+
+Operationally, for loss functions normalized to \([0,1]\),
+
+\[
+r(E)
+\]
+
+upper-bounds the worst possible reduction in decision risk obtained from \(E\) compared with having no state information.
+
+This follows from the Le Cam/randomization risk interpretation of deficiency.
+
+---
+
+## 4. Sharp Dobrushin–Le Cam tail theorem
+
+### Theorem CW-002.1 — Universal future-tail information bound
+
+For the entire future observation experiment
+
+\[
+E_t=T_{0:t}G_t,
+\]
+
+\[
+\boxed{
+r(E_t)
+\le
+\left(1-\frac1n\right)
+\eta(T_{0:t}).
+}
+\]
+
+Hence, by Dobrushin submultiplicativity,
+
+\[
+\boxed{
+r(E_t)
+\le
+\left(1-\frac1n\right)
+\prod_{s=0}^{t-1}
+\eta(T_s).
+}
+\]
+
+In the homogeneous case
+
+\[
+T_s=T,
+\qquad
+\eta(T)=\rho<1,
+\]
+
+\[
+\boxed{
+r(E_t)
+\le
+\left(1-\frac1n\right)\rho^t.
+}
+\]
+
+### Proof
+
+Let \(u\) be the uniform distribution on the \(n\) initial states.
+
+Construct the state-independent future-tail law
+
+\[
+q_t
+=
+uT_{0:t}G_t.
+\]
+
+For each initial state \(x\),
+
+\[
+\operatorname{TV}
+(
+\delta_xT_{0:t}G_t,
+uT_{0:t}G_t
+)
+\]
+
+is bounded by data processing through \(G_t\):
+
+\[
+\le
+\operatorname{TV}
+(
+\delta_xT_{0:t},
+uT_{0:t}
+).
+\]
+
+Dobrushin contraction gives
+
+\[
+\le
+\eta(T_{0:t})
+\operatorname{TV}(\delta_x,u).
+\]
+
+For uniform \(u\),
+
+\[
+\operatorname{TV}(\delta_x,u)
+=
+1-\frac1n.
+\]
+
+Therefore
+
+\[
+\sup_x
+\operatorname{TV}
+(
+E_t(\cdot|x),
+q_t
+)
+\le
+\left(1-\frac1n\right)\eta(T_{0:t}).
+\]
+
+Infimizing over all null laws can only improve the bound.
+
+Finally,
+
+\[
+\eta(T_{0:t})
+\le
+\prod_{s=0}^{t-1}\eta(T_s).
+\]
+
+QED.
+
+---
+
+## 5. Why this is stronger than a one-step memory statement
+
+The bound applies to
+
+\[
+\boxed{
+Y_t,Y_{t+1},Y_{t+2},\ldots
+}
+\]
+
+**jointly**, not merely to \(Y_t\).
+
+The reason is structural:
+
+\[
+X_0
+\to
+X_t
+\to
+Y_{t:\infty}
+\]
+
+is a Markov chain.
+
+Once the latent process has forgotten the initial state up to TV scale \(\rho^t\), no arbitrarily informative future observation mechanism can recreate the lost distinction.
+
+Thus:
+
+\[
+\boxed{
+\text{mixing loss before time }t
+\text{ is irreversible by all future observations}.
+}
+\]
+
+This is a strong data-processing statement in decision-theoretic form.
+
+---
+
+## 6. Decision-theoretic corollary
+
+Let \(L(x,a)\in[0,1]\) be any bounded decision loss.
+
+Let
+
+\[
+R_{\mathrm{null}}^\star(L)
+\]
+
+be the minimax/Bayes risk (under the corresponding deficiency formulation) with a null experiment, and let
+
+\[
+R_{E_t}^\star(L)
+\]
+
+be the risk with access to the entire future observation tail.
+
+Then the Le Cam comparison theorem gives
+
+\[
+\boxed{
+0
+\le
+R_{\mathrm{null}}^\star(L)
+-
+R_{E_t}^\star(L)
+\le
+r(E_t).
+}
+\]
+
+Consequently,
+
+\[
+\boxed{
+R_{\mathrm{null}}^\star(L)
+-
+R_{E_t}^\star(L)
+\le
+\left(1-\frac1n\right)
+\prod_{s<t}\eta(T_s).
+}
+\]
+
+This is uniform over:
+
+- the decision problem;
+- the action set;
+- the future observation channel \(G_t\).
+
+---
+
+## 7. Exact semantic / decision horizon
+
+For homogeneous contraction \(\rho<1\), fix tolerance
+
+\[
+\varepsilon>0.
+\]
+
+If
+
+\[
+\left(1-\frac1n\right)\rho^t
+\le
+\varepsilon,
+\]
+
+then every future observation after time \(t\), even taken jointly forever, can improve any normalized decision problem about \(X_0\) by at most \(\varepsilon\).
+
+Thus a sufficient exact horizon is
+
+\[
+\boxed{
+t_\varepsilon
+=
+\left\lceil
+\frac{
+\log\left(
+\varepsilon/(1-1/n)
+\right)
+}{
+\log\rho
+}
+\right\rceil
+}
+\]
+
+when \(0<\rho<1\) and the numerator is in the relevant range.
+
+This gives an **ex ante residual-information stopping horizon**.
+
+---
+
+## 8. Sharpness
+
+The universal constant is sharp.
+
+Let
+
+\[
+T_\rho
+=
+\rho I
++
+(1-\rho)U,
+\]
+
+where \(U\) has every row equal to the uniform distribution \(u\).
+
+Then
+
+\[
+\eta(T_\rho)=\rho
+\]
+
+and
+
+\[
+T_\rho^t
+=
+\rho^t I
++
+(1-\rho^t)U.
+\]
+
+Let the future observation be perfect at time \(t\):
+
+\[
+G_t=I.
+\]
+
+The \(x\)-th experiment row is
+
+\[
+p_x
+=
+\rho^t\delta_x
++
+(1-\rho^t)u.
+\]
+
+By permutation symmetry, the optimal null center is \(u\).
+
+Hence
+
+\[
+r(E_t)
+=
+\operatorname{TV}(p_x,u)
+=
+\rho^t
+\left(1-\frac1n\right).
+\]
+
+Therefore:
+
+### Theorem CW-002.2 — Sharpness
+
+\[
+\boxed{
+\sup_{T:\eta(T)\le\rho}
+\sup_{G_t}
+r(T^tG_t)
+=
+\left(1-\frac1n\right)\rho^t.
+}
+\]
+
+The reset chain with perfect delayed observation attains equality.
+
+The same construction works inhomogeneously with kernels
+
+\[
+T_s
+=
+\rho_s I
++
+(1-\rho_s)U,
+\]
+
+for which the product coefficient is
+
+\[
+\prod_s\rho_s.
+\]
+
+---
+
+## 9. Autocorrection: this is NOT yet a history-adaptive Wald stopping theorem
+
+A tempting but invalid jump would be:
+
+> after observing an arbitrary past history \(Y_{<t}=y_{<t}\), future information is pathwise bounded by the same \(\rho^t\).
+
+That does not follow from the theorem.
+
+Conditioning on a rare or informative observation history can alter the effective smoothing/transition kernels and can destroy the simple unconditional Dobrushin bound.
+
+The HMM literature treats this through filter/smoother stability and observation-dependent contraction coefficients.
+
+McDonald–Yuksel (2019/2020) explicitly combine Dobrushin coefficients of the transition and observation kernels to obtain exponential filter stability under a joint contraction condition.
+
+Therefore:
+
+\[
+\boxed{
+\text{CW-002.1 is an ex ante tail theorem, not an anytime conditional theorem.}
+}
+\]
+
+To obtain a genuine Wald-style history-adaptive stopping result, one needs a pathwise or uniform conditional contraction hypothesis.
+
+This is a productive constraint, not a dead end.
+
+---
+
+## 10. Conditional extension target
+
+Suppose that after history \(h_t\) the conditional latent propagation to a later cut admits a contraction coefficient
+
+\[
+\rho_s(h_s)<1.
+\]
+
+If one can establish a history-uniform bound
+
+\[
+\sup_{h_s}\rho_s(h_s)\le\bar\rho_s,
+\]
+
+then the same proof gives a conditional future-tail deficiency envelope
+
+\[
+\boxed{
+r(E_{t:\infty}\mid h_t)
+\le
+\left(1-\frac1n\right)
+\prod_{s<t}\bar\rho_s
+}
+\]
+
+for the appropriate conditional experiment.
+
+The technical question is exactly the filter/smoother-stability problem.
+
+This is where Dobrushin and Wald genuinely need Stratonovich/filtering theory rather than simple Markov contraction.
+
+---
+
+## 11. Historical collision audit
+
+### Clearly classical components
+
+- Dobrushin TV contraction and submultiplicativity;
+- exponential forgetting/mixing of Markov chains;
+- Le Cam deficiency as worst-case loss of decision performance;
+- filter stability via Dobrushin coefficients;
+- hidden-Markov conditional forgetting.
+
+### Search result
+
+A direct search for a theorem explicitly phrased as:
+
+\[
+\text{Dobrushin contraction}
+\to
+\text{Le Cam deficiency of the entire future observation tail to null}
+\]
+
+did not surface a standard named result.
+
+This is not novelty evidence.
+
+The theorem may be an immediate corollary scattered across strong-data-processing, deficiency, and HMM literatures.
+
+Its value in the CWR program is that it is an exact cross-school synthesis and gives a sharp operational constant.
+
+---
+
+## 12. Independent byproducts
+
+This interaction generates multiple research programs independent of DCSG:
+
+1. sharp future-tail decision-information radius;
+2. null-deficiency as a mixing horizon;
+3. conditional/pathwise deficiency horizons via filter stability;
+4. nonlinear replacement using Dobrushin curves when the linear coefficient is \(1\);
+5. controlled-Markov extensions;
+6. model-uncertainty robust horizons;
+7. exact decision-value stopping rules from deficiency rather than mutual information.
+
+All are added to the permanent CWR byproduct registry.
+
+---
+
+# Verdict
+
+### Exact
+
+For an \(n\)-state latent Markov process,
+
+\[
+\boxed{
+\delta(\text{best null experiment},E_{t:\infty})
+\le
+\left(1-\frac1n\right)
+\prod_{s<t}\eta(T_s).
+}
+\]
+
+The bound is sharp.
+
+### Meaning
+
+The entire infinite future cannot recover initial-state decision information that latent mixing has already destroyed.
+
+### Boundary
+
+The theorem is ex ante.
+
+A history-adaptive stopping theorem requires conditional/filter stability and is the next research target.

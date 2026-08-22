@@ -1,0 +1,395 @@
+# COLD WAR RENAISSANCE / DCSG RESEARCH LAB — CHAT HANDOFF
+Date: 2026-08-22
+Purpose: Continue the lab safely in a new ChatGPT conversation without losing research state.
+
+## 0. Continuation instruction for the next chat
+
+Read this file first. Treat it as the authoritative handoff for the active research state.
+
+Then continue the research immediately. Do not restart from first principles and do not ask for a recap unless a file is missing.
+
+The byproduct registry is append-only. Never delete old topics. Change status if needed, but preserve every result, failed idea, collision, counterexample, theorem candidate, and independent byproduct.
+
+Next new byproduct ID:
+
+**CWR-BP-213**
+
+Primary current frontier:
+
+**CW-002 / unrestricted reversible switching → PSD/symmetric matrix-semigroup scalar sign reachability**
+
+Immediate next task:
+1. Audit the exact literature status of scalar sign reachability for rational symmetric / PSD matrix semigroups.
+2. Try direct reductions from known mortality, zero-in-corner, vector reachability, PFA, or matrix-semigroup undecidability while preserving symmetry or PSD.
+3. If generic symmetry is too strong, classify the minimal extra resource that restores undecidability.
+4. Preserve every byproduct starting from CWR-BP-213.
+5. Keep novelty claims provisional until explicit collision search is done.
+
+## 1. Lab methodology
+
+This project reconstructs relatively independent 20th-century / Cold-War mathematical programs and deliberately makes separated schools interact.
+
+Core rules:
+
+- Interaction-first, exactness-last.
+- DCSG is optional source/autocorrect/counterexample factory/beneficiary, not the destination.
+- Prefer 2nd-degree interactions: classical A + classical B + archive theorem C → independently interesting new result.
+- Also mine historical limitations/open statements, then verify whether modern literature solved them.
+- Every theorem candidate must be actively attacked by counterexamples, exhaustive finite tests, and literature collision search.
+- Never claim novelty merely because a search did not find a match.
+- Every side result is permanently archived.
+
+Status vocabulary:
+SEED, ACTIVE, EXACT-CANDIDATE, PROVED-PROVISIONALLY, CLASSICAL-COLLISION, PARTIAL, IMPOSSIBILITY, FALSIFIED, DORMANT, OPEN-HISTORICAL, PROMOTE.
+
+## 2. Main historical/completion thread already completed far enough
+
+### CW-001 — Blackwell × Le Cam × order completion
+
+Key exact result:
+
+For finite-source Blackwell experiment classes \(B_X\), use the Dedekind–MacNeille completion
+
+\[
+DM(B_X)=\{A\subseteq B_X:A=L(U(A))\}.
+\]
+
+Embedding:
+
+\[
+j(E)=\downarrow E.
+\]
+
+For experiments \(E_1,\ldots,E_p\),
+
+\[
+j(E_1)\wedge\cdots\wedge j(E_p)
+=
+\bigcap_i \downarrow E_i.
+\]
+
+A genuine Blackwell meet exists iff this common-information cut is principal.
+
+Bertschinger–Rauh's 3-state non-lattice example becomes an explicit nonprincipal MacNeille cut.
+
+Important distinction retained:
+
+1. Dedekind–MacNeille completion = minimal order completion.
+2. Le Cam generalized experiments/transitions = functional-analytic enlargement.
+3. Deficiency metric/topological completion = quantitative approximation.
+
+Relevant files:
+- CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md
+- CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md
+- cwr_cw001_zonotope_intersection_check.txt
+
+## 3. Active CW-002 thread — Dobrushin → filtering → automata → computability
+
+### CW-002
+Sharp ex-ante future-tail decision-information radius:
+
+\[
+r(E_t)
+\le
+\left(1-\frac1n\right)\eta(T_{0:t})
+\le
+\left(1-\frac1n\right)\prod_s\eta(T_s).
+\]
+
+Homogeneous case:
+
+\[
+r(E_t)\le(1-1/n)\rho^t.
+\]
+
+Sharp for reset kernels.
+
+### CW-002B
+Birkhoff/Hilbert projective contraction upgrades this to a pathwise history-uniform future-tail Le Cam horizon under strict positivity.
+
+### CW-002C
+Primitive sparse transitions + positive observation blocks remove one-step positivity.
+
+### CW-002D
+Kaijser/subrectangular-word collision. Projective contracting-word machinery is classical. New endpoint is conditional entire-future Le Cam deficiency and decision stopping.
+
+### CW-002E
+Weighted designated-pair synchronization is undecidable by exact PFA reduction:
+
+\[
+v_{\rm pair}=1-\operatorname{val}(\mathcal A).
+\]
+
+Even a fixed TV threshold such as \(1/2\) is undecidable in general. Hence no recursive general reset-length bound.
+
+Global all-row zero synchronization, by contrast, is support-decidable via scrambling products.
+
+### CW-002F
+Strict positivity / uniform scrambling is a decidability island:
+
+\[
+TV(pP_w,qP_w)\le\rho^{|w|}TV(p,q).
+\]
+
+### CW-002G
+Absorbing-target synchronization is exactly a PFA value problem.
+
+Leaktightness is interpreted as excluding recurrent support/limit Booleanization defects.
+
+### CW-002H
+Common-stationary uniformly contracting systems:
+off-stationary cutpoints have a finite verification horizon.
+
+Rote 2025 gives undecidability exactly at the stationary cutpoint even for positive doubly-stochastic PFAs.
+
+This created the **stationary-cutpoint singularity**.
+
+### CW-002I
+Strictly positive PFAs are leaktight and have trivial support dynamics, yet Rote-style zero-margin undecidability survives.
+
+Conclusion:
+
+\[
+\text{leak pathology}\neq\text{zero-margin signed computation}.
+\]
+
+Contractive-shell interpretation:
+computation can survive in the sign/direction of an exponentially shrinking tangent perturbation.
+
+### CW-002J
+Vahanwala 2024 collision:
+general contractive-shell LRS embedding is published prior art.
+
+Exact tangent dictionary for doubly-stochastic chains:
+
+\[
+(M^t)_{ij}-1/n
+\]
+
+is an LRS of order at most \(n-1\), and Vahanwala gives the reverse \(k\to k+1\) encoding.
+
+### CW-002K
+Reversibility/self-adjointness removes the discrete one-generator arithmetic frontier.
+
+For a rational finite reversible Markov chain:
+- strict halfspace crossing is decidable in arbitrary dimension via real-root LRS Positivity;
+- exact hyperplane hitting is decidable via real-root Skolem fragments.
+
+Continuous time is subtler. Commensurate reversible CTMC spectra reduce to polynomial root/sign problems.
+
+### CW-002L
+Arbitrary bistochastic step \(P\) admits a symmetric reversible two-microstep lift:
+
+\[
+A(P)=\begin{pmatrix}0&P\\P^\top&0\end{pmatrix},
+\qquad
+K=\begin{pmatrix}0&I\\I&0\end{pmatrix},
+\]
+
+with
+
+\[
+A(P)K=\operatorname{diag}(P,P^\top).
+\]
+
+After a positive shell, every microstep is positive symmetric doubly stochastic.
+
+This gives undecidability under a forced alternating reversible schedule.
+
+### CW-002M
+Binary phase-code reduction compresses any finite bistochastic alphabet to two positive bistochastic generators while preserving stationary cutpoint semantics.
+
+From Rote's fixed 6-generator 7-state bistochastic system:
+
+- two fixed positive doubly-stochastic 98x98 matrices suffice for variable-start undecidability;
+- combining with CW-002L gives three fixed positive reversible 196x196 kernels under periodic forcing.
+
+### CW-002N
+Hadamard tangent algebra embedding.
+
+Choose nonconstant Hadamard columns \(B\) with
+
+\[
+B^\top B=mI,\qquad B^\top\mathbf1=0.
+\]
+
+Define
+
+\[
+\Phi(A)=\frac1m BAB^\top.
+\]
+
+Then
+
+\[
+\Phi(A)\Phi(C)=\Phi(AC),
+\]
+
+\[
+\Phi(A)^\top=\Phi(A^\top).
+\]
+
+For symmetric source generators \(A_i\), choose small rational \(\varepsilon\):
+
+\[
+S_i=J+\varepsilon\Phi(A_i).
+\]
+
+Then every \(S_i\) is strictly positive symmetric doubly stochastic and
+
+\[
+S_w=J+\varepsilon^{|w|}\Phi(A_w).
+\]
+
+Scalar sign transfer:
+
+\[
+\mu S_wf-\frac12
+=
+C\varepsilon^{|w|}
+x^\top A_wy,
+\qquad C>0.
+\]
+
+Therefore clock removal reduces to:
+
+**SYM-SCALAR-SIGN**  
+Given rational symmetric \(A_1,\ldots,A_k,x,y\), decide whether some word satisfies
+
+\[
+x^\top A_wy>0.
+\]
+
+Also:
+- all nonzero-margin thresholds for free positive reversible switching have finite horizons;
+- three positive-definite reversible steps can regenerate complex spectral phase.
+
+### CW-002O — latest completed wave
+
+File:
+CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md
+
+Important collision:
+Kenison 2022 Proposition 16 directly proves equality reachability decidability for reversible Markov chains; CWR-BP-160 must be treated as direct classical prior art.
+
+New exact device:
+matched tangent observable
+
+\[
+\mu=u+\delta g^\top,
+\qquad
+f=b\mathbf1+\gamma g
+\]
+
+gives
+
+\[
+\mu S_wf-b
+=
+\delta\gamma g^\top S_wg.
+\]
+
+Results:
+
+1. One PSD reversible step cannot invert the matched sign:
+   \[
+   g^\top Sg\ge0.
+   \]
+
+2. If PSD reversible generators commute, every product stays PSD, so matched crossing below baseline is impossible for every word.
+
+3. Two noncommuting PSD reversible kernels already suffice for matched sign inversion.
+
+4. Two-step sign inversion is governed exactly by the Jordan product:
+   \[
+   g^\top S_1S_2g
+   =
+   g^\top\frac{S_1S_2+S_2S_1}{2}g.
+   \]
+
+5. This Jordan sign defect appears at product length 2, before complex spectral phase can appear in the positive-definite class (length 3).
+
+Current sharpened frontier:
+
+**PSD-SYM-SCALAR-SIGN**  
+Given rational symmetric PSD generators, decide whether some product has prescribed scalar sign.  
+Known:
+- matched \(x=y\) + commuting ⇒ nonnegative forever;
+- matched \(x=y\) + noncommuting ⇒ negative values possible in 2 steps;
+- full decidability/undecidability status remains under audit.
+
+## 4. Latest registry state
+
+Newest complete registry snapshot:
+
+**COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md**
+
+It contains entries through:
+
+**CWR-BP-212**
+
+The canonical registry has been synchronized to the same content:
+
+**COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md**
+
+Next ID:
+
+**CWR-BP-213**
+
+Latest entries:
+- 203 Kenison reversible-reachability collision correction
+- 204 Matched tangent observable
+- 205 Commuting PSD reversible no-crossing theorem
+- 206 Two-step PSD reversible sign inversion
+- 207 Minimal matched sign-inversion length two
+- 208 Jordan-product criterion
+- 209 Jordan sign defect precedes complex phase defect
+- 210 Wordwise Hermitian shadow verification
+- 211 PSD symmetric-semigroup scalar-sign frontier
+- 212 Composition-stable stochastic symmetries
+
+## 5. Immediate next research attack
+
+Start from CWR-BP-211 / 198.
+
+Search and derive around:
+
+- scalar sign reachability for products of rational symmetric matrices;
+- same problem under PSD generators;
+- matrix mortality / zero-in-corner / vector reachability / semigroup membership reductions preserving symmetry;
+- block symmetrization gadgets such as
+  \[
+  \begin{pmatrix}0&A\\A^\top&0\end{pmatrix}
+  \]
+  and whether invalid products can be neutralized without a clock;
+- Jordan algebra / Hermitian shadow methods;
+- products of PSD matrices and computational universality;
+- exact relation between scalar sign, numerical range, and semigroup reachability;
+- single-target versus generalized-output reversible PFA gap.
+
+Every apparent theorem must get a dedicated prior-art collision search.
+
+## 6. Important project constraints
+
+- Never say raw pre-account-switch transcript was recovered; it was not.
+- Never claim a book was read cover-to-cover.
+- Preserve provisional status until proof + prior-art audit.
+- Every independent byproduct remains archived.
+- DCSG may benefit from results, but CWR research is independently valuable.
+- Use exact theorem statements and explicit assumptions.
+- Counterexamples/failures are artifacts, not trash.
+- If shell commands are needed, prefer one PowerShell command at a time when talking to the user.
+
+## 7. Safety instruction for the human user
+
+Open the new conversation in the same project if possible.
+
+Attach:
+1. this handoff file;
+2. COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md.
+
+Then send:
+
+> Bu handoff dosyası önceki lab'ın authoritative continuation state'idir. Oku, registry'yi append-only koru, yeni ID CWR-BP-213'ten başla ve CW-002O sonrası symmetric/PSD matrix-semigroup scalar sign frontier'ından devam et. Önce collision audit, sonra theorem/counterexample üret.
+
+If the whole artifact set is needed, attach the ZIP safety bundle created alongside this file.

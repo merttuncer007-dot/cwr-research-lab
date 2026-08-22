@@ -1,0 +1,39 @@
+CWR CW-002D subrectangular-word contraction sanity check
+
+Observation stepping matrices M(a), M(b) sum to a row-stochastic transition P.
+M(a) is nonzero subrectangular with active columns {0,1}.
+
+M(a) =
+[[0.2  0.1  0.   0.  ]
+ [0.1  0.2  0.   0.  ]
+ [0.15 0.15 0.   0.  ]
+ [0.05 0.25 0.   0.  ]]
+
+M(b) =
+[[0.1  0.15 0.2  0.25]
+ [0.15 0.1  0.25 0.2 ]
+ [0.2  0.15 0.15 0.2 ]
+ [0.1  0.2  0.2  0.2 ]]
+
+active projective diameter Delta(a) = 2.302585092994
+Birkhoff coefficient tau(a) = tanh(Delta/4) = 0.519493853296
+
+Random histories use a with probability .35 and b with probability .65.
+For a history with q nonoverlapping a occurrences (here single-letter, so q=#a), tested:
+  pairwise Hilbert distance <= Delta(a) tau(a)^(q-1)
+  pairwise standard-TV <= tanh(Delta(a) tau(a)^(q-1)/4)
+
+n | histories tested | observed max Hilbert | observed max TV | max bound used
+ 1 | 1474 | 2.302585092994 | 0.500000000000 | 2.302585092994
+ 2 | 2336 | 0.675128675057 | 0.166666666667 | 2.302585092994
+ 3 | 2879 | 0.222527977272 | 0.055555555556 | 2.302585092994
+ 5 | 3579 | 0.024691776191 | 0.006172839506 | 2.302585092994
+ 8 | 3895 | 0.000914494763 | 0.000228623685 | 2.302585092994
+12 | 3984 | 0.000002173446 | 0.000000518421 | 2.302585092994
+20 | 3999 | 0.000000000015 | 0.000000000003 | 2.302585092994
+30 | 4000 | 0.000000000000 | 0.000000000000 | 1.196178802501
+
+max Hilbert-bound violation = 4.441e-16
+max TV-bound violation = -2.271e-06
+
+This is a sanity check of the projective product bound, not a proof.

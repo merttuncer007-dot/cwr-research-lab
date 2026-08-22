@@ -1,0 +1,30 @@
+CWR CW-002L reversible microstep lift sanity check
+
+Original kernels P1,P2 are rational doubly stochastic.
+Symmetric lift A(P)=[[0,P],[P^T,0]] and clock K=[[0,I],[I,0]].
+Positive shell S(A)=(1-alpha)J+alpha A with alpha=1/10.
+
+All S1,S2,SK symmetric? True
+All entries strictly positive? True
+Product S1*SK symmetric? False
+Commutator S1*SK-SK*S1 is zero? False
+
+Encoded identity tested for every original binary word of length 1..4:
+  hatpi [S(P_i1) SK ... S(P_ik) SK] e_j - 1/(2n)
+    = alpha^(2k)/2 * (pi P_w e_j - 1/n).
+maximum exact symbolic residual = 0
+
+sample rows: word | original deviation | unshelled lifted deviation | shelled deviation | predicted shelled
+(0,) | 7/120 | 7/240 | 7/24000 | 7/24000
+(1,) | 1/15 | 1/30 | 1/3000 | 1/3000
+(0, 0) | 1/144 | 1/288 | 1/2880000 | 1/2880000
+(0, 1) | 7/480 | 7/960 | 7/9600000 | 7/9600000
+(1, 0) | 3/160 | 3/320 | 3/3200000 | 3/3200000
+(1, 1) | 1/60 | 1/120 | 1/1200000 | 1/1200000
+(0, 0, 0) | -1/720 | -1/1440 | -1/1440000000 | -1/1440000000
+(0, 0, 1) | 1/576 | 1/1152 | 1/1152000000 | 1/1152000000
+(0, 1, 0) | 1/180 | 1/360 | 1/360000000 | 1/360000000
+(0, 1, 1) | 7/1920 | 7/3840 | 7/3840000000 | 7/3840000000
+
+Thus each microstep kernel is positive symmetric doubly stochastic (reversible),
+while the two-step macro action exactly preserves the original stationary-threshold sign.

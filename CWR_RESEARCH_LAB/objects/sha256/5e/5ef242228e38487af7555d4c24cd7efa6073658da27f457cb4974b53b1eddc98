@@ -1,0 +1,626 @@
+# COLD WAR RENAISSANCE — CW-002J
+## Kannan–Lipton × Skolem–Mahler–Lech × Ouaknine–Worrell × Vahanwala
+### A dimension-tight stationary-cutpoint dictionary for positive doubly-stochastic Markov chains
+Date: 2026-08-22
+Status: EXACT SYNTHESIS / MAJOR COLLISION CORRECTION; CORE REDUCTION PUBLISHED BY VAHANWALA
+
+## 1. Collision correction
+
+CW-002I abstracted a "contractive-shell" mechanism:
+
+\[
+D_a=(1-\alpha)J+\alpha C_a
+\]
+
+and observed that exponentially contracting stochastic dynamics can preserve the sign of a hidden tangent-space computation.
+
+A dedicated literature search found a much closer prior result than the previous notes acknowledged.
+
+Mihir Vahanwala's 2024 paper "Skolem and positivity completeness of ergodic Markov chains" gives an explicit reduction from an order-\(k\) linear recurrence sequence to a \((k+1)\)-state **strictly positive ergodic Markov chain**. His construction is
+
+\[
+M=S+D,
+\]
+
+with
+
+\[
+S=s\mathbf1^\top,
+\qquad
+SD=DS=0,
+\]
+
+and
+
+\[
+M^n=S+D^n.
+\]
+
+He chooses the stationary distribution \(s\) to be uniform.
+
+The disturbance entry satisfies
+
+\[
+d_{ij}^{(n)}
+=
+\eta\,u_n/\rho^n
+\]
+
+for positive rational constants \(\eta,\rho\).
+
+Therefore the core "stationary background + shrinking signed disturbance" mechanism is published prior art.
+
+CWR-BP-139 must be downgraded from a possible new mechanism to a classical-collision/reformulation.
+
+What remains useful is to expose the exact **doubly-stochastic and tangent-dimension consequences** of that construction and combine them with classical LRS decidability frontiers.
+
+---
+
+# 2. Vahanwala's uniform construction is actually doubly stochastic
+
+Vahanwala uses the column-stochastic convention.
+
+Let the number of Markov states be
+
+\[
+n=k+1.
+\]
+
+Choose
+
+\[
+s=\frac1n\mathbf1,
+\]
+
+so
+
+\[
+S=s\mathbf1^\top
+=
+J
+=
+\frac1n\mathbf1\mathbf1^\top.
+\]
+
+His construction imposes
+
+\[
+SD=0,
+\qquad
+DS=0.
+\]
+
+Since
+
+\[
+SD
+=
+\frac1n\mathbf1(\mathbf1^\top D),
+\]
+
+we obtain
+
+\[
+\mathbf1^\top D=0.
+\]
+
+Since
+
+\[
+DS
+=
+\frac1n(D\mathbf1)\mathbf1^\top,
+\]
+
+we obtain
+
+\[
+D\mathbf1=0.
+\]
+
+Thus \(D\) has both zero column sums and zero row sums.
+
+Therefore
+
+\[
+M=J+D
+\]
+
+has both row sums and column sums equal to \(1\).
+
+All entries are chosen strictly positive in the reduction.
+
+### Theorem CW-002J.1 — Doubly-stochastic strengthening of the Vahanwala reduction
+
+The published reduction may be instantiated so that the resulting \((k+1)\)-state Markov chain is
+
+\[
+\boxed{
+\text{strictly positive and doubly stochastic}.
+}
+\]
+
+Its stationary distribution is exactly uniform.
+
+This conclusion follows directly from the equations in the published construction; the paper states ergodicity rather than emphasizing bistochasticity.
+
+---
+
+# 3. Stationary-coordinate deviations live in an \((n-1)\)-dimensional tangent space
+
+Let \(M\) be any \(n\times n\) doubly stochastic matrix.
+
+Set
+
+\[
+J=\frac1n\mathbf1\mathbf1^\top,
+\qquad
+D=M-J.
+\]
+
+Then
+
+\[
+D\mathbf1=0,
+\qquad
+\mathbf1^\top D=0.
+\]
+
+Therefore the zero-sum subspace
+
+\[
+\boxed{
+H
+=
+\{x\in\mathbb Q^n:\mathbf1^\top x=0\}
+}
+\]
+
+is \(D\)-invariant and has dimension
+
+\[
+\dim H=n-1.
+\]
+
+Also
+
+\[
+JD=DJ=0,
+\]
+
+so for every \(t\ge1\),
+
+\[
+\boxed{
+M^t=J+D^t.
+}
+\]
+
+For coordinates \(i,j\),
+
+\[
+(M^t)_{ij}-\frac1n
+=
+e_i^\top D^t e_j.
+\]
+
+Since \(De_j\in H\), for \(t\ge1\) the nonstationary sequence is generated entirely by the restriction
+
+\[
+D_H:=D|_H,
+\]
+
+an \((n-1)\)-dimensional rational linear operator.
+
+By Cayley–Hamilton:
+
+### Theorem CW-002J.2 — Tangent-order bound
+
+For every \(n\)-state rational doubly stochastic Markov chain and every pair \(i,j\), the stationary-coordinate deviation sequence
+
+\[
+\boxed{
+a_t
+=
+(M^t)_{ij}-\frac1n,
+\qquad t\ge1,
+}
+\]
+
+is a rational linear recurrence sequence of order at most
+
+\[
+\boxed{n-1}.
+\]
+
+The stationary eigenvalue \(1\) has disappeared exactly; it does not consume an LRS dimension.
+
+---
+
+# 4. Dimension-tight reduction in the other direction
+
+Vahanwala starts from an arbitrary rational order-\(k\) LRS
+
+\[
+u_0,u_1,\ldots
+\]
+
+and constructs a positive \((k+1)\)-state chain satisfying
+
+\[
+(M^t)_{ij}
+=
+\frac1{k+1}
++
+\frac{\eta}{\rho^t}u_t
+\]
+
+for positive \(\eta,\rho\).
+
+Hence
+
+\[
+\operatorname{sgn}
+\left(
+(M^t)_{ij}-\frac1{k+1}
+\right)
+=
+\operatorname{sgn}(u_t).
+\]
+
+Combining with CW-002J.1:
+
+### Theorem CW-002J.3 — Stationary-cutpoint / LRS dictionary
+
+Up to complementing the inequality, the following \(n\)-state problem is polynomial-time interreducible, with the natural dimension shift, with Positivity for LRS of order at most \(n-1\):
+
+> Input: a rational strictly-positive doubly-stochastic \(n\times n\) matrix \(M\), states \(i,j\).  
+> Question:
+> \[
+> \exists t\ge1:
+> (M^t)_{ij}<\frac1n?
+> \]
+
+The upper direction is CW-002J.2 plus Cayley–Hamilton.
+
+The lower direction is Vahanwala's \(k\mapsto k+1\) reduction with the doubly-stochastic observation above.
+
+Thus the exact stationary threshold
+
+\[
+\boxed{\frac1n}
+\]
+
+is not an arbitrary numerical nuisance.
+
+It is the coordinate expression of the tangent-space LRS.
+
+---
+
+# 5. Full stationary-cutpoint dictionary
+
+The same construction yields three classical number-theoretic problems.
+
+Let
+
+\[
+a_t=(M^t)_{ij}-\frac1n.
+\]
+
+Then:
+
+## Exact equality
+
+\[
+\exists t:a_t=0
+\]
+
+is the Skolem problem for the tangent LRS.
+
+## One-time sign crossing
+
+\[
+\exists t:a_t<0
+\]
+
+is the complement of Positivity for \(-a_t\) (up to the strict/non-strict convention and finite zero handling).
+
+## Infinitely many sign crossings
+
+\[
+\exists^\infty t:a_t<0
+\]
+
+is the complement form associated with Ultimate Positivity.
+
+Hence one positive mixing Markov chain at its stationary coordinate threshold contains the classical trinity
+
+\[
+\boxed{
+\text{Skolem}
+\quad
+\text{Positivity}
+\quad
+\text{Ultimate Positivity}.
+}
+\]
+
+This dictionary is essentially the content of Vahanwala's reachability equivalences, sharpened here by the uniform/doubly-stochastic tangent interpretation.
+
+---
+
+# 6. Exact dimension frontier for stationary-cutpoint crossing
+
+Ouaknine and Worrell prove that Positivity is decidable for general LRS of order at most \(5\).
+
+By CW-002J.2:
+
+### Corollary CW-002J.4 — Six-state decidability
+
+For rational doubly stochastic Markov chains with
+
+\[
+\boxed{n\le6},
+\]
+
+stationary-coordinate threshold crossing is decidable.
+
+Strict positivity is not required for this upper direction.
+
+Now use Vahanwala's lower reduction.
+
+An algorithm solving the problem for all positive doubly-stochastic
+
+\[
+\boxed{n=7}
+\]
+
+chains would solve Positivity for arbitrary order-\(6\) LRS.
+
+Ouaknine–Worrell show that extending general Positivity decidability to order \(6\) would entail major breakthroughs in Diophantine approximation.
+
+Therefore:
+
+### Corollary CW-002J.5 — Seven-state Diophantine frontier
+
+\[
+\boxed{
+n=7
+}
+\]
+
+is already number-theoretically hard in precisely the sense inherited from order-\(6\) LRS Positivity.
+
+This is not an undecidability theorem.
+
+It is a transfer of a longstanding open arithmetic frontier into a single strictly-positive doubly-stochastic Markov chain.
+
+---
+
+# 7. Simple-spectrum island
+
+If the tangent operator \(D_H\) has no repeated characteristic roots, then the coordinate-deviation LRS is simple.
+
+Ouaknine–Worrell prove Positivity decidable for simple LRS up to order \(9\).
+
+Therefore:
+
+### Corollary CW-002J.6
+
+For a doubly stochastic \(n\)-state chain whose relevant tangent recurrence is simple,
+
+\[
+\boxed{
+n\le10
+}
+\]
+
+gives decidable stationary-coordinate Positivity/crossing.
+
+Moreover, Ultimate Positivity is decidable for simple LRS of arbitrary order.
+
+So eventual stationary-side behavior is much more tractable than all-time stationary-side behavior in the simple-spectrum regime.
+
+This is another exact asymmetry.
+
+---
+
+# 8. Kannan–Lipton target-geometry inversion
+
+Kannan and Lipton's classical Orbit Problem asks:
+
+\[
+\exists t:
+A^t x=y?
+\]
+
+for rational \(A,x,y\).
+
+They proved this point-target problem decidable in polynomial time.
+
+Now compare the same one-generator setting with an apparently simpler target:
+
+\[
+\boxed{
+c^\top A^t x<\lambda?
+}
+\]
+
+a halfspace.
+
+For a single positive doubly-stochastic Markov matrix at the stationary threshold, this halfspace question is Positivity-equivalent and unresolved in general.
+
+Thus:
+
+\[
+\boxed{
+\text{point target}
+\quad\text{can be algorithmically easier than}\quad
+\text{halfspace target}.
+}
+\]
+
+This is not a paradox.
+
+Point hitting asks an exact orbit-membership equation amenable to algebraic spectral methods.
+
+Halfspace hitting asks for the sign pattern of an exponential-polynomial sequence, where Diophantine approximation enters.
+
+The difficulty lies in asymptotic sign geometry, not target-set dimension alone.
+
+---
+
+# 9. Relation to the Polyhedron-Hitting landscape
+
+Chonev–Ouaknine–Worrell show that replacing the point target in the Orbit Problem by higher-dimensional polyhedral targets creates a detailed decidability landscape tied to Skolem-type and Diophantine problems.
+
+CW-002J supplies a particularly transparent stochastic slice:
+
+\[
+\boxed{
+\text{single positive mixing Markov orbit}
++
+\text{stationary halfspace boundary}
+}
+\]
+
+already realizes the LRS Positivity frontier.
+
+Thus mixing/spectral stability does not remove the arithmetic hardness of target crossing.
+
+---
+
+# 10. Robustness must be split into two contracts
+
+CW-002H proved a simple finite-horizon result when the threshold itself has margin
+
+\[
+|\lambda-\nu f|=\gamma>0.
+\]
+
+That is **threshold-margin robustness**.
+
+Akshay–Bazille–Genest–Vahanwala study a different notion:
+
+> perturb the initial configuration over a neighborhood and require Positivity/Skolem behavior uniformly.
+
+They show:
+
+- when the neighborhood is explicitly given as input, robust Skolem and robust Positivity remain Diophantine hard;
+- when the question is whether *some* suitable neighborhood exists, the problems become decidable in PSPACE.
+
+Therefore "robustness makes the problem easy" is false without specifying the robustness contract.
+
+There are at least three distinct layers:
+
+1. threshold separated from the stationary limit;
+2. fixed explicit uncertainty neighborhood of initialization;
+3. existential robustness: whether some neighborhood exists.
+
+They have different computability behavior.
+
+---
+
+# 11. A sharper historical interaction
+
+The stationary-cutpoint problem connects several generations:
+
+### Skolem 1935 / Mahler 1935 / Lech 1953
+
+Zeros of recurrence sequences and the Skolem–Mahler–Lech structure theorem.
+
+### Kannan–Lipton 1980/1986
+
+Point-orbit reachability becomes polynomial-time decidable.
+
+### Ouaknine–Worrell 2013/2014
+
+Positivity:
+- decidable through order \(5\);
+- order \(6\) already touches deep Diophantine approximation;
+- simple Positivity decidable through order \(9\);
+- simple Ultimate Positivity decidable in arbitrary order.
+
+### Vahanwala 2024
+
+The arithmetic frontier survives in ordinary ergodic Markov chains with only a \(+1\) state overhead.
+
+### CWR synthesis
+
+With Vahanwala's uniform stationary choice, the reduction is actually positive and doubly stochastic, and its entire hard component lives in the \((n-1)\)-dimensional zero-sum tangent space.
+
+Thus the common structural object is
+
+\[
+\boxed{
+\text{stationary mode}
+\oplus
+\text{tangent recurrence dynamics}.
+}
+\]
+
+---
+
+# 12. Numerical exact check
+
+A rational positive doubly-stochastic \(4\times4\) matrix was constructed.
+
+With
+
+\[
+D=M-J,
+\]
+
+the restriction of \(D\) to the \(3\)-dimensional zero-sum subspace was computed exactly.
+
+The sequence
+
+\[
+d_t=(M^t)_{11}-1/4
+\]
+
+satisfied the degree-\(3\) Cayley–Hamilton recurrence with exact zero residuals for all tested terms.
+
+This is only a sanity check; the theorem follows algebraically.
+
+---
+
+# 13. Collision status
+
+## Downgraded
+
+The general "contractive shell embeds signed LRS behavior into a positive ergodic Markov chain" mechanism is already explicitly present in Vahanwala's 2024 construction.
+
+## Exact CWR deductions still worth retaining
+
+1. the uniform choice makes the reduction doubly stochastic;
+2. the stationary mode can be removed exactly, giving an \(n-1\) tangent-order bound;
+3. this yields the clean \(n\le6\) decidable / \(n=7\) Diophantine-frontier statement;
+4. it produces a direct Kannan–Lipton point-target versus stationary-halfspace contrast;
+5. it makes the full Skolem/Positivity/Ultimate-Positivity dictionary geometric in the tangent simplex.
+
+A dedicated literature search for the exact phrase "positive doubly-stochastic stationary-cutpoint Positivity completeness with \(n-1\) tangent order" did not surface a prior statement.
+
+This is not a novelty claim.
+
+---
+
+# Verdict
+
+The signed-tangent branch did not produce a new hidden computational mechanism; Vahanwala already built it.
+
+It produced something more useful: an exact classification bridge.
+
+For an \(n\)-state doubly stochastic Markov chain,
+
+\[
+\boxed{
+(M^t)_{ij}-1/n
+}
+\]
+
+is an LRS of order at most \(n-1\).
+
+Conversely, every order-\(k\) LRS can be encoded in the stationary-coordinate deviation of a strictly-positive doubly-stochastic \((k+1)\)-state chain.
+
+Therefore the longstanding arithmetic frontier of recurrence positivity is exactly a frontier of transient sign geometry around a globally stable stochastic equilibrium.

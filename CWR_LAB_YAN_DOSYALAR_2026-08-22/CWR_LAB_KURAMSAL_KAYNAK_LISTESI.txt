@@ -1,0 +1,161 @@
+Evet. Aşağıdaki liste, bu laboratuvarda şimdiye kadar fiilen kullanılan kuramsal hatları, araştırma programlarını, bilim insanlarını ve kaynakları topluyor.
+
+Önemli not: Burada “okunan makale” derken her eserin baştan sona satır satır okunmuş olduğunu iddia etmiyorum. Bazılarında tam metin/PDF ve ilgili teorem bölümleri incelendi; bazılarında belirli bölüm, theorem statement, proof mechanism, abstract veya bibliyografik collision taraması kullanıldı. Özellikle bunu ayrı belirtiyorum.
+
+1. Araştırmada kullanılan ana teoriler ve matematiksel çerçeveler
+
+İstatistiksel deneyler ve karar teorisi: Blackwell information order / garbling order, k-decision comparison, Blackwell sufficient comparison, Le Cam deficiency ve deficiency distance, randomization criterion, generalized experiments, transitions, decision functions/risk sets, Wald sequential decision theory, minimax/Bayes decision theory, experiment equivalence, local asymptotic normality, Fisher–Rao information geometry, Čencov invariance.
+
+Order theory ve completion: Dedekind–MacNeille completion, ideal/downset completion, complete lattices, principal ideals, nonprincipal cuts, closure systems, Galois connections, formal concept lattices, common lower bounds / meets / joins, order vs metric completion.
+
+Functional analysis: Riesz/vector lattices, L-spaces ve M-spaces, order duals, positive operators, Hahn–Banach, Choquet/conical measures, Banach-space representations, Lipschitz-free / Arens–Eells spaces.
+
+Convexity ve information geometry: zonotopes, convex-order, majorization, Strassen dilation order, support functions, convex Chebyshev radii, polyhedral decision regions, Birkhoff polytope, doubly stochastic matrices.
+
+Markov chains ve contraction: Dobrushin contraction coefficient, ergodicity coefficients, Doeblin-type mixing, Perron–Frobenius theory, primitive matrices, Wielandt exponent, scrambling/SIA matrices, weak ergodicity.
+
+Nonlinear filtering / HMM: Stratonovich filtering viewpoint, nonlinear filter stability, hidden Markov models, Birkhoff/Hilbert projective metric, filter memory, smoother stability, subrectangular stepping matrices, rank-one closure, unique ergodicity.
+
+Projective geometry: Hilbert projective metric, Birkhoff contraction theorem, projective diameter, positive cones, positive matrix products.
+
+Random matrix products: Furstenberg–Kesten type products, Lyapunov exponents, occurrence of contracting words, block contraction, regeneration/renewal ideas.
+
+Probabilistic automata ve computability: Rabin probabilistic automata, cutpoint emptiness, value-1 problem, leaktight automata, Markov monoid, stabilization monoids, prostochastic/profinite completion, Post Correspondence Problem reductions.
+
+Synchronization: Černý/reset words, deterministic synchronization, stochastic synchronization, approximate pair synchronization, rank-one products, probabilistic/weighted automata.
+
+Linear recurrence sequences / number theory: Skolem Problem, Skolem–Mahler–Lech theory, Positivity Problem, Ultimate Positivity, real-root LRS, simple LRS, exponential-polynomial sign problems.
+
+Linear dynamical systems: Kannan–Lipton Orbit Problem, polyhedron/halfspace hitting, matrix-semigroup reachability, switched linear systems.
+
+Reversible stochastic dynamics: detailed balance, self-adjoint Markov operators, common stationary law, real-spectrum dynamics, symmetric stochastic matrices, positive-definite matrix products.
+
+Continuous-time dynamics: reversible CTMC generators, exponential polynomials, Continuous Skolem problem, commensurate decay spectra.
+
+Matrix factorization / symmetric dilation: symmetric doubly stochastic factorization, block dilation, positive mixing shells, Hadamard embeddings, zero-sum tangent-space embeddings.
+
+Control theory tarafı: Pontryagin maximum principle, Bellman dynamic programming, relaxed/switching control, Maslov/tropical Hamiltonian viewpoint.
+
+Differential geometry ve singular systems: Stefan–Sussmann orbit theorem, Hörmander bracket generation, null distributions, Fisher nullspaces, bracket-generated semantic collapse.
+
+Approximation / inverse problems: Kolmogorov widths, Morozov discrepancy principle, Tikhonov regularization, deficiency-calibrated inverse problems.
+
+Information theory: Gács–Körner common information, Blackwell deterministic common core, strong data-processing inequalities, conditional mutual information forgetting.
+
+Duality/category theory tarafı: Stone duality, Priestley duality, Gelfand–Naimark duality, affine duality, locale/frame duality, reflector/coreflector ideas.
+
+2. Laboratuvarda açılan başlıca araştırma programları
+
+Araştırmanın ana tarihsel hücreleri şu şekilde ilerledi:
+
+CW-001 — Blackwell × Le Cam × Riesz/order completion. Blackwell order’ın lattice olmamasından yola çıkıldı; decision-envelope completion, coherent decision systems ve sonunda canonical Dedekind–MacNeille completion ayrıştırıldı. Ana soru: MacNeille completion, Le Cam generalized experiments ve deficiency completion arasındaki ilişki.
+
+CW-002 — Dobrushin × Le Cam × Wald. Markov mixing’den başlangıç state’i hakkındaki tüm future observation tail’ın decision value’suna sharp bound çıkarıldı.
+
+CW-002B — Birkhoff × nonlinear filtering × Le Cam × Wald. Ex-ante Dobrushin bound pathwise/history-dependent hale getirildi.
+
+CW-002C — Perron–Frobenius/Wielandt × Birkhoff. One-step positivity kaldırılıp primitive positive blocks kullanıldı.
+
+CW-002D — Kaijser × subrectangular products × Le Cam. Observation words’ün repeated contraction etkisi future-tail deficiency’ye bağlandı.
+
+CW-002E/F — Rabin × Černý × probabilistic automata × Dobrushin. Weighted pair synchronization’ın general durumda undecidability’si ile strictly-positive/uniformly-scrambling decidability island’ı karşılaştırıldı.
+
+CW-002G — Leaktight automata × support/limit defects. Leak kavramının support Booleanization ile stochastic limit arasındaki noncommutation olduğunu ayırdık.
+
+CW-002H/I — Rote × mixing × zero-margin verification. Exponential mixing altında bile exact stationary threshold’da undecidability yaşayabildiği; nonzero margin’da finite horizon çıktığı görüldü.
+
+CW-002J — LRS × Markov chains. Stationary-coordinate deviations’ın LRS olduğu ve stochastic tangent dimension’ın n−1 olduğu ayrıştırıldı.
+
+CW-002K — reversibility. Reversible single-chain probleminde real spectrum nedeniyle discrete halfspace/hyperplane verification’ın arbitrary dimension’da decidable olduğu çıkarıldı.
+
+CW-002L/M — reversible switching ve alphabet compression. Reversible microsteps ile nonreversible macro-computation, ardından binary positive bistochastic phase coding geliştirildi.
+
+CW-002N — Hadamard tangent stochasticization. Rational symmetric matrix semigroups’un strictly-positive symmetric doubly stochastic Markov dynamics’e exact multiplicative embedding’i kuruldu. Current frontier artık symmetric matrix-semigroup scalar-sign reachability.
+
+Bunların yanında daha erken hücreler de açık: Kolmogorov widths × Lipschitz-free spaces; Kantorovich × Krein–Rutman × Choquet; Morozov × Tikhonov × Le Cam; Čencov/Rao × LAN; Gács–Körner × Blackwell; Strassen × majorization; Pontryagin × Bellman × Maslov; Watanabe × Stefan–Sussmann × Hörmander.
+
+3. Araştırmada kullanılan başlıca bilim insanları
+
+Karar teorisi ve istatistiksel deneyler tarafında: David Blackwell, Lucien Le Cam, Abraham Wald, Erik Torgersen, Charles Stein, Nils Bertschinger, Johannes Rauh.
+
+Markov/contraction/filtering tarafında: R. L. Dobrushin, Garrett Birkhoff, Rami Atar, Ofer Zeitouni, Curtis McDonald, Serdar Yüksel, Thomas Kaijser, Fred Kochman, Jim Reeds, Pavel Chigansky, Ramon van Handel, Boaz Shuval, Ido Tal.
+
+Matrix theory tarafında: Oskar Perron, Georg Frobenius, Helmut Wielandt, Eugene Seneta, Harry Furstenberg, Harry Kesten, Peter M. Gibson.
+
+Probabilistic automata/computability tarafında: Michael Rabin, Imre Simon, Hugo Gimbert, Youssouf Oualhadj, Nathanaël Fijalkow, Günter Rote, Paul C. Bell, Černý.
+
+Linear dynamics/LRS tarafında: Thoralf Skolem, Kurt Mahler, Christer Lech, Ravindran Kannan, Richard Lipton, Joël Ouaknine, James Worrell, Mihir Vahanwala, Gemma De les Coves, Joshua Graf, Andreas Klingler, Tim Netzer, S. Akshay, Nikhil Balaji, Nikhil Murhekar, Rohit Varma, S. Vyas.
+
+Information geometry/decision geometry tarafında: C. R. Rao, Nikolai Čencov, Maurice Fréchet/Arens–Eells hattı, Andrey Kolmogorov, Gács, Körner.
+
+Convexity/optimization tarafında: Leonid Kantorovich, Mark Krein, M. Rutman, Gustave Choquet, Volker Strassen, Lev Pontryagin, Richard Bellman, Victor Maslov, Andrey Tikhonov, Vladimir Morozov.
+
+Differential-geometric/singular tarafında: Stefan, Héctor Sussmann, Lars Hörmander, Sumio Watanabe.
+
+Duality tarafında: Marshall Stone, Hilary Priestley, Israel Gelfand, Mark Naimark, de Vries.
+
+4. Doğrudan incelenen / araştırmada merkezi kullanılan kaynaklar
+
+Bunlar araştırma kararlarımızı doğrudan değiştiren veya theorem/collision audit’te merkezi kullandığımız kaynaklardır.
+
+Lucien Le Cam — “Sufficiency and Approximate Sufficiency” (1964), Annals of Mathematical Statistics 35(4), 1419–1455. General transitions, Riesz-space/statistical-experiment hattının temel kaynaklarından biri.
+Erik Torgersen — Comparison of Statistical Experiments (1991). Özellikle generalized decision rules/transitions, vector lattices, generalized experiments, deficiencies, representations/functionals, conical measures, majorization/dilations bölümleri incelendi. Bu kitap CW-001’in ana tarihsel kaynaklarından biri.
+Nils Bertschinger & Johannes Rauh — “The Blackwell relation defines no lattice” (2014). Blackwell order’ın genel durumda lattice olmadığını ve explicit counterexample’ları veriyor.
+Rami Atar & Ofer Zeitouni — “Exponential stability for nonlinear filtering” (1997). Filter memory length’i Birkhoff contraction coefficient ile bağlıyor; CW-002B’nin historical engine’i.
+Rami Atar & Ofer Zeitouni — “Lyapunov Exponents for Finite State Nonlinear Filtering” (1997). Filter sensitivity ve Lyapunov-exponent hattı.
+Curtis McDonald & Serdar Yüksel — “Exponential Filter Stability via Dobrushin's Coefficient” (2019). Transition ve observation kernels’in Dobrushin coefficients’ını ortak contraction condition’da kullanıyor; controlled extensions de içeriyor.
+Thomas Kaijser — “On Markov chains induced by partitioned transition probability matrices.” Subrectangular stepping-matrix/filtering hattının ana kaynaklarından.
+Fred Kochman & Jim Reeds — “A simple proof of Kaijser’s unique ergodicity result for hidden Markov α-chains” (2006). Kaijser condition’ının daha sade/kuvvetli treatment’ı.
+Pavel Chigansky & Ramon van Handel — “A complete solution to Blackwell's unique ergodicity problem for hidden Markov chains” (2010). Blackwell’ın 1957 problemine necessary-and-sufficient çözüm; Kaijser/Kochman–Reeds sonuçlarını subsume ediyor.
+Boaz Shuval & Ido Tal — “Universal Polarization for Processes with Memory”; ilk arXiv 2018, konferans 2019, genişletilmiş journal version 2025. HMM forgetfulness ve contracting subrectangular-product machinery için kullanıldı.
+Nathanaël Fijalkow, Hugo Gimbert, Youssouf Oualhadj — “Deciding the Value 1 Problem of Probabilistic Leaktight Automata.” Leaktight class, Markov monoid, value-1 decidability ve PSPACE hattının ana kaynağı.
+Günter Rote — “Probabilistic Finite Automaton Emptiness Is Undecidable for a Fixed Automaton” (MFCS 2025). Fixed automaton, variable starting distribution, positive/doubly-stochastic variants ve PCP reductions; CW-002H–M’nin merkezi contemporary collision’ı.
+Mihir Vahanwala — “Skolem and Positivity Completeness of Ergodic Markov Chains.” LRS → ergodic Markov chain reduction, k↦k+1 state overhead ve stationary-threshold interpretation.
+Gemma De les Coves, Joshua Graf, Andreas Klingler, Tim Netzer — “Positive Moments Forever: Undecidable and Decidable Cases.” Real-eigenvalue matrices ve real-root LRS positivity decidability; reversibility frontier’ını önemli biçimde düzeltti.
+P. M. Gibson — “Products of symmetric doubly stochastic matrices over a field” (1976). Symmetric bistochastic factorization collision’ı.
+Paul C. Bell — “Polynomially Ambiguous Probabilistic Automata on Restricted Languages” (2019). Commutative PFA matrices altında bile cutpoint undecidability’nin yaşayabildiğini gösteren collision.
+Helmut Wielandt — “Unzerlegbare, nicht negative Matrizen” (1950). Primitive-matrix exponent ve (n−1)
+2
++1 hattının tarihsel kaynağı; CW-002C’de structural memory-delay interpretation’a girdi.
+G. Birkhoff — “Extensions of Jentzsch’s Theorem” (1957). Positive operators ve projective contraction temel kaynağı; Atar–Zeitouni bibliography’sinde de doğrudan yer alıyor.
+5. Ayrıca theorem/collision düzeyinde kullanılan temel klasik kaynaklar
+
+Bunların bazıları doğrudan tam PDF okumasından çok theorem-level historical grounding için kullanıldı:
+
+David Blackwell: comparison of experiments, sufficient informativeness, k-decision comparison.
+
+Abraham Wald: sequential analysis ve statistical decision functions.
+
+Rabin 1963: probabilistic automata, cut points, “actual automata” yani strictly-positive automata.
+
+Skolem / Mahler / Lech: zero sets of recurrence sequences ve Skolem–Mahler–Lech theorem.
+
+Kannan–Lipton: Orbit Problem; point-orbit reachability’nin polynomial-time decidability’si.
+
+Ouaknine–Worrell: Positivity/Ultimate Positivity low-order ve simple-LRS decidability frontiers.
+
+Furstenberg–Kesten: random matrix products.
+
+Seneta: nonnegative matrices, stochastic matrices ve coefficients of ergodicity.
+
+Černý: deterministic synchronizing automata ve reset-word threshold programı.
+
+Strassen: majorization/dilation/convex-order.
+
+Čencov/Rao: invariant statistical geometry/Fisher metric.
+
+Stefan–Sussmann/Hörmander: orbit distributions ve bracket generation.
+
+Stone/Priestley/Gelfand: quotient/subobject duality hattı.
+
+6. İncelendi ama tam metnine erişim sınırlı veya collision durumu açık olan kaynaklar
+
+Justin Farmer — “Geometric Characterization of the Blackwell Order” (2026, SSRN). Abstract ve metadata görüldü; PDF erişimi engellendiği için construction/theorems hakkında tam iddia yapılmadı.
+
+Blackwell’ın bazı orijinal comparison papers’ı. Historical theorem/use var, fakat bu wave’lerde her makale tam metin theorem-by-theorem okunmuş sayılmamalı.
+
+Le Cam 1986, Asymptotic Methods in Statistical Decision Theory. Historical/definition lookup hattında referans verildi; bütün kitap okunmadı.
+
+Heyer, Strasser, Bomze gibi statistical experiments/function-analytic sources araştırma kuyruğuna ve collision search’e dahil edildi; her birinin tam systematic reading’i henüz yapılmış değil.
+
+Bu liste, şu anki araştırmanın gerçek bibliyografik omurgasıdır. Özellikle “kullandık” ile “tam okuduk” ayrımını korudum; çünkü laboratuvarın güvenilirliği açısından bibliyografik geçmişi olduğundan daha fazla göstermemek gerekiyor.

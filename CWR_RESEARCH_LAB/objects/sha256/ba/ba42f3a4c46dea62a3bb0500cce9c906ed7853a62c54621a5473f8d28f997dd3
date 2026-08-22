@@ -1,0 +1,254 @@
+# COLD WAR RENAISSANCE LAB — v0.1
+## Cross-school exact synthesis program
+Date: 2026-08-22
+
+## Mission
+
+Reconstruct the strongest 20th-century mathematical/statistical research programs at the level of their original problems, definitions, proofs, limitations, and negative results; then deliberately place previously separated schools into a common laboratory.
+
+The target is not novelty-by-analogy. The target is:
+
+1. an exact theorem,
+2. a sharp impossibility result,
+3. a canonical object,
+4. a solved historical boundary/problem,
+5. or a mathematically useful new synthesis.
+
+Contribution to DCSG is optional. DCSG is one source of objects, counterexamples, and constraints, not the destination of every investigation.
+
+## Epistemic rule
+
+Do not assume that later consensus is wrong, or that older work is automatically superior.
+
+Instead exploit a concrete historical search advantage:
+
+- older schools often developed one mathematical viewpoint very deeply;
+- later fields may have developed machinery that the earlier author did not possess;
+- independent schools may solve complementary halves of the same structural problem.
+
+The lab searches for those missing cross-links.
+
+## Research unit: an Interaction Cell
+
+Every cell contains:
+
+A. ORIGINAL PROBLEM
+- exact primary-source statement;
+- assumptions;
+- what was proved;
+- what remained open or structurally incomplete.
+
+B. FOREIGN TOOL
+- theorem/machinery developed by another school;
+- exact hypotheses;
+- whether it post-dates the original problem.
+
+C. INTERACTION HYPOTHESIS
+- what happens if the foreign tool is inserted into the original problem?
+
+D. DESTRUCTIVE TEST
+- counterexample search;
+- boundary cases;
+- computational finite exhaustive checks where appropriate;
+- modern literature collision search.
+
+E. OUTPUT STATUS
+- CLASSICAL REDISCOVERY
+- KNOWN CROSS-SYNTHESIS
+- NEW DERIVED CANDIDATE
+- EXACT THEOREM
+- SHARP IMPOSSIBILITY
+- FALSIFIED
+- OPEN
+
+No result is called novel before a dedicated collision search.
+
+---
+
+# Cell CW-001
+## Blackwell × Le Cam × Riesz/vector-lattice completion
+### Problem: exact common information when the Blackwell meet does not exist
+
+### Historical inputs
+
+Blackwell's experiment order compares experiments by performance in all decision problems.
+
+For an experiment E, let
+
+    U_E(D)
+
+be its optimal value in normalized decision problem D, with larger values better.
+
+Then, modulo Blackwell equivalence,
+
+    E >=_B F
+
+iff
+
+    U_E(D) >= U_F(D)
+
+for every D.
+
+The class of actual experiments is not generally a lattice when the parameter set has more than two states.
+
+Le Cam later replaces exact domination by a deficiency that quantifies the maximum decision loss incurred when one experiment is simulated from another.
+
+Torgersen's synthesis places generalized experiments, vector lattices/Riesz spaces, and deficiency in one framework.
+
+### Exact ambient completion
+
+Let
+
+    Phi(E) = U_E
+
+be the complete decision-performance profile of experiment E.
+
+These profiles live inside the complete product lattice
+
+    R^D
+
+under pointwise order.
+
+Therefore for any family E_1,...,E_P the pointwise lower envelope
+
+    U_cap(D) = inf_p U_{E_p}(D)
+
+always exists.
+
+It is the greatest lower bound of the channel profiles in the ambient decision-function lattice.
+
+Thus:
+
+    actual Blackwell meet may fail to exist,
+    but the exact decision-envelope meet always exists.
+
+The non-lattice phenomenon is therefore a REPRESENTABILITY FAILURE:
+the ambient lower envelope need not be the profile of any genuine statistical experiment.
+
+### First theorem candidate
+
+THEOREM CANDIDATE CW-001-A — Decision-envelope completion.
+
+After quotienting experiments by Blackwell equivalence, the map
+
+    E -> U_E
+
+is an order embedding into a complete lattice of normalized decision-value functionals.
+
+For every family {E_p},
+
+    U_cap = inf_p U_{E_p}
+
+is the canonical exact common lower information envelope.
+
+A genuine Blackwell meet exists iff U_cap lies in the image of the experiment embedding.
+
+Generic order-theoretic content is classical; the research question is the exact characterization of the image and its closure.
+
+### New quantitative object
+
+Define the representability defect
+
+    eta_cap
+      =
+    inf_G ||U_G - U_cap||_infinity
+
+over genuine experiments G and a fixed normalized universal class of decision problems.
+
+Interpretation:
+
+- eta_cap = 0:
+  the envelope is exactly realizable or lies in the metric closure of realizable experiments;
+- eta_cap > 0:
+  there is a strict quantitative obstruction to representing the common decision envelope by one experiment.
+
+### Le Cam interaction target
+
+Le Cam deficiency has equivalent interpretations through randomization and uniform downstream risk loss.
+
+The next exact question is:
+
+    Is eta_cap equal to, bounded by, or representable as
+    a minimax Le Cam-deficiency projection of the ambient envelope
+    back onto the experiment class?
+
+If an equality can be proved, Blackwell's missing meet acquires an exact approximate replacement:
+
+    exact ambient meet
+      +
+    exact deficiency projection defect.
+
+This is not yet a theorem.
+
+### Destructive tests required
+
+1. Recover an explicit >2-state Blackwell non-lattice example.
+2. Compute its decision envelopes on a finite universal decision basis.
+3. Prove that the pointwise lower envelope is not experiment-representable.
+4. Compute the nearest genuine experiment under finite deficiency.
+5. Test whether deficiency equals the uniform decision-envelope projection error.
+6. Search Torgersen/Strassen/Le Cam/generalized-experiment literature for an existing completion theorem.
+
+Status: NEW DERIVED CANDIDATE / COLLISION AUDIT OPEN.
+
+---
+
+# Initial Interaction Queue
+
+CW-002
+Dobrushin × Wald × Stratonovich × sequential confidence
+Target:
+an exact residual-information tail certificate from contraction, potentially turning a local gain observation into a deterministic stopping bound.
+
+CW-003
+Kolmogorov widths × Lipschitz-free spaces × spectral non-canonicity
+Target:
+a canonical approximation spectrum of common semantics that survives the failure of arbitrary spectral kernels.
+
+CW-004
+Kantorovich × Krein–Rutman × Choquet × semantic tomography
+Target:
+continuum/extreme-ray reconstruction of channel-use geometry beyond finite polyhedral normal fans.
+
+CW-005
+Morozov discrepancy × Tikhonov regularization × Le Cam deficiency
+Target:
+derive a non-arbitrary regularization scale from experiment simulability/uncertainty rather than choosing lambda exogenously.
+
+CW-006
+Čencov/Rao × Le Cam × LAN
+Target:
+identify the exact local-to-global bridge between invariant Fisher geometry and decision deficiency, and determine the hypotheses under which one is the infinitesimal limit of the other.
+
+CW-007
+Gács–Körner × Blackwell deterministic core × quotient dualities
+Target:
+a categorical classification of deterministic common information across more than two heterogeneous experiments.
+
+CW-008
+Strassen dilation/majorization × Blackwell × convex-order completion
+Target:
+characterize which ambient decision envelopes are realizable statistical experiments.
+
+CW-009
+Pontryagin × Bellman × Maslov × routed transport
+Target:
+exact phase/switching laws for heterogeneous transport systems with channel-specific costs and admissibility.
+
+CW-010
+Watanabe singular statistics × Stefan–Sussmann × Hörmander
+Target:
+separate exact observational collapse, singular quotient geometry, and stochastic regularization in models where Fisher rank changes.
+
+---
+
+# Search priority rule
+
+Rank a cell highly when all four hold:
+
+1. the historical problem has a real structural obstruction, not merely missing computation;
+2. another school contains machinery aimed at precisely that obstruction;
+3. the interaction produces a falsifiable exact statement;
+4. the result would remain mathematically useful even if DCSG did not exist.
+
+That is the operating definition of the Cold War Renaissance program.

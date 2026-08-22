@@ -1,0 +1,41 @@
+{
+  "label": "bootstrap-v1",
+  "created_at": "2026-08-23T00:18:31+03:00",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1643,
+      "sha256": "becb2d32236a57c8bd7f6e5cca5011efacb88b7e1544a0b23d8c953163334d64"
+    },
+    {
+      "path": "LAB_KERNEL.md",
+      "bytes": 3073,
+      "sha256": "31cf0f45d4dab0624b839ad74c1e7e33bcd0e7afc870a5921d4b7f46e36e3081"
+    },
+    {
+      "path": "LAB_STATE.md",
+      "bytes": 1729,
+      "sha256": "ed1de21352083527b3b323d15cbedfc41fe96a91dfe56b7b28b15132ea154a65"
+    },
+    {
+      "path": "LAB_WAVE_PROTOCOL.md",
+      "bytes": 1062,
+      "sha256": "eb72c2c7ebde3a92089ea150bed8ac9c831264e660010e9fb1aea225a4b21d41"
+    },
+    {
+      "path": "LAB_RETRIEVAL_POLICY.md",
+      "bytes": 1263,
+      "sha256": "811c5f53d0bb74ced10815c6bd08e810797abcb5f145aa05cbe15003855473c0"
+    },
+    {
+      "path": "schema\\lab.sql",
+      "bytes": 5999,
+      "sha256": "cea926b76ba58eceba17ae69821c7cfdda78f4f0eb773a9a6a1a8407a906e735"
+    },
+    {
+      "path": "checkpoints\\20260823T001831_bootstrap-v1\\lab.sqlite3",
+      "bytes": 9949184,
+      "sha256": "eb9afdd48758beefd0a0d1f00059eab12d046fcd52912a0c0550d98ee3fc52ce"
+    }
+  ]
+}

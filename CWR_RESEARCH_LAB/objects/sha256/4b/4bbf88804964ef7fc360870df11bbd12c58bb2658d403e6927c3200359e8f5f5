@@ -1,0 +1,424 @@
+# COLD WAR RENAISSANCE — CW-002F
+## Rabin "actual automata" × Dobrushin × weighted synchronization
+### Strict positivity is a decidability island
+Date: 2026-08-22
+Status: EXACT POSITIVE RESULT; CLASSICAL CONTRACTION ENGINE
+
+## 1. Context
+
+CW-002E proves that unrestricted rational weighted pair synchronization is undecidable.
+
+This immediately raises the structural question:
+
+> Which old regularity assumptions destroy the undecidability mechanism?
+
+Rabin's 1963 paper already isolated a special class of probabilistic automata in which all transition probabilities are strictly positive. He called these "actual automata" and proved strong stability/definiteness properties.
+
+For synchronization, strict positivity gives an even simpler exact boundary.
+
+---
+
+# 2. Uniform positivity
+
+Let
+
+\[
+\Sigma=\{P_a:a\in A\}
+\]
+
+be a finite family of \(n\times n\) row-stochastic matrices.
+
+Assume
+
+\[
+\boxed{
+P_a(i,j)>0
+\quad
+\forall a,i,j.
+}
+\]
+
+Because the family is finite,
+
+\[
+\eta
+=
+\min_{a,i,j}
+P_a(i,j)
+>0.
+\]
+
+For a stochastic matrix \(P\), Dobrushin's coefficient is
+
+\[
+\delta(P)
+=
+\frac12
+\max_{i,k}
+\sum_j|P_{ij}-P_{kj}|.
+\]
+
+Equivalent formula:
+
+\[
+\delta(P)
+=
+1-
+\min_{i,k}
+\sum_j
+\min(P_{ij},P_{kj}).
+\]
+
+Since every entry is at least \(\eta\),
+
+\[
+\sum_j\min(P_{ij},P_{kj})
+\ge
+n\eta.
+\]
+
+Therefore every generator satisfies
+
+\[
+\boxed{
+\delta(P_a)
+\le
+1-n\eta
+=:
+\rho
+<1.
+}
+\]
+
+---
+
+# 3. Universal pair synchronization
+
+For arbitrary probability distributions \(p,q\),
+
+\[
+TV(pP,qP)
+\le
+\delta(P)TV(p,q).
+\]
+
+For a word
+
+\[
+w=a_1\cdots a_k,
+\]
+
+submultiplicativity gives
+
+\[
+TV(pP_w,qP_w)
+\le
+\prod_{t=1}^{k}
+\delta(P_{a_t})
+TV(p,q)
+\le
+\rho^kTV(p,q).
+\]
+
+Hence:
+
+### Theorem CW-002F.1 — Strict positivity forces uniform synchronization
+
+For every pair \(p,q\),
+
+\[
+\boxed{
+\inf_w
+TV(pP_w,qP_w)
+=
+0.
+}
+\]
+
+Indeed every sufficiently long word works; the controller does not need to optimize the letters.
+
+More strongly, every infinite switching sequence forgets its initial distribution exponentially fast.
+
+---
+
+# 4. Explicit finite reset bound
+
+For
+
+\[
+0<\varepsilon<TV(p,q),
+\]
+
+any word of length
+
+\[
+\boxed{
+k
+\ge
+\frac{
+\log(\varepsilon/TV(p,q))
+}{
+\log\rho
+}
+}
+\]
+
+satisfies
+
+\[
+TV(pP_w,qP_w)\le\varepsilon.
+\]
+
+Thus the universal sufficient integer horizon is
+
+\[
+\boxed{
+L_\varepsilon
+\le
+\left\lceil
+\frac{
+\log(\varepsilon/TV(p,q))
+}{
+\log(1-n\eta)
+}
+\right\rceil.
+}
+\]
+
+If \(p=q\), the threshold is zero.
+
+This is the exact opposite of CW-002E's anti-Černý result.
+
+Under unrestricted rational stochastic generators there is no recursive witness-length bound.
+
+Under strict positivity there is an explicit logarithmic bound and every word of that length succeeds.
+
+---
+
+# 5. Positivity is stronger than necessary
+
+The proof uses only a uniform Dobrushin contraction bound.
+
+Therefore strict positivity can be replaced by
+
+\[
+\boxed{
+\bar\delta
+:=
+\max_a\delta(P_a)
+<1.
+}
+\]
+
+Then
+
+\[
+TV(pP_w,qP_w)
+\le
+\bar\delta^{|w|}
+TV(p,q).
+\]
+
+So the true structural sufficient condition is:
+
+\[
+\boxed{
+\text{every generator is uniformly scrambling.}
+}
+\]
+
+Strict positivity is a simple Rabin-style sufficient condition.
+
+This produces a hierarchy:
+
+\[
+\text{strictly positive}
+\subset
+\text{uniformly scrambling}
+\subset
+\text{general stochastic}.
+\]
+
+The first two admit immediate pair-synchronization bounds.
+
+The general class is undecidable.
+
+---
+
+# 6. PFA value-1 collapses under uniform positivity
+
+Consider a probabilistic automaton whose transition matrices all have entries at least \(\eta>0\).
+
+If the accepting set \(F\) is a proper subset of the state set and at least one letter is read, then every output state has probability at least \(\eta\).
+
+Hence for every nonempty word,
+
+\[
+\operatorname{Acc}(w)
+\le
+1-\eta |F^c|
+<1.
+\]
+
+Therefore the value cannot approach one unless the acceptance convention has a trivial all-accepting escape or empty-word special case.
+
+This explains structurally why the value-1 reduction in CW-002E necessarily relies on zeros/support restrictions.
+
+The undecidability mechanism needs probability mass to become arbitrarily concentrated through forbidden transitions or increasingly selective paths.
+
+Uniform positivity destroys that mechanism by maintaining a fixed rejection floor.
+
+This is closely aligned with Rabin's 1963 observation that strictly positive "actual automata" have much stronger stability properties than general probabilistic automata.
+
+---
+
+# 7. Algorithmic phase diagram
+
+We can now state a sharper boundary.
+
+## Deterministic exact synchronization
+
+Finite-state/combinatorial; existence decidable. Reset-threshold optimization is hard, with the Černý conjecture governing worst-case length.
+
+## General stochastic global synchronization
+
+\[
+v_{\rm glob}=0
+\]
+
+is decidable through scrambling/support semigroups.
+
+## Uniformly scrambling stochastic pair synchronization
+
+Always converges exponentially; explicit finite horizon.
+
+## General rational stochastic pair synchronization
+
+Even fixed-threshold reachability such as
+
+\[
+TV<1/2
+\]
+
+is undecidable.
+
+Thus adding stochastic weights does not monotonically increase difficulty.
+
+The decisive issue is whether a finite support/contraction certificate survives.
+
+---
+
+# 8. New boundary problem
+
+The large gap is now:
+
+\[
+\boxed{
+\max_a\delta(P_a)=1
+}
+\]
+
+but the semigroup may still contain useful contracting products.
+
+Questions:
+
+1. If every generator is irreducible and aperiodic but not scrambling, is pair synchronization decidable?
+2. If all generators share a common full-support invariant distribution, is it decidable?
+3. If every product of some fixed length \(L\) is scrambling, the problem is again uniformly decidable. Can one decide whether such an \(L\) exists efficiently?
+4. How far can one weaken uniform scrambling before PFA undecidability returns?
+5. Can leaktightness be reformulated as a finite semigroup condition occupying this intermediate region?
+
+This is the real decidability-boundary program.
+
+---
+
+# 9. Numerical check
+
+For two strictly positive 3-state stochastic matrices with
+
+\[
+\eta=0.15,
+\]
+
+the universal bound gives
+
+\[
+\rho=1-3\eta=0.55.
+\]
+
+An alternating generator sequence was tested from two point masses.
+
+At every length \(k\),
+
+\[
+TV(pP_w,qP_w)
+\le
+0.55^k
+\]
+
+held, with the observed contraction substantially faster.
+
+The computation is only a sanity check of the exact Dobrushin proof.
+
+---
+
+# 10. Literature ownership
+
+### Rabin
+
+Strict positivity/"actual automata" and stability phenomena are classical.
+
+### Dobrushin/Seneta
+
+Uniform contraction coefficients for stochastic matrices are classical.
+
+### Consensus/infinite-product literature
+
+Uniform scrambling and weak ergodicity are classical.
+
+### CWR contribution
+
+The useful synthesis is the exact juxtaposition:
+
+\[
+\boxed{
+\text{Rabin positivity}
+\Rightarrow
+\text{explicit weighted-pair reset bound}
+}
+\]
+
+against
+
+\[
+\boxed{
+\text{general PFA weights}
+\Rightarrow
+\text{undecidable pair synchronization}.
+}
+\]
+
+The contraction theorem is classical; the phase-diagram use is the research product.
+
+---
+
+# Verdict
+
+CW-002E's undecidability is not robust to strict positivity.
+
+For a finite positive stochastic generator family,
+
+\[
+\boxed{
+TV(pP_w,qP_w)
+\le
+(1-n\eta)^{|w|}
+TV(p,q)
+}
+\]
+
+for every word.
+
+Thus pair synchronization is not merely decidable: it is unavoidable.
+
+The next target is the intermediate zero-pattern regime between uniform scrambling and full PFA undecidability.

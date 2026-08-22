@@ -1,0 +1,666 @@
+# COLD WAR RENAISSANCE — CW-002K
+## Kolmogorov reversibility × spectral self-adjointness × real-root LRS × Continuous Skolem
+### Reversibility removes the discrete arithmetic frontier, but not automatically the continuous-time one
+Date: 2026-08-22
+Status: EXACT SYNTHESIS / MAJOR COLLISION CORRECTION
+
+## 1. Question
+
+CW-002J found that a general positive doubly-stochastic single Markov chain can encode the arithmetic frontier of linear recurrence positivity at the stationary cutpoint.
+
+The next question was:
+
+> Does reversibility/self-adjoint spectral geometry remove that difficulty?
+
+For discrete time, the answer is now essentially yes.
+
+A 2025 result on positivity for real-eigenvalue matrices supplies the missing theorem.
+
+For continuous time, the situation is materially different.
+
+---
+
+# 2. Reversible Markov chains have real spectrum
+
+Let \(P\) be a finite irreducible Markov kernel with stationary law \(\pi>0\).
+
+Reversibility means detailed balance:
+
+\[
+\pi_iP_{ij}=\pi_jP_{ji}.
+\]
+
+Let
+
+\[
+\Pi=\operatorname{diag}(\pi).
+\]
+
+Then
+
+\[
+S=\Pi^{1/2}P\Pi^{-1/2}
+\]
+
+is real symmetric.
+
+Hence:
+
+1. \(P\) is diagonalizable;
+2. every eigenvalue of \(P\) is real;
+3. the spectral representation has no genuinely complex rotational phases.
+
+This is the classical reversible-chain spectral theorem.
+
+---
+
+# 3. Any rational halfspace observable is a real-root LRS
+
+Take rational data:
+
+- rational reversible \(P\);
+- rational initial distribution \(\mu\);
+- rational observable \(f\);
+- rational threshold \(\lambda\).
+
+Define
+
+\[
+a_t
+=
+\mu P^tf-\lambda.
+\]
+
+By Cayley–Hamilton, \(a_t\) is a rational linear recurrence sequence.
+
+Because \(P\) is diagonalizable with real eigenvalues, after combining repeated equal eigenvalues it has the form
+
+\[
+\boxed{
+a_t
+=
+c_0+\sum_{r=1}^d c_r\theta_r^t,
+}
+\]
+
+where all \(\theta_r\in\overline{\mathbb Q}\cap\mathbb R\).
+
+So every characteristic root relevant to the sequence is real algebraic.
+
+Negative roots may cause parity oscillation, but there are no irrational complex phases.
+
+---
+
+# 4. 2025 collision: positivity for real-root LRS is decidable
+
+De les Coves, Graf, Klingler, and Netzer prove in "Positive Moments Forever: Undecidable and Decidable Cases" (LAA 2025) that moment positivity is decidable for rational matrices with only real eigenvalues.
+
+They explicitly state the corresponding consequence:
+
+\[
+\boxed{
+\text{Positivity is decidable for LRS whose characteristic roots are all real.}
+}
+\]
+
+This is arbitrary order.
+
+Therefore the low-order frontier used in CW-002J is not the right frontier once reversibility is imposed.
+
+---
+
+# 5. Main discrete-time theorem
+
+### Theorem CW-002K.1 — Reversible halfspace crossing is decidable in arbitrary dimension
+
+Given rational finite reversible \(P\), rational \(\mu,f,\lambda\), it is decidable whether
+
+\[
+\exists t\in\mathbb N:
+\mu P^tf<\lambda.
+\]
+
+### Proof
+
+Set
+
+\[
+a_t=\mu P^tf-\lambda.
+\]
+
+By reversibility, \(a_t\) is a rational LRS with only real characteristic roots.
+
+The real-root Positivity theorem decides whether
+
+\[
+a_t\ge0
+\quad\forall t.
+\]
+
+Negating that answer decides whether some \(a_t<0\).
+
+QED.
+
+Likewise, replacing \(a_t\) by \(-a_t\) decides whether some value exceeds the threshold.
+
+Therefore all strict halfspace crossing questions are decidable.
+
+---
+
+# 6. Exact equality is also decidable
+
+Akshay, Balaji, Murhekar, Varma, and Vyas (STACS 2020) prove decidability of the Skolem problem for LRS whose characteristic roots are roots of real algebraic numbers:
+
+\[
+\alpha^d=r,
+\qquad
+r\in\overline{\mathbb Q}\cap\mathbb R.
+\]
+
+Every real algebraic root belongs to this class by taking \(d=1\).
+
+Hence:
+
+### Theorem CW-002K.2 — Reversible hyperplane hitting is decidable
+
+For rational reversible \(P,\mu,f,\lambda\), it is decidable whether
+
+\[
+\boxed{
+\exists t:
+\mu P^tf=\lambda.
+}
+\]
+
+Thus, for one rational reversible chain, exact hyperplane hitting and strict halfspace crossing are both decidable in arbitrary state dimension.
+
+---
+
+# 7. Correction to the previous state-count frontier
+
+CW-002J identified:
+
+\[
+n\le6
+\]
+
+as a general decidable range for stationary-coordinate crossing by transferring low-order LRS Positivity, and
+
+\[
+n=7
+\]
+
+as a Diophantine frontier for arbitrary positive doubly-stochastic chains.
+
+That statement remains relevant for the general **nonreversible** bistochastic class.
+
+It must not be applied to reversible chains.
+
+With reversibility:
+
+\[
+\boxed{
+\text{no finite state-count frontier is needed for discrete-time halfspace crossing}.
+}
+\]
+
+The problem is decidable for every finite dimension.
+
+So symmetry does exactly what the previous wave hoped it might do.
+
+---
+
+# 8. What symmetry removes
+
+For a nonreversible real matrix, a scalar orbit can contain terms
+
+\[
+r^t\cos(t\theta+\phi),
+\]
+
+coming from complex conjugate eigenvalues.
+
+Arithmetic questions then depend on how the discrete orbit
+
+\[
+t\theta\pmod{2\pi}
+\]
+
+approaches special phases.
+
+This is where Diophantine approximation enters many LRS problems.
+
+A reversible chain is similar to a symmetric matrix, so all eigenvalues are real.
+
+Its scalar orbit contains only
+
+\[
+c_r\theta_r^t.
+\]
+
+The difficult rotational torus disappears.
+
+### CWR principle
+
+\[
+\boxed{
+\text{reversibility removes phase arithmetic from a single discrete Markov orbit}.
+}
+\]
+
+This is the geometric reason behind the decidability transfer.
+
+---
+
+# 9. Negative eigenvalues do not reintroduce the hard phase
+
+A positive reversible stochastic matrix can still have negative eigenvalues.
+
+Example:
+
+\[
+P=
+\begin{pmatrix}
+2/15&11/15&2/15\\
+11/15&2/15&2/15\\
+2/15&2/15&11/15
+\end{pmatrix}.
+\]
+
+It is positive, symmetric, and doubly stochastic, with spectrum
+
+\[
+\{1,3/5,-3/5\}.
+\]
+
+The stationary deviation
+
+\[
+(P^t)_{11}-1/3
+\]
+
+alternates sign.
+
+But the only phase is parity:
+
+\[
+(-3/5)^t=(-1)^t(3/5)^t.
+\]
+
+Parity is a finite arithmetic progression, not an irrational torus.
+
+That distinction is algorithmically decisive.
+
+---
+
+# 10. One reversible generator versus switched reversible generators
+
+The theorem above concerns one fixed \(P\).
+
+Now let
+
+\[
+P_1,\ldots,P_m
+\]
+
+all be reversible with respect to the same stationary law \(\pi\).
+
+Each is self-adjoint in \(L^2(\pi)\).
+
+But generally
+
+\[
+P_iP_j
+\]
+
+is not self-adjoint unless the generators commute.
+
+Indeed:
+
+\[
+(P_iP_j)^\ast=P_jP_i.
+\]
+
+Thus noncommuting switching destroys one-step reversibility at the product level.
+
+The scalar word problem
+
+\[
+\mu P_{w_1}\cdots P_{w_k}f
+\]
+
+is therefore not reduced to a one-variable real-root LRS.
+
+### Open frontier
+
+\[
+\boxed{
+\text{single reversible generator: decidable;}
+}
+\]
+
+\[
+\boxed{
+\text{finite switched reversible family: classification open in this lab.}
+}
+\]
+
+A direct literature search did not locate a cutpoint undecidability/decidability theorem under the exact restriction "all stochastic generators symmetric/reversible."
+
+No novelty or openness claim beyond that search is made.
+
+---
+
+# 11. Symmetric factorization collision
+
+A 1976 theorem of Gibson shows that, over a field and for \(n>3\), every algebraically doubly-stochastic matrix can be represented as a product of symmetric doubly-stochastic matrices under the stated characteristic condition.
+
+However "doubly stochastic over a field" in that algebraic theorem does not by itself guarantee that the factors are entrywise nonnegative stochastic kernels.
+
+Therefore it does **not** immediately transfer Rote's probabilistic-automaton undecidability to positive symmetric/reversible generators.
+
+This creates a precise representation problem:
+
+> Can positive rational doubly-stochastic matrices used in PFA reductions be simulated by bounded products of positive rational symmetric doubly-stochastic matrices, possibly after a state-space lift?
+
+If yes, switching reversible chains inherit undecidability.
+
+If no, reversibility may define a genuine semigroup-level decidability island.
+
+This is now a high-priority CWR question.
+
+---
+
+# 12. Continuous-time reversible chains
+
+Let \(Q\) be a finite reversible continuous-time Markov generator.
+
+Then
+
+\[
+\Pi^{1/2}Q\Pi^{-1/2}
+\]
+
+is symmetric.
+
+Its eigenvalues are real and nonpositive:
+
+\[
+0=-\beta_0>-\beta_1\ge\cdots\ge-\beta_d.
+\]
+
+For a scalar observable,
+
+\[
+g(t)=\mu e^{tQ}f-\lambda
+\]
+
+has the form
+
+\[
+\boxed{
+g(t)
+=
+c_0+\sum_{r=1}^d c_re^{-\beta_rt}.
+}
+\]
+
+This is a real exponential polynomial with no trigonometric frequencies.
+
+---
+
+# 13. Discrete-time decidability does not automatically transfer to continuous time
+
+The Continuous Skolem literature studies exactly zeros of functions generated by linear ODEs / exponential polynomials.
+
+General decidability is open.
+
+Chonev–Ouaknine–Worrell show conditional decidability of important bounded variants under Schanuel's conjecture and identify major transcendence-theoretic obstacles.
+
+Dantam–Pouly likewise obtain conditional results for continuous-time reachability when the dynamics has only real eigenvalues.
+
+Therefore:
+
+\[
+\boxed{
+\text{real spectrum is sufficient for discrete LRS Positivity decidability,}
+}
+\]
+
+but current general continuous-time reachability theory does not permit us to claim the analogous arbitrary-dimensional theorem merely from real spectrum.
+
+The reversible CTMC subclass is narrower than a general real-spectrum LDS, so this is not a proof of hardness or openness for the exact subclass.
+
+It is a warning that the discrete proof does not carry over.
+
+The exact reversible-CTMC zero problem remains under collision audit in this program.
+
+---
+
+# 14. An unconditional continuous-time island: commensurate spectrum
+
+There is a clean exact special case.
+
+Assume the nonzero decay rates span a one-dimensional rational vector space:
+
+\[
+\beta_r=\frac{m_r}{q}\beta,
+\]
+
+where
+
+\[
+m_r\in\mathbb Z_{\ge0},
+\qquad
+q\in\mathbb N,
+\qquad
+\beta>0.
+\]
+
+Set
+
+\[
+z=e^{-\beta t/q}.
+\]
+
+For \(t\in[0,\infty)\),
+
+\[
+z\in(0,1].
+\]
+
+Then
+
+\[
+e^{-\beta_rt}=z^{m_r},
+\]
+
+so
+
+\[
+\boxed{
+g(t)=P(z)
+}
+\]
+
+for an algebraic-coefficient polynomial
+
+\[
+P(z)=c_0+\sum_rc_rz^{m_r}.
+\]
+
+Thus all questions
+
+\[
+g(t)=0,
+\quad
+g(t)>0,
+\quad
+g(t)<0
+\]
+
+reduce to algebraic polynomial sign/root questions on the interval
+
+\[
+0<z\le1.
+\]
+
+### Theorem CW-002K.3 — Commensurate-spectrum reversible CTMC decidability
+
+For a finite reversible CTMC whose decay rates are rationally commensurate, exact hyperplane hitting and strict halfspace crossing for algebraic scalar observables are decidable.
+
+This mechanism is classical-adjacent: continuous-LTI literature already records decidability when diagonal exponents are rational/rational multiples of a common algebraic scale.
+
+---
+
+# 15. Exact example
+
+Take the symmetric generator
+
+\[
+Q=
+\begin{pmatrix}
+-1&1&0\\
+1&-2&1\\
+0&1&-1
+\end{pmatrix}.
+\]
+
+Its spectrum is
+
+\[
+\{0,-1,-3\}.
+\]
+
+For initial state \(1\) and the state-\(1\) indicator,
+
+\[
+p_{11}(t)
+=
+\frac13
++
+\frac12e^{-t}
++
+\frac16e^{-3t}.
+\]
+
+Testing threshold \(1/2\):
+
+\[
+p_{11}(t)-\frac12
+=
+-\frac16+\frac12e^{-t}+\frac16e^{-3t}.
+\]
+
+With
+
+\[
+z=e^{-t},
+\]
+
+this becomes
+
+\[
+\boxed{
+\frac16z^3+\frac12z-\frac16.
+}
+\]
+
+The relevant root in \((0,1]\) is approximately
+
+\[
+z=0.3221853546,
+\]
+
+corresponding to
+
+\[
+t\approx1.132628264.
+\]
+
+The continuous problem has become ordinary polynomial root isolation.
+
+---
+
+# 16. New research matrix
+
+The reversibility interaction produces a new phase diagram.
+
+## Discrete time, one generator
+
+Reversible:
+\[
+\boxed{\text{decidable in arbitrary dimension}.}
+\]
+
+General bistochastic:
+LRS arithmetic frontier remains; low-dimensional results and Vahanwala reductions apply.
+
+## Discrete time, many generators
+
+General:
+undecidable PFA/cutpoint phenomena exist.
+
+Every generator reversible/symmetric:
+open target for this laboratory.
+
+## Continuous time, one reversible generator
+
+Commensurate decay spectrum:
+\[
+\boxed{\text{unconditionally decidable}.}
+\]
+
+General algebraic real spectrum:
+do not claim blanket decidability; Continuous-Skolem/transcendence collision remains.
+
+## Continuous time with control/switching
+
+Expected to interact with CTMDP reachability and continuous Skolem; major audit required.
+
+---
+
+# 17. Historical synthesis
+
+The relevant lines are now:
+
+- Kolmogorov/detailed balance: reversibility and self-adjoint Markov structure;
+- classical spectral theorem: real modes;
+- Skolem/LRS theory: discrete sign and zero questions;
+- De les Coves et al. 2025: arbitrary-order real-root Positivity decidability;
+- Akshay et al. 2020: Skolem decidability for roots of real algebraic numbers;
+- Continuous Skolem/Pisot: continuous-time exact zero questions;
+- Kannan–Lipton: discrete point-orbit decidability;
+- PFA/matrix semigroups: switching destroys the single-operator simplification.
+
+This gives an exact example of the CWR method:
+
+\[
+\boxed{
+\text{statistical symmetry}
+\to
+\text{spectral restriction}
+\to
+\text{number-theoretic decidability}.
+}
+\]
+
+---
+
+# Verdict
+
+The hoped-for "geometric symmetry repairs computability" phenomenon is real in discrete time.
+
+For one finite rational reversible Markov chain:
+
+\[
+\boxed{
+\text{exact halfspace crossing and hyperplane hitting are decidable in every dimension}.
+}
+\]
+
+The reason is not mixing rate.
+
+It is the elimination of complex spectral phases.
+
+The next high-value frontier is whether this survives **switching among reversible kernels**, and why the analogous continuous-time theorem is more delicate.

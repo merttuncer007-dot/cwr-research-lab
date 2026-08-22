@@ -1,0 +1,29 @@
+CWR CW-002B pathwise Hilbert-filter contraction sanity check
+
+T =
+[[0.7  0.2  0.1 ]
+ [0.15 0.7  0.15]
+ [0.1  0.25 0.65]]
+
+projective diameter Delta(T) = 3.817712325957
+Birkhoff coefficient tau(T) = tanh(Delta/4) = 0.741781178354
+
+For each n, 1000 arbitrary positive observation-likelihood sequences were sampled.
+Three filters were initialized at the three point masses.
+Bounds tested:
+  max pairwise Hilbert distance <= Delta(T) tau(T)^(n-1)
+  max pairwise standard-TV <= tanh(Delta(T) tau(T)^(n-1) / 4)
+
+n | observed max Hilbert | Hilbert bound | observed max TV | TV bound
+ 1 | 3.817712325957 | 3.817712325957 | 0.734155011050 | 0.741781178354
+ 2 | 2.453746487741 | 2.831907147766 | 0.509041479833 | 0.609406561180
+ 3 | 1.649075872622 | 2.100655421060 | 0.332823102570 | 0.481675647267
+ 5 | 0.721067478473 | 1.155863203214 | 0.122009448966 | 0.281182658300
+ 8 | 0.183817422869 | 0.471773852330 | 0.032118401503 | 0.117399598598
+12 | 0.013511621607 | 0.142835810975 | 0.002473016591 | 0.035693782637
+
+max Hilbert-bound violation = 8.882e-16
+max TV-bound violation = 0.000e+00
+
+Observation diagonals do not change the projective cross-ratios of T,
+so the contraction bound is history-uniform under strictly positive likelihoods.

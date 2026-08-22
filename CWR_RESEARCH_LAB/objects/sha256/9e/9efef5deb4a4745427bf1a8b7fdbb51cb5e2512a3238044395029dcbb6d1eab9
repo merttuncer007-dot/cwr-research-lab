@@ -1,0 +1,833 @@
+# COLD WAR RENAISSANCE — CW-002N
+## Hadamard × reversible Markov geometry × matrix-semigroup sign reachability
+### Exact stochasticization of symmetric semigroups and re-emergence of complex phase under switching
+Date: 2026-08-22
+Status: PROVISIONAL EXACT THEOREMS; NOVELTY/COLLISION AUDIT OPEN
+
+## 1. The clock-removal problem has a cleaner algebraic core
+
+CW-002L/M left one sharp frontier:
+
+> Is exact zero-margin halfspace reachability for **unrestricted free products** of rational positive symmetric stochastic matrices decidable?
+
+The previous constructions spent substantial effort preserving:
+
+- positivity;
+- stochasticity;
+- common stationary law;
+- symmetry/reversibility.
+
+This wave shows that those constraints are not the main algebraic obstacle.
+
+Any finite semigroup of rational symmetric matrices can be embedded **multiplicatively** into the zero-sum tangent dynamics of strictly positive rational symmetric doubly-stochastic matrices.
+
+Thus the unrestricted reversible-switching problem contains, essentially verbatim, the scalar sign problem for rational symmetric matrix semigroups.
+
+The remaining bottleneck is not stochasticization.
+
+It is the computability of products of symmetric operators.
+
+---
+
+# 2. Sylvester–Hadamard tangent coordinates
+
+Fix source dimension
+
+\[
+d\ge1.
+\]
+
+Choose a power of two
+
+\[
+m=2^r\ge d+1.
+\]
+
+Let
+
+\[
+H_m\in\{\pm1\}^{m\times m}
+\]
+
+be a normalized Sylvester Hadamard matrix whose first column is the all-ones vector.
+
+Choose any \(d\) nonconstant columns and assemble them into
+
+\[
+B\in\{\pm1\}^{m\times d}.
+\]
+
+Then
+
+\[
+\boxed{
+B^\top B=mI_d,
+}
+\]
+
+and
+
+\[
+\boxed{
+B^\top\mathbf1=0.
+}
+\]
+
+Thus the columns of \(B\) are mutually orthogonal rational/integer coordinates inside the zero-sum tangent space
+
+\[
+\mathbf1^\perp\subset\mathbb R^m.
+\]
+
+---
+
+# 3. Multiplicative tangent embedding
+
+For
+
+\[
+A\in M_d(\mathbb Q),
+\]
+
+define
+
+\[
+\boxed{
+\Phi(A)
+=
+\frac1m B A B^\top.
+}
+\]
+
+Then:
+
+### Theorem CW-002N.1 — Hadamard tangent algebra embedding
+
+For all \(A,C\in M_d(\mathbb Q)\),
+
+\[
+\boxed{
+\Phi(A)\Phi(C)=\Phi(AC).
+}
+\]
+
+Also,
+
+\[
+\boxed{
+\Phi(A)^\top=\Phi(A^\top).
+}
+\]
+
+Further,
+
+\[
+\Phi(A)\mathbf1=0,
+\qquad
+\mathbf1^\top\Phi(A)=0.
+\]
+
+Finally,
+
+\[
+\boxed{
+A
+=
+\frac1m
+B^\top\Phi(A)B,
+}
+\]
+
+so the map is injective.
+
+### Proof
+
+Using
+
+\[
+B^\top B=mI,
+\]
+
+\[
+\Phi(A)\Phi(C)
+=
+\frac1{m^2}
+BA B^\top B C B^\top
+=
+\frac1m
+BACB^\top
+=
+\Phi(AC).
+\]
+
+Transpose preservation is immediate.
+
+Since
+
+\[
+B^\top\mathbf1=0,
+\]
+
+both row and column sums vanish.
+
+For injectivity,
+
+\[
+B^\top\Phi(A)B
+=
+\frac1m
+(B^\top B)A(B^\top B)
+=
+mA.
+\]
+
+QED.
+
+---
+
+# 4. Exact stochasticization
+
+Let
+
+\[
+J_m
+=
+\frac1m\mathbf1\mathbf1^\top.
+\]
+
+Take a finite set of rational **symmetric** source matrices
+
+\[
+A_1,\ldots,A_k.
+\]
+
+Because the set is finite, choose rational
+
+\[
+\varepsilon>0
+\]
+
+small enough that every entry of
+
+\[
+J_m+\varepsilon\Phi(A_i)
+\]
+
+is strictly positive.
+
+Define
+
+\[
+\boxed{
+S_i
+=
+J_m+\varepsilon\Phi(A_i).
+}
+\]
+
+Then each \(S_i\) is:
+
+- rational;
+- strictly positive entrywise;
+- symmetric;
+- row stochastic;
+- column stochastic.
+
+Hence every \(S_i\) is a reversible Markov kernel with uniform stationary law.
+
+Because
+
+\[
+J_m\Phi(A)=\Phi(A)J_m=0,
+\qquad
+J_m^2=J_m,
+\]
+
+we get:
+
+### Theorem CW-002N.2 — Positive reversible stochasticization
+
+For every nonempty word
+
+\[
+w=i_1\cdots i_\ell,
+\]
+
+\[
+\boxed{
+S_w
+=
+J_m
++
+\varepsilon^\ell
+\Phi(A_w),
+}
+\]
+
+where
+
+\[
+A_w=A_{i_1}\cdots A_{i_\ell}.
+\]
+
+Thus the source semigroup is reproduced exactly in the tangent block, up to the harmless positive radial factor
+
+\[
+\varepsilon^{|w|}.
+\]
+
+No clock, regular-language restriction, or phase scheduler is needed.
+
+---
+
+# 5. Exact scalar sign transfer
+
+Let
+
+\[
+x,y\in\mathbb Q^d.
+\]
+
+Set
+
+\[
+r^\top=x^\top B^\top,
+\qquad
+g=By.
+\]
+
+Then
+
+\[
+r^\top\mathbf1=0,
+\qquad
+\mathbf1^\top g=0.
+\]
+
+Let
+
+\[
+u^\top=\frac1m\mathbf1^\top.
+\]
+
+Choose rational \(\delta>0\) small enough that
+
+\[
+\boxed{
+\mu^\top
+=
+u^\top+\delta r^\top
+}
+\]
+
+is a probability distribution.
+
+Choose rational \(\gamma>0\) small enough that
+
+\[
+\boxed{
+f
+=
+\frac12\mathbf1+\gamma g
+}
+\]
+
+has every coordinate in \([0,1]\).
+
+Then:
+
+### Theorem CW-002N.3 — Zero-margin sign-preserving PFA embedding
+
+For every word \(w\),
+
+\[
+\boxed{
+\mu^\top S_w f-\frac12
+=
+\delta\gamma m
+\,
+\varepsilon^{|w|}
+\,
+x^\top A_w y.
+}
+\]
+
+### Proof
+
+The constant component gives \(1/2\), because \(S_w\mathbf1=\mathbf1\).
+
+Every mixed stationary/tangent term vanishes.
+
+For the tangent term,
+
+\[
+r^\top\Phi(A_w)g
+=
+x^\top B^\top
+\frac1m BA_wB^\top
+By
+=
+m x^\top A_wy.
+\]
+
+QED.
+
+Therefore:
+
+\[
+\boxed{
+\exists w:
+x^\top A_wy>0
+}
+\]
+
+iff
+
+\[
+\boxed{
+\exists w:
+\mu^\top S_wf>\frac12.
+}
+\]
+
+This is an unrestricted free-word reduction.
+
+All stochastic generators are strictly positive, symmetric, and doubly stochastic.
+
+The output \(f\) is a rational generalized PFA output vector in \([0,1]^m\), not necessarily a single \(0/1\) target-state indicator.
+
+That distinction is retained explicitly.
+
+---
+
+# 6. What is now reduced to what
+
+Define:
+
+### SYM-SCALAR-SIGN
+
+Input:
+
+- rational symmetric matrices \(A_1,\ldots,A_k\);
+- rational \(x,y\).
+
+Question:
+
+\[
+\exists w:
+x^\top A_wy>0?
+\]
+
+Define:
+
+### POS-REV-PFA-1/2
+
+Input:
+
+- rational strictly-positive symmetric doubly-stochastic matrices \(S_1,\ldots,S_k\);
+- rational initial distribution \(\mu\);
+- rational output \(f\in[0,1]^m\).
+
+Question:
+
+\[
+\exists w:
+\mu S_wf>\frac12?
+\]
+
+Then CW-002N.3 gives an effective many-one reduction
+
+\[
+\boxed{
+\text{SYM-SCALAR-SIGN}
+\le_m
+\text{POS-REV-PFA-1/2}.
+}
+\]
+
+Therefore any undecidability or hardness theorem for symmetric matrix-semigroup scalar sign reachability transfers immediately to unrestricted positive reversible stochastic switching.
+
+This dramatically narrows the clock-removal problem.
+
+---
+
+# 7. Arbitrary free reversible switching is easy away from the stationary boundary
+
+Now start directly with a finite family
+
+\[
+S_1,\ldots,S_k
+\]
+
+of strictly-positive symmetric stochastic matrices on \(m\) states.
+
+Because each is symmetric and stochastic:
+
+- uniform \(u\) is stationary;
+- \(\mathbf1^\perp\) is invariant.
+
+Since each \(S_i\) is positive and primitive, every nonstationary eigenvalue satisfies
+
+\[
+|\lambda|<1.
+\]
+
+Set
+
+\[
+\boxed{
+\rho
+=
+\max_i
+\left\|
+S_i|_{\mathbf1^\perp}
+\right\|_2
+<1.
+}
+\]
+
+For an arbitrary free word \(w\),
+
+\[
+\left\|
+S_w|_{\mathbf1^\perp}
+\right\|_2
+\le
+\rho^{|w|}.
+\]
+
+For any initial distribution \(\mu\) and observable \(f\), write
+
+\[
+\bar f=uf.
+\]
+
+Then:
+
+### Theorem CW-002N.4 — Free-switching stationary envelope
+
+\[
+\boxed{
+|\mu S_wf-\bar f|
+\le
+\rho^{|w|}
+\,
+\|\mu-u\|_2
+\,
+\|f-\bar f\mathbf1\|_2.
+}
+\]
+
+Thus any threshold
+
+\[
+\lambda\ne\bar f
+\]
+
+has a computable finite search horizon.
+
+So even for unrestricted noncommuting reversible switching:
+
+\[
+\boxed{
+\text{all possible hard behavior is forced onto zero margin}.
+}
+\]
+
+This extends the CW-002H stationary-margin principle to arbitrary free products of positive symmetric kernels.
+
+---
+
+# 8. Local self-adjointness does not preserve real spectrum under products
+
+One might hope that every symmetric step having real spectrum prevents the phase arithmetic responsible for nonreversible hardness.
+
+That is false.
+
+For two positive-definite symmetric matrices \(A,B\),
+
+\[
+AB
+\]
+
+has positive real eigenvalues: it is similar to
+
+\[
+B^{1/2}AB^{1/2}.
+\]
+
+But three positive-definite factors can already have nonreal eigenvalues.
+
+The general positive-definite product literature confirms that the three-factor regime is qualitatively richer than the two-factor regime.
+
+CW-002N gives a fully stochastic rational witness.
+
+---
+
+# 9. Exact four-state positive-definite reversible witness
+
+Start with three rational symmetric positive-definite \(3\times3\) tangent matrices:
+
+\[
+A_1
+=
+\begin{pmatrix}
+1/2&1/4&0\\
+1/4&1/2&0\\
+0&0&1/5
+\end{pmatrix},
+\]
+
+\[
+A_2
+=
+\begin{pmatrix}
+1/5&1/10&0\\
+1/10&4/5&0\\
+0&0&1/5
+\end{pmatrix},
+\]
+
+\[
+A_3
+=
+\begin{pmatrix}
+2/5&-3/20&0\\
+-3/20&1/10&0\\
+0&0&1/5
+\end{pmatrix}.
+\]
+
+Each is positive definite.
+
+Their product has eigenvalues
+
+\[
+\boxed{
+\frac1{50}\pm
+i\frac{\sqrt{59}}{800},
+\qquad
+\frac1{125}.
+}
+\]
+
+Embed with the order-\(4\) Sylvester Hadamard matrix and choose
+
+\[
+\varepsilon=\frac12.
+\]
+
+This gives three \(4\times4\) matrices \(S_1,S_2,S_3\), each:
+
+- rational;
+- entrywise strictly positive;
+- symmetric;
+- doubly stochastic;
+- positive definite.
+
+The product has spectrum
+
+\[
+\boxed{
+1,\quad
+\frac1{1000},
+\quad
+\frac1{400}
+\pm
+i\frac{\sqrt{59}}{6400}.
+}
+\]
+
+Therefore:
+
+### Theorem CW-002N.5 — Three-step phase resurrection
+
+There exist three rational strictly-positive positive-definite symmetric stochastic matrices whose threefold product has nonreal spectrum.
+
+Since a product of two positive-definite symmetric matrices has only positive real eigenvalues, length \(3\) is the first possible product length for this phenomenon in the positive-definite class.
+
+### Interpretation
+
+\[
+\boxed{
+\text{every local step: self-adjoint and phase-free}
+}
+\]
+
+does not imply
+
+\[
+\boxed{
+\text{macro-dynamics: phase-free}.
+}
+\]
+
+Noncommutativity manufactures complex phase from real spectral ingredients.
+
+---
+
+# 10. Why CW-002K and CW-002L/N fit together
+
+## One fixed reversible kernel
+
+Repeated powers of one self-adjoint operator retain one common real eigenbasis.
+
+No phase resurrection occurs.
+
+Discrete exact halfspace/hyperplane questions reduce to real-root recurrence problems and are decidable.
+
+## Several noncommuting reversible kernels
+
+There is no common spectral basis.
+
+Already three positive-definite reversible factors can produce complex eigenvalues.
+
+Thus switching reintroduces precisely the spectral phenomenon that single-operator reversibility had removed.
+
+The mechanism is now explicit rather than heuristic.
+
+---
+
+# 11. Collision audit
+
+## Hadamard and symmetric doubly-stochastic matrices
+
+Hadamard matrices are classical tools in inverse eigenvalue problems for symmetric doubly-stochastic matrices. Constructions of the form
+
+\[
+\frac1m HDH^\top
+\]
+
+are established for realizing spectra.
+
+The present use is different:
+
+\[
+\Phi(A)
+=
+\frac1m BAB^\top
+\]
+
+is exploited as a **multiplicative noncommutative algebra embedding**, not merely a diagonal spectral realization.
+
+A direct search did not locate this exact stochastic-semigroup embedding formulation.
+
+No novelty claim is made.
+
+## Products of positive semidefinite/definite matrices
+
+The fact that two positive-definite factors have positive real spectrum is classical.
+
+The literature on products of positive semidefinite matrices explicitly studies three-, four-, and five-factor representations and shows that the three-factor class is substantially richer.
+
+Thus "three factors can recover complex spectrum" is not itself new.
+
+The stochastic four-state witness and its role in the reversibility computability phase diagram are the CWR-specific synthesis.
+
+## Symmetric matrix-semigroup sign reachability
+
+The general matrix-semigroup literature contains many undecidability results, but the exact restriction
+
+\[
+\boxed{
+A_i=A_i^\top
+}
+\]
+
+for scalar sign reachability was not resolved by the sources inspected in this wave.
+
+This is now the core collision target.
+
+---
+
+# 12. The clock-removal problem has been reformulated
+
+Previously:
+
+> Can the clocked reversible PFA construction be made self-validating?
+
+Now:
+
+> Is SYM-SCALAR-SIGN decidable for rational symmetric generators?
+
+Because if SYM-SCALAR-SIGN is undecidable, CW-002N.3 immediately yields unrestricted positive reversible stochastic undecidability with no clock.
+
+Conversely, a strong decidability theorem for symmetric-generator scalar sign reachability would explain why the clock is genuinely necessary.
+
+Thus:
+
+\[
+\boxed{
+\text{clock-removal}
+\longrightarrow
+\text{symmetric matrix-semigroup sign problem}.
+}
+\]
+
+This is a much cleaner research target.
+
+---
+
+# 13. Output-vector versus single-target gap
+
+CW-002N.3 gives
+
+\[
+f\in[0,1]^m.
+\]
+
+For classical generalized PFAs this is fully legitimate.
+
+But earlier CWR reductions often used a single accepting state.
+
+Converting an arbitrary rational output vector into one terminal stochastic readout is easy, but that readout need not be symmetric/reversible.
+
+Therefore a stricter frontier remains:
+
+> Does unrestricted free switching remain hard when every generator is positive symmetric stochastic **and the objective is a single state coordinate at its stationary value \(1/m\)**?
+
+This is distinct from the generalized halfspace problem and must not be silently conflated with it.
+
+---
+
+# Verdict
+
+This wave does not yet prove unrestricted reversible PFA undecidability.
+
+It removes most of the stochastic engineering from the problem.
+
+The exact core theorem is:
+
+\[
+\boxed{
+S_w
+=
+J+
+\varepsilon^{|w|}
+\Phi(A_w)
+}
+\]
+
+for an injective transpose-preserving Hadamard tangent embedding.
+
+Hence arbitrary products of symmetric rational matrices can be reproduced inside strictly-positive reversible Markov dynamics.
+
+At the same time:
+
+\[
+\boxed{
+\lambda\ne\text{stationary baseline}
+\Rightarrow
+\text{finite-horizon decidability},
+}
+\]
+
+while three noncommuting positive-definite reversible steps can already regenerate complex spectral phase.
+
+The next target is now mathematically precise:
+
+\[
+\boxed{
+\text{scalar sign reachability for rational symmetric matrix semigroups}.
+}
+\]

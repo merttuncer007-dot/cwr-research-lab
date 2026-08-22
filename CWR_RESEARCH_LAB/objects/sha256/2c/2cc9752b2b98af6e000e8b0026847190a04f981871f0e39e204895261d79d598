@@ -1,0 +1,545 @@
+# COLD WAR RENAISSANCE — CW-001 DEEPENING
+## Blackwell × Le Cam × convex decision systems
+### Exact completion by coherent reachable-decision sets
+Date: 2026-08-22
+Status: PROVISIONAL EXACT THEOREMS; NOVELTY/COLLISION AUDIT OPEN
+
+## 1. Historical collision that changes the problem
+
+The first formulation of CW-001 treated the pointwise decision-performance envelope as a possible new completion of the Blackwell order.
+
+The Le Cam/Torgersen literature already goes much further than ordinary sample-space experiments:
+
+- Le Cam's experiments can be formulated in abstract L/Riesz spaces;
+- generalized decision rules are transitions rather than only Markov kernels;
+- Torgersen states that deficiency distance is a natural sup-distance between experiment functionals on classes of sublinear functions;
+- for finite parameter sets, standard measures represent experiments and information ordering becomes dilation ordering;
+- generalized variables repair failures of weak compactness.
+
+Therefore the generic idea "enlarge ordinary experiments until limits become representable" is classical.
+
+The remaining exact question is narrower:
+
+> What is the smallest operational object obtained by retaining, for every decision alphabet size, exactly the decisions simultaneously reachable from all experiments?
+
+This leads to a concrete completion independent of DCSG.
+
+---
+
+# 2. Reachable k-decision regions
+
+Fix a finite state/parameter set X.
+
+For a channel
+
+\[
+\kappa:X\rightsquigarrow Y
+\]
+
+and an integer \(k\ge1\), define
+
+\[
+\boxed{
+\mathcal R_k(\kappa)
+=
+\{
+\kappa\lambda:
+\lambda:Y\rightsquigarrow[k]
+\}.
+}
+\]
+
+Thus \(\mathcal R_k(\kappa)\) is the set of all \(k\)-action stochastic decision channels obtainable after observing \(\kappa\).
+
+It is a compact convex subset of the stochastic-matrix polytope
+
+\[
+K(X,[k]).
+\]
+
+It contains every constant-row channel, because the observer can ignore the observation.
+
+It is closed under downstream post-processing:
+
+\[
+A\in\mathcal R_k(\kappa),\quad
+\tau:[k]\rightsquigarrow[\ell]
+\]
+
+implies
+
+\[
+A\tau\in\mathcal R_\ell(\kappa).
+\]
+
+---
+
+# 3. Exact Blackwell representation by the full decision system
+
+Define the decision system of \(\kappa\) as
+
+\[
+\mathcal R(\kappa)
+=
+(\mathcal R_k(\kappa))_{k\ge1}.
+\]
+
+### Theorem CW-001.1 — Reachable-decision representation of the Blackwell order
+
+For finite channels \(\kappa,\mu\),
+
+\[
+\boxed{
+\kappa\succeq_B\mu
+\iff
+\mathcal R_k(\mu)\subseteq\mathcal R_k(\kappa)
+\quad\forall k.
+}
+\]
+
+In fact it is enough to take
+
+\[
+k=|\operatorname{out}(\mu)|.
+\]
+
+### Proof
+
+If
+
+\[
+\mu=\kappa\Lambda,
+\]
+
+then every decision derived from \(\mu\),
+
+\[
+\mu\Gamma,
+\]
+
+equals
+
+\[
+\kappa(\Lambda\Gamma),
+\]
+
+so
+
+\[
+\mathcal R_k(\mu)\subseteq\mathcal R_k(\kappa)
+\]
+
+for every \(k\).
+
+Conversely let \(k=|\operatorname{out}(\mu)|\). Since the identity post-processing belongs to the admissible \(k\)-decision rules,
+
+\[
+\mu\in\mathcal R_k(\mu).
+\]
+
+If
+
+\[
+\mathcal R_k(\mu)\subseteq\mathcal R_k(\kappa),
+\]
+
+then
+
+\[
+\mu=\kappa\Lambda
+\]
+
+for some stochastic \(\Lambda\).
+
+Thus the full family \(\mathcal R(\kappa)\) is an exact operational representation of a Blackwell-equivalence class.
+
+---
+
+# 4. Coherent decision systems
+
+Define a **coherent decision system** on finite X to be a family
+
+\[
+C=(C_k)_{k\ge1}
+\]
+
+such that:
+
+1. each \(C_k\subseteq K(X,[k])\) is nonempty, compact, and convex;
+2. every constant-row \(X\to[k]\) channel belongs to \(C_k\);
+3. downstream closure holds:
+   \[
+   A\in C_k,\ \tau:[k]\rightsquigarrow[\ell]
+   \Rightarrow
+   A\tau\in C_\ell.
+   \]
+
+Order coherent systems componentwise by inclusion:
+
+\[
+C\preceq D
+\iff
+C_k\subseteq D_k
+\quad\forall k.
+\]
+
+Every genuine statistical channel gives such a system through \(\mathcal R(\kappa)\).
+
+---
+
+# 5. Exact completed meet
+
+Take any family of coherent decision systems
+
+\[
+(C^{(i)})_{i\in I}.
+\]
+
+Define
+
+\[
+\boxed{
+\left(\bigwedge_i C^{(i)}\right)_k
+=
+\bigcap_i C_k^{(i)}.
+}
+\]
+
+### Theorem CW-001.2 — Arbitrary meets exist
+
+The componentwise intersection is again a coherent decision system and is the greatest lower bound.
+
+### Proof
+
+- compactness and convexity survive arbitrary intersections of closed subsets of the compact stochastic polytope;
+- nonemptiness survives because every system contains all constant-row decision channels;
+- post-processing closure survives intersection;
+- the universal lower-bound property is immediate from inclusion.
+
+Therefore coherent decision systems form a complete meet-semilattice.
+
+Because they form a closure system inside the product of powersets, arbitrary joins also exist as the smallest coherent system containing the union.
+
+Hence:
+
+\[
+\boxed{
+\text{coherent decision systems form a complete lattice.}
+}
+\]
+
+This gives a literal exact completion in which the missing Blackwell meet always exists.
+
+---
+
+# 6. Common decision system of several experiments
+
+For channels
+
+\[
+\kappa_1,\ldots,\kappa_P
+\]
+
+define
+
+\[
+\boxed{
+C_k^\cap
+=
+\bigcap_{p=1}^P
+\mathcal R_k(\kappa_p).
+}
+\]
+
+Then
+
+\[
+C^\cap=(C_k^\cap)_k
+\]
+
+is the exact greatest coherent decision system available from every channel separately.
+
+Operational meaning:
+
+\[
+A\in C_k^\cap
+\]
+
+iff the same \(k\)-action stochastic decision channel can be implemented from every \(\kappa_p\), possibly using a different post-processing for each experiment.
+
+This object exists even when the Blackwell meet does not.
+
+---
+
+# 7. Exact representability criterion for a genuine Blackwell meet
+
+### Theorem CW-001.3 — Blackwell meet iff the completed meet is channel-realizable
+
+For finite channels \(\{\kappa_p\}_{p=1}^P\), the following are equivalent:
+
+1. a greatest common Blackwell lower bound \(\mu\) exists;
+2. there is a channel \(\mu\) such that
+   \[
+   \boxed{
+   \mathcal R_k(\mu)
+   =
+   \bigcap_p\mathcal R_k(\kappa_p)
+   \quad\forall k.
+   }
+   \]
+
+### Proof: 2 ⇒ 1
+
+Immediate from Theorem CW-001.1.
+
+### Proof: 1 ⇒ 2
+
+Let \(\mu\) be the greatest common lower bound.
+
+Certainly
+
+\[
+\mathcal R_k(\mu)
+\subseteq
+C_k^\cap.
+\]
+
+Now take arbitrary
+
+\[
+A\in C_k^\cap.
+\]
+
+Viewed itself as a channel
+
+\[
+A:X\rightsquigarrow[k],
+\]
+
+A is a post-processing of every \(\kappa_p\), so A is a genuine common Blackwell lower bound.
+
+By maximality of \(\mu\),
+
+\[
+\mu\succeq_B A.
+\]
+
+Therefore
+
+\[
+A\in\mathcal R_k(\mu).
+\]
+
+Hence
+
+\[
+C_k^\cap\subseteq\mathcal R_k(\mu).
+\]
+
+Equality holds for every k.
+
+### Consequence
+
+The Blackwell non-lattice phenomenon is exactly:
+
+\[
+\boxed{
+\text{failure of the coherent common decision system }
+C^\cap
+\text{ to be representable by one genuine channel.}
+}
+\]
+
+This is stronger and more operational than saying merely "the intersection of two zonotopes need not be a zonotope."
+
+---
+
+# 8. Bertschinger–Rauh example as the k=2 shadow
+
+For k=2, a stochastic decision channel is determined by one vector of probabilities, and
+
+\[
+\mathcal R_2(\kappa)
+\]
+
+is equivalent to the zonotope
+
+\[
+Z_\kappa.
+\]
+
+Bertschinger and Rauh use
+
+\[
+\kappa_1=
+\begin{pmatrix}
+1/3&2/3&0\\
+0&1/3&2/3\\
+2/3&0&1/3
+\end{pmatrix},
+\qquad
+\kappa_2=
+\begin{pmatrix}
+2/3&1/3&0\\
+0&2/3&1/3\\
+1/3&0&2/3
+\end{pmatrix}.
+\]
+
+Their intersection has vertices
+
+\[
+0,\quad
+(5,2,2)/6,\ (2,5,2)/6,\ (2,2,5)/6,
+\]
+
+\[
+(1,4,4)/6,\ (4,1,4)/6,\ (4,4,1)/6,
+\quad 1.
+\]
+
+Its convex hull has triangular two-dimensional facets.
+
+Every face of a zonotope is a zonotope, and a two-dimensional zonotope is centrally symmetric; a triangle is not.
+
+Therefore
+
+\[
+C_2^\cap
+\]
+
+is not the two-decision region of any genuine channel.
+
+By Theorem CW-001.3, no genuine Blackwell meet can exist.
+
+Thus the published zonotope obstruction is exactly the binary-decision projection of the more general coherent-system representability failure.
+
+---
+
+# 9. New research direction: decision-arity filtration
+
+The hierarchy
+
+\[
+\mathcal R_2(\kappa),
+\mathcal R_3(\kappa),
+\ldots
+\]
+
+contains progressively stronger operational information.
+
+Blackwell's k-decision orders satisfy a strict hierarchy in general.
+
+This suggests an independent invariant:
+
+\[
+\boxed{
+a(\kappa,\mu)
+=
+\min\{
+k:
+\mathcal R_k(\mu)\not\subseteq\mathcal R_k(\kappa)
+\},
+}
+\]
+
+with \(a=\infty\) for Blackwell domination.
+
+Interpretation:
+
+> the minimum number of actions needed for a decision problem to witness that \(\kappa\) fails to dominate \(\mu\).
+
+This "decision arity" is not the same as output alphabet size.
+
+It measures the operational complexity of an informativeness distinction.
+
+Dedicated prior-art search required.
+
+---
+
+# 10. New research direction: representability defect by arity
+
+For a completed common system \(C^\cap\), define an arity-k realization defect relative to genuine channels, for a declared compact-set metric \(d_H\), by
+
+\[
+\eta_k(C^\cap)
+=
+\inf_\mu
+d_H(
+\mathcal R_k(\mu),
+C_k^\cap
+).
+\]
+
+A full weighted defect could be
+
+\[
+\eta(C^\cap)
+=
+\inf_\mu
+\sup_{k\ge2}
+w_k
+d_H(
+\mathcal R_k(\mu),
+C_k^\cap
+).
+\]
+
+This is not yet canonically normalized.
+
+Torgersen's exact deficiency-as-sup-distance result strongly suggests that the correct full metric should be defined through normalized decision/risk functionals rather than an arbitrary Hausdorff metric.
+
+Research target:
+
+\[
+\boxed{
+\text{completion projection distance}
+\stackrel{?}{=}
+\text{Le Cam deficiency distance to genuine experiments}.
+}
+\]
+
+---
+
+# 11. Historical correction: Le Cam already built much of the needed ambient world
+
+Torgersen's account records that:
+
+- generalized variables repair ordinary-test nonclosure under pointwise limits;
+- generalized decision rules/transitions repair inadequacy of ordinary Markov kernels;
+- abstract experiments are families of nonnegative normalized vectors in L-spaces;
+- deficiency distance equals a natural sup-distance on experiment functionals;
+- standard/conical measures convert experiment statements into measure statements;
+- for finite parameter sets, information order becomes dilation order;
+- local comparison of differentiable experiments produces a local deficiency and local information order;
+- for the linear normal models studied there, that local order is Fisher-information order.
+
+Therefore the Cold War Renaissance result here is not "invent generalized experiments."
+
+The useful new candidate is the explicit complete-lattice **coherent decision-system completion** and its representability interface with Le Cam's generalized-experiment machinery.
+
+The collision audit must determine whether this exact object already appears under another name.
+
+---
+
+# 12. Current verdict
+
+PROVED PROVISIONALLY:
+- reachable-decision representation of finite Blackwell order;
+- coherent decision systems are closed under arbitrary meets;
+- componentwise intersection gives an exact common decision object;
+- genuine Blackwell meet exists iff that common decision system is realizable by one channel.
+
+CLASSICAL COMPONENTS:
+- Blackwell order and k-decision orders;
+- zonotope obstruction;
+- generalized experiments/transitions;
+- deficiency sup-distance machinery.
+
+OPEN:
+- whether the coherent decision-system completion is already explicit in Le Cam/Torgersen/category-theoretic decision literature;
+- minimal axioms characterizing genuine-channel systems among all coherent decision systems;
+- exact Le Cam metric projection from the completion onto genuine experiments;
+- decision-arity complexity and its bounds.
+
+The byproducts from this iteration are appended permanently to the CWR registry.

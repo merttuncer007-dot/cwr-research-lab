@@ -1,0 +1,33 @@
+CWR CW-002C primitive-block projective contraction check
+
+T =
+[[0.  1.  0. ]
+ [0.  0.  1. ]
+ [0.5 0.5 0. ]]
+
+primitive exponent L = 5
+T^L =
+[[0.25  0.25  0.5  ]
+ [0.25  0.5   0.25 ]
+ [0.125 0.375 0.5  ]]
+Delta(T^L) = 1.386294361120
+likelihood-ratio cap R = 3.0
+uniform block diameter bound Dbar = Delta(T^L)+2L log R = 12.372417247801
+uniform block Birkhoff coefficient taubar = tanh(Dbar/4) = 0.995893223819
+
+1500 random positive likelihood sequences per block count, each with max/min <= R.
+Three filters started from point masses.
+
+q blocks | n steps | observed max Hilbert | bound | observed max TV | TV bound
+ 1 |  5 | 3.302917231742 | 12.372417247801 | 0.604697704876 | 0.995893223819
+ 2 | 10 | 1.003008601059 | 12.321606499350 | 0.183640154785 | 0.995787775569
+ 3 | 15 | 0.255695511504 | 12.271004419271 | 0.047858233478 | 0.995680075387
+ 4 | 20 | 0.062948881509 | 12.220610150608 | 0.009338197283 | 0.995570086885
+ 6 | 30 | 0.002155414968 | 12.120441637300 | 0.000434309962 | 0.995343097746
+ 8 | 40 | 0.000142590822 | 12.021094173918 | 0.000024754892 | 0.995106510590
+
+max Hilbert-bound violation = 0.000e+00
+max TV-bound violation = 0.000e+00
+
+The bound is deliberately support/uniform-likelihood based and can be loose.
+Its role is to certify pathwise contraction despite zeros in the one-step transition matrix.

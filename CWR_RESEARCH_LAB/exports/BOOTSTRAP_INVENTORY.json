@@ -1,0 +1,1958 @@
+{
+  "generated_at": "2026-08-23T00:17:43+03:00",
+  "policy": "One content blob per SHA-256; every filename and ZIP member remains a separate occurrence.",
+  "status": {
+    "blobs": 75,
+    "occurrences": 176,
+    "documents": 75,
+    "chunks": 524,
+    "conversation_turns": 88,
+    "byproducts": 220,
+    "registry_max": 212,
+    "confirmed_max": 220,
+    "papers": 0,
+    "source_ledger_entries": 38,
+    "checkpoints": 0,
+    "open_issues": 2,
+    "duplicate_occurrences": 101
+  },
+  "occurrences": [
+    {
+      "id": 1,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt",
+      "display_name": "ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt",
+      "archive_member": null,
+      "blob_sha256": "cb6c7359ce55353163bc2afb12b7f143ed0ac7755f3941b472d7e28e57224480",
+      "byte_size": 258385,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 2,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.zip",
+      "display_name": "ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.zip",
+      "archive_member": null,
+      "blob_sha256": "fa2e6747e048fcc45c041198f014e506809897733e9b783fa9e39eb0ce9e6bce",
+      "byte_size": 86648,
+      "media_type": "application/x-zip-compressed"
+    },
+    {
+      "id": 3,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.zip",
+      "display_name": "ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt",
+      "archive_member": "ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt",
+      "blob_sha256": "cb6c7359ce55353163bc2afb12b7f143ed0ac7755f3941b472d7e28e57224480",
+      "byte_size": 258385,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 4,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (1).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (1).md",
+      "archive_member": null,
+      "blob_sha256": "c3c5634df829fad6bdbd66872dc84b7c7100d4ac691da7fa77442753da092a88",
+      "byte_size": 61789,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 5,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (10).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (10).md",
+      "archive_member": null,
+      "blob_sha256": "abd5354720885bf572b8ef284a81a84171e10cdcdd0114a541e5b92e61ffa76d",
+      "byte_size": 113395,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 6,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (11).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (11).md",
+      "archive_member": null,
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 7,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (12).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (12).md",
+      "archive_member": null,
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "byte_size": 124203,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 8,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (13).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (13).md",
+      "archive_member": null,
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 9,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (14).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (14).md",
+      "archive_member": null,
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 10,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (2).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (2).md",
+      "archive_member": null,
+      "blob_sha256": "70226693183f77e06e6c8dd411aca8612ff4fd36b987d8f85077d3f8d8de0d53",
+      "byte_size": 68937,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 11,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (3).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (3).md",
+      "archive_member": null,
+      "blob_sha256": "de4e186c5a40744eebd97d97e13af1708b39ff285f0ec6e4e04b621ce5ba073f",
+      "byte_size": 78024,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 12,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (4).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (4).md",
+      "archive_member": null,
+      "blob_sha256": "56e4a7184b10a12a45cb0052c55e12f01dee97c41b4653890d48f2e997c126ca",
+      "byte_size": 84378,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 13,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (5).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (5).md",
+      "archive_member": null,
+      "blob_sha256": "0cf419d4e224aaf73be199a3ef1e67ad33ccc5e783a2020f89d12d3b4b83b947",
+      "byte_size": 96328,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 14,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (6).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (6).md",
+      "archive_member": null,
+      "blob_sha256": "0cf419d4e224aaf73be199a3ef1e67ad33ccc5e783a2020f89d12d3b4b83b947",
+      "byte_size": 96328,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 15,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (7).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (7).md",
+      "archive_member": null,
+      "blob_sha256": "bcb64e7d617ae13a35acef2aff1b7ecf83839f2d43693037ff370ccb1928df9c",
+      "byte_size": 108261,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 16,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (8).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (8).md",
+      "archive_member": null,
+      "blob_sha256": "bcb64e7d617ae13a35acef2aff1b7ecf83839f2d43693037ff370ccb1928df9c",
+      "byte_size": 108261,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 17,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (9).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (9).md",
+      "archive_member": null,
+      "blob_sha256": "abd5354720885bf572b8ef284a81a84171e10cdcdd0114a541e5b92e61ffa76d",
+      "byte_size": 113395,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 18,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md",
+      "archive_member": null,
+      "blob_sha256": "eeff8d9333aadae5e09279a569f3eefda5f65be76bda93a69d6e018534d9536c",
+      "byte_size": 49641,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 19,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md",
+      "archive_member": null,
+      "blob_sha256": "bcb64e7d617ae13a35acef2aff1b7ecf83839f2d43693037ff370ccb1928df9c",
+      "byte_size": 108261,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 20,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md",
+      "archive_member": null,
+      "blob_sha256": "abd5354720885bf572b8ef284a81a84171e10cdcdd0114a541e5b92e61ffa76d",
+      "byte_size": 113395,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 21,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18 (1).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18 (1).md",
+      "archive_member": null,
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 22,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18 (2).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18 (2).md",
+      "archive_member": null,
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 23,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md",
+      "archive_member": null,
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 24,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19 (1).md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19 (1).md",
+      "archive_member": null,
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "byte_size": 124203,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 25,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md",
+      "archive_member": null,
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "byte_size": 124203,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 26,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22 (1).md",
+      "display_name": "CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22 (1).md",
+      "archive_member": null,
+      "blob_sha256": "778452a490d72c1c1f979ca5b0e2476b7f38bb9fe99b2ada8940075229e8c9fb",
+      "byte_size": 35926,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 27,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22.md",
+      "display_name": "CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "778452a490d72c1c1f979ca5b0e2476b7f38bb9fe99b2ada8940075229e8c9fb",
+      "byte_size": 35926,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 28,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md",
+      "display_name": "CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "d21678d68651e7155779d0b3fa5007d00a170a033efd82634e19d8dd9449303f",
+      "byte_size": 12127,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 29,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md",
+      "display_name": "CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "38a12e25d3b47967a38061dc3efa381919eef8ffe45894fec1018661c0913a40",
+      "byte_size": 13245,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 30,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\cwr_cw002l_reversible_microstep_lift_check.txt",
+      "display_name": "cwr_cw002l_reversible_microstep_lift_check.txt",
+      "archive_member": null,
+      "blob_sha256": "128f6f102a13638269b0d1319f50a4836fabf16391ae2e37af09c89aa5e957d4",
+      "byte_size": 1334,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 31,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md",
+      "display_name": "CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "71b2482d3050dd2833dff22f5ff7867371c0ce598e6555818833e8e9ff9cc550",
+      "byte_size": 12724,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 32,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md",
+      "display_name": "CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "56c8d32207e74112ef9fe705571d95a4573c4fa2e2da29c3e7de97da0a0e2240",
+      "byte_size": 13614,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 33,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\cwr_cw002m_binary_bistochastic_phase_code_check.txt",
+      "display_name": "cwr_cw002m_binary_bistochastic_phase_code_check.txt",
+      "archive_member": null,
+      "blob_sha256": "78d88970f693e7c52988a64ead2fb8a4fbfb6f56c5b078720e1557605c377124",
+      "byte_size": 1128,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 34,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22 (1).md",
+      "display_name": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22 (1).md",
+      "archive_member": null,
+      "blob_sha256": "3ee4d627e998459b2a64ac54b3ecc078139f1a5505e2b28e790ff02e440f459f",
+      "byte_size": 11655,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 35,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md",
+      "display_name": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "3ee4d627e998459b2a64ac54b3ecc078139f1a5505e2b28e790ff02e440f459f",
+      "byte_size": 11655,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 36,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\cwr_cw002o_psd_reversible_sign_inversion_check.txt",
+      "display_name": "cwr_cw002o_psd_reversible_sign_inversion_check.txt",
+      "archive_member": null,
+      "blob_sha256": "edce7224d93c34063157e091dec135567b199d5a39ec285654e353d91d604981",
+      "byte_size": 1188,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 37,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_DCSG_FILELIST_2026-08-22 (1).txt",
+      "display_name": "CWR_DCSG_FILELIST_2026-08-22 (1).txt",
+      "archive_member": null,
+      "blob_sha256": "19a5b65c9d55c2a75dc380592025651ad566a2e5b61e0125c967c41ba93da76f",
+      "byte_size": 5219,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 38,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_DCSG_FILELIST_2026-08-22 (2).txt",
+      "display_name": "CWR_DCSG_FILELIST_2026-08-22 (2).txt",
+      "archive_member": null,
+      "blob_sha256": "19a5b65c9d55c2a75dc380592025651ad566a2e5b61e0125c967c41ba93da76f",
+      "byte_size": 5219,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 39,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_DCSG_FILELIST_2026-08-22.txt",
+      "display_name": "CWR_DCSG_FILELIST_2026-08-22.txt",
+      "archive_member": null,
+      "blob_sha256": "19a5b65c9d55c2a75dc380592025651ad566a2e5b61e0125c967c41ba93da76f",
+      "byte_size": 5219,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 40,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_DCSG_LAB_HANDOFF_2026-08-22 (1).md",
+      "display_name": "CWR_DCSG_LAB_HANDOFF_2026-08-22 (1).md",
+      "archive_member": null,
+      "blob_sha256": "b16e159ed7f9b12dda18f2d4de3e2dae7376224758bbafd123d23032fee3888d",
+      "byte_size": 3657,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 41,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_DCSG_LAB_HANDOFF_2026-08-22.md",
+      "display_name": "CWR_DCSG_LAB_HANDOFF_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "b16e159ed7f9b12dda18f2d4de3e2dae7376224758bbafd123d23032fee3888d",
+      "byte_size": 3657,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 42,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_DCSG_MANIFEST_SHA256_2026-08-22 (1).txt",
+      "display_name": "CWR_DCSG_MANIFEST_SHA256_2026-08-22 (1).txt",
+      "archive_member": null,
+      "blob_sha256": "33b81638173902cb8f16c69b5de0ee14bb4e4f5acde1956c43db89ea02d93b72",
+      "byte_size": 12802,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 43,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_DCSG_MANIFEST_SHA256_2026-08-22.txt",
+      "display_name": "CWR_DCSG_MANIFEST_SHA256_2026-08-22.txt",
+      "archive_member": null,
+      "blob_sha256": "33b81638173902cb8f16c69b5de0ee14bb4e4f5acde1956c43db89ea02d93b72",
+      "byte_size": 12802,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 44,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_KURAMSAL_KAYNAK_LISTESI.txt",
+      "display_name": "CWR_LAB_KURAMSAL_KAYNAK_LISTESI.txt",
+      "archive_member": null,
+      "blob_sha256": "87ce491a950db8c9b4c6e9544441ddc9dac7d562b41cb85262cfdbd5060c628c",
+      "byte_size": 15460,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 45,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "archive_member": null,
+      "blob_sha256": "cf2d2bba269c5a2cedb4f2eca91b44bf29d1df75bc2eb5e74bc618c9af925a6e",
+      "byte_size": 565285,
+      "media_type": "application/x-zip-compressed"
+    },
+    {
+      "id": 46,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md",
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "byte_size": 124203,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 47,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_1.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_1.md",
+      "blob_sha256": "0435aaaede4e7cb15b9c30e2a51305521c3ea41cad7543b09c1b28fb30c20d84",
+      "byte_size": 23332,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 48,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_10.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_10.md",
+      "blob_sha256": "74d1f47ab5ea46000789f2e1492c90a984e49e9fcbf06c06bc638fd14c51ea10",
+      "byte_size": 74361,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 49,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_11.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_11.md",
+      "blob_sha256": "de4e186c5a40744eebd97d97e13af1708b39ff285f0ec6e4e04b621ce5ba073f",
+      "byte_size": 78024,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 50,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_12.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_12.md",
+      "blob_sha256": "56e4a7184b10a12a45cb0052c55e12f01dee97c41b4653890d48f2e997c126ca",
+      "byte_size": 84378,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 51,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_13.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_13.md",
+      "blob_sha256": "4a8b254e21f49a5496ccf998bd82d8abc777c48f9e94b9dd9301b658845ddac9",
+      "byte_size": 89828,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 52,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_14.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_14.md",
+      "blob_sha256": "0cf419d4e224aaf73be199a3ef1e67ad33ccc5e783a2020f89d12d3b4b83b947",
+      "byte_size": 96328,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 53,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_15.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_15.md",
+      "blob_sha256": "aa07e9936a1f7428502196b9f0ec55b4461e95641d66fa0689abeb659e6abf1c",
+      "byte_size": 102540,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 54,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md",
+      "blob_sha256": "bcb64e7d617ae13a35acef2aff1b7ecf83839f2d43693037ff370ccb1928df9c",
+      "byte_size": 108261,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 55,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md",
+      "blob_sha256": "abd5354720885bf572b8ef284a81a84171e10cdcdd0114a541e5b92e61ffa76d",
+      "byte_size": 113395,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 56,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md",
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 57,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md",
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "byte_size": 124203,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 58,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_2.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_2.md",
+      "blob_sha256": "30e3168b77aa6bac8f4a5b5f32ab40d34adb063e43066e7e1f44b3c842fb936f",
+      "byte_size": 30182,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 59,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_3.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_3.md",
+      "blob_sha256": "d898c24c922f5074d571d02f2e6a0ed5e3609665b577b830802d85459af8c4f7",
+      "byte_size": 37015,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 60,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_4.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_4.md",
+      "blob_sha256": "22c6d9312aed8c6819c0b17161649373c6ee445564d8ce35a985f4ba441ab38a",
+      "byte_size": 43386,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 61,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_5.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_5.md",
+      "blob_sha256": "1c196516c95aadaf6f26b41e35bb4ceca2afcf7538a6196676c3c39e010a31a2",
+      "byte_size": 48530,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 62,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_6.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_6.md",
+      "blob_sha256": "eeff8d9333aadae5e09279a569f3eefda5f65be76bda93a69d6e018534d9536c",
+      "byte_size": 49641,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 63,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_7.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_7.md",
+      "blob_sha256": "4d3ac2ff67c72a85a70a8d7136883ea85899b320f9381e018af7ff6496a3257c",
+      "byte_size": 55515,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 64,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_8.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_8.md",
+      "blob_sha256": "c3c5634df829fad6bdbd66872dc84b7c7100d4ac691da7fa77442753da092a88",
+      "byte_size": 61789,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 65,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_9.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_9.md",
+      "blob_sha256": "70226693183f77e06e6c8dd411aca8612ff4fd36b987d8f85077d3f8d8de0d53",
+      "byte_size": 68937,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 66,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_LAB_v0_1.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_LAB_v0_1.md",
+      "blob_sha256": "ba42f3a4c46dea62a3bb0500cce9c906ed7853a62c54621a5473f8d28f997dd3",
+      "byte_size": 7956,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 67,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "COLD_WAR_RENAISSANCE_LAB_v0_2.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_LAB_v0_2.md",
+      "blob_sha256": "958f9991632b02d583240602e5177e6f6f9a8427f81000236da2862eccaf0a17",
+      "byte_size": 3168,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 68,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md",
+      "archive_member": "CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md",
+      "blob_sha256": "ec10c4068406740b2b3f200ae342518f3eeff5208b9225c7da4d49c7164a3e63",
+      "byte_size": 11977,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 69,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md",
+      "archive_member": "CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md",
+      "blob_sha256": "223eed8b300aeb391740abcfe3bc9e1f0e1e6442effe1c98d1160be6e02090c6",
+      "byte_size": 10885,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 70,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md",
+      "archive_member": "CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md",
+      "blob_sha256": "2cc9752b2b98af6e000e8b0026847190a04f981871f0e39e204895261d79d598",
+      "byte_size": 11370,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 71,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md",
+      "blob_sha256": "d21678d68651e7155779d0b3fa5007d00a170a033efd82634e19d8dd9449303f",
+      "byte_size": 12127,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 72,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002C_PRIMITIVE_BLOCK_INFORMATION_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002C_PRIMITIVE_BLOCK_INFORMATION_HORIZON_2026-08-22.md",
+      "blob_sha256": "68e63bcf463522ff67c05bd38d9768c3756eaff3bab47a9e3382fb10c2336199",
+      "byte_size": 11542,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 73,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002D_SUBRECTANGULAR_WORD_LECAM_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002D_SUBRECTANGULAR_WORD_LECAM_HORIZON_2026-08-22.md",
+      "blob_sha256": "d260022f804009b41df6ec16f27a586740da2487ae88a1469e2264e61e549f1f",
+      "byte_size": 14736,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 74,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002E_WEIGHTED_PAIR_SYNCHRONIZATION_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": "CWR_CW002E_WEIGHTED_PAIR_SYNCHRONIZATION_UNDECIDABILITY_2026-08-22.md",
+      "blob_sha256": "275b537232f3c28b0057a3e9ff3c937a9f9a9340259a2ee99147e0b6d7ea5b5d",
+      "byte_size": 14681,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 75,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002F_STRICT_POSITIVITY_DECIDABILITY_ISLAND_2026-08-22.md",
+      "archive_member": "CWR_CW002F_STRICT_POSITIVITY_DECIDABILITY_ISLAND_2026-08-22.md",
+      "blob_sha256": "4bbf88804964ef7fc360870df11bbd12c58bb2658d403e6927c3200359e8f5f5",
+      "byte_size": 7438,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 76,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002G_LEAKTIGHT_SUPPORT_LIMIT_SYNCHRONIZATION_2026-08-22.md",
+      "archive_member": "CWR_CW002G_LEAKTIGHT_SUPPORT_LIMIT_SYNCHRONIZATION_2026-08-22.md",
+      "blob_sha256": "d2604ba1366fd57d0bfaf5fbefe865aef2253209fa9d973671e355f15cbce731",
+      "byte_size": 6880,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 77,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002H_STATIONARY_CUTPOINT_SINGULARITY_2026-08-22.md",
+      "archive_member": "CWR_CW002H_STATIONARY_CUTPOINT_SINGULARITY_2026-08-22.md",
+      "blob_sha256": "beb7315d909839dd0c73797937511487a1fd339534171b6ad66f945e447ecd2a",
+      "byte_size": 8291,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 78,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": "CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md",
+      "blob_sha256": "38a12e25d3b47967a38061dc3efa381919eef8ffe45894fec1018661c0913a40",
+      "byte_size": 13245,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 79,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002J_STATIONARY_CUTPOINT_LRS_DICTIONARY_2026-08-22.md",
+      "archive_member": "CWR_CW002J_STATIONARY_CUTPOINT_LRS_DICTIONARY_2026-08-22.md",
+      "blob_sha256": "5ef242228e38487af7555d4c24cd7efa6073658da27f457cb4974b53b1eddc98",
+      "byte_size": 13272,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 80,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002K_REVERSIBILITY_DECIDABILITY_PHASE_DIAGRAM_2026-08-22.md",
+      "archive_member": "CWR_CW002K_REVERSIBILITY_DECIDABILITY_PHASE_DIAGRAM_2026-08-22.md",
+      "blob_sha256": "a4cb14f07c14dd8234f8f9036ede8134567745c88a99179fa21f72e8788bbb97",
+      "byte_size": 13353,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 81,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": "CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md",
+      "blob_sha256": "71b2482d3050dd2833dff22f5ff7867371c0ce598e6555818833e8e9ff9cc550",
+      "byte_size": 12724,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 82,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md",
+      "archive_member": "CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md",
+      "blob_sha256": "56c8d32207e74112ef9fe705571d95a4573c4fa2e2da29c3e7de97da0a0e2240",
+      "byte_size": 13614,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 83,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md",
+      "archive_member": "CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md",
+      "blob_sha256": "9efef5deb4a4745427bf1a8b7fdbb51cb5e2512a3238044395029dcbb6d1eab9",
+      "byte_size": 13360,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 84,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md",
+      "archive_member": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md",
+      "blob_sha256": "3ee4d627e998459b2a64ac54b3ecc078139f1a5505e2b28e790ff02e440f459f",
+      "byte_size": 11655,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 85,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_CW002_DOBRUSHIN_LECAM_FUTURE_INFORMATION_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002_DOBRUSHIN_LECAM_FUTURE_INFORMATION_HORIZON_2026-08-22.md",
+      "blob_sha256": "a0deccd5593b092a76fa65e6866df06c6b290ad1ef2cd6f4ec45cfa7d9ceecb0",
+      "byte_size": 10394,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 86,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_DCSG_BACKUP_INTEGRITY_2026-08-22.txt",
+      "archive_member": "CWR_DCSG_BACKUP_INTEGRITY_2026-08-22.txt",
+      "blob_sha256": "f7afab92763ec32ee767f5bbf484c6069d8b9828caa96e2f3911aa901fef5a18",
+      "byte_size": 431,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 87,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_DCSG_FULL_ALL_FILES_MANIFEST_2026-08-22.txt",
+      "archive_member": "CWR_DCSG_FULL_ALL_FILES_MANIFEST_2026-08-22.txt",
+      "blob_sha256": "d8af62497302848e68a12e08881ccea15de2331334c22f6c0ec6006a4b1a0d56",
+      "byte_size": 14680,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 88,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_HANDOFF_MANIFEST_2026-08-22.txt",
+      "archive_member": "CWR_HANDOFF_MANIFEST_2026-08-22.txt",
+      "blob_sha256": "f7d3e29ba19fbd94cb5e55ba22f48baa82962367e06539f09d55e16b345bd314",
+      "byte_size": 428,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 89,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_NEW_CHAT_START_HERE_2026-08-22.md",
+      "archive_member": "CWR_NEW_CHAT_START_HERE_2026-08-22.md",
+      "blob_sha256": "9ac312c3c77cbc2aaab04829dea27a59c237f93cd39e1cdd4c405455dab51465",
+      "byte_size": 2163,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 90,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "CWR_SOURCE_READING_LEDGER_2026-08-22.md",
+      "archive_member": "CWR_SOURCE_READING_LEDGER_2026-08-22.md",
+      "blob_sha256": "b9a554f6fd3211fd293b00db38a995f3570113df9913c6a8c6c7f7330fff5aba",
+      "byte_size": 17723,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 91,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw001_zonotope_intersection_check.txt",
+      "archive_member": "cwr_cw001_zonotope_intersection_check.txt",
+      "blob_sha256": "03ea1f169ce48693470aea13e6b997ddf1520e694b72633d9e730fb4d0e8a28d",
+      "byte_size": 525,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 92,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002_dobrushin_lecam_sharpness_check.txt",
+      "archive_member": "cwr_cw002_dobrushin_lecam_sharpness_check.txt",
+      "blob_sha256": "9db4131818ecdc72b32a0020eeca4cbadee293642632c880513883438343d6d8",
+      "byte_size": 1343,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 93,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002b_pathwise_hilbert_filter_check.txt",
+      "archive_member": "cwr_cw002b_pathwise_hilbert_filter_check.txt",
+      "blob_sha256": "4836e6a5f5ccdcbe259ca286134dfe5143ee6e756e77a6a49e892bb9c6cd44b2",
+      "byte_size": 1229,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 94,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002c_primitive_block_check.txt",
+      "archive_member": "cwr_cw002c_primitive_block_check.txt",
+      "blob_sha256": "e437869592144f61530dcd3648c1a90c72bf5d106496baadbc80c19233592353",
+      "byte_size": 1322,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 95,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002d_subrectangular_word_check.txt",
+      "archive_member": "cwr_cw002d_subrectangular_word_check.txt",
+      "blob_sha256": "665b41c84ab7c7986559ad2bccbda585acbbfdf08405c52aca4a7c99ea82de62",
+      "byte_size": 1497,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 96,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002d_word_horizon_summary.txt",
+      "archive_member": "cwr_cw002d_word_horizon_summary.txt",
+      "blob_sha256": "04c4cbbcd4aa0b5e5bcdc5aba1058490000b506aab2606a40679ebe45091f658",
+      "byte_size": 376,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 97,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002e_pair_sync_reduction_check.txt",
+      "archive_member": "cwr_cw002e_pair_sync_reduction_check.txt",
+      "blob_sha256": "143c7669264cf7e7106c86dfe992ceeb11c387b62c01e442f7fd0803782fb4d6",
+      "byte_size": 1329,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 98,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002f_positive_generator_check.txt",
+      "archive_member": "cwr_cw002f_positive_generator_check.txt",
+      "blob_sha256": "c7003eb980cdd56604fc0521f16d2d952e18014e7b91cb946e4d98daa69d0698",
+      "byte_size": 927,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 99,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002h_stationary_margin_check.txt",
+      "archive_member": "cwr_cw002h_stationary_margin_check.txt",
+      "blob_sha256": "4865998e469f5540ae22dfafade3571b7c9829b8514678273f50b75af6c2d3e8",
+      "byte_size": 1453,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 100,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002i_mixing_shell_embedding_check.txt",
+      "archive_member": "cwr_cw002i_mixing_shell_embedding_check.txt",
+      "blob_sha256": "953b129c0b220fbb6ec7a1620caf8810fa69e9982ab648cceae9916111f61c92",
+      "byte_size": 969,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 101,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002j_tangent_order_check.txt",
+      "archive_member": "cwr_cw002j_tangent_order_check.txt",
+      "blob_sha256": "53369ff7a55ac6eac78e756fb5c690b86d49aaaca42f1366c02686da9fd109ca",
+      "byte_size": 871,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 102,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002k_reversible_symmetry_check.txt",
+      "archive_member": "cwr_cw002k_reversible_symmetry_check.txt",
+      "blob_sha256": "bd017178c1b98c278c841156f4c73c4024de94359885c17f1bd8fa6c0289ca41",
+      "byte_size": 878,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 103,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002l_reversible_microstep_lift_check.txt",
+      "archive_member": "cwr_cw002l_reversible_microstep_lift_check.txt",
+      "blob_sha256": "128f6f102a13638269b0d1319f50a4836fabf16391ae2e37af09c89aa5e957d4",
+      "byte_size": 1334,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 104,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002m_binary_bistochastic_phase_code_check.txt",
+      "archive_member": "cwr_cw002m_binary_bistochastic_phase_code_check.txt",
+      "blob_sha256": "78d88970f693e7c52988a64ead2fb8a4fbfb6f56c5b078720e1557605c377124",
+      "byte_size": 1128,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 105,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002n_hadamard_tangent_stochasticization_check.txt",
+      "archive_member": "cwr_cw002n_hadamard_tangent_stochasticization_check.txt",
+      "blob_sha256": "3f4d9feb67fed4a2112bc6e443204950e0d29e0eff16071b96ecc51e2a90aacb",
+      "byte_size": 1301,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 106,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+      "display_name": "cwr_cw002o_psd_reversible_sign_inversion_check.txt",
+      "archive_member": "cwr_cw002o_psd_reversible_sign_inversion_check.txt",
+      "blob_sha256": "edce7224d93c34063157e091dec135567b199d5a39ec285654e353d91d604981",
+      "byte_size": 1188,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 107,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "archive_member": null,
+      "blob_sha256": "cf2d2bba269c5a2cedb4f2eca91b44bf29d1df75bc2eb5e74bc618c9af925a6e",
+      "byte_size": 565285,
+      "media_type": "application/x-zip-compressed"
+    },
+    {
+      "id": 108,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md",
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "byte_size": 124203,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 109,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_1.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_1.md",
+      "blob_sha256": "0435aaaede4e7cb15b9c30e2a51305521c3ea41cad7543b09c1b28fb30c20d84",
+      "byte_size": 23332,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 110,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_10.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_10.md",
+      "blob_sha256": "74d1f47ab5ea46000789f2e1492c90a984e49e9fcbf06c06bc638fd14c51ea10",
+      "byte_size": 74361,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 111,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_11.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_11.md",
+      "blob_sha256": "de4e186c5a40744eebd97d97e13af1708b39ff285f0ec6e4e04b621ce5ba073f",
+      "byte_size": 78024,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 112,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_12.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_12.md",
+      "blob_sha256": "56e4a7184b10a12a45cb0052c55e12f01dee97c41b4653890d48f2e997c126ca",
+      "byte_size": 84378,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 113,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_13.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_13.md",
+      "blob_sha256": "4a8b254e21f49a5496ccf998bd82d8abc777c48f9e94b9dd9301b658845ddac9",
+      "byte_size": 89828,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 114,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_14.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_14.md",
+      "blob_sha256": "0cf419d4e224aaf73be199a3ef1e67ad33ccc5e783a2020f89d12d3b4b83b947",
+      "byte_size": 96328,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 115,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_15.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_15.md",
+      "blob_sha256": "aa07e9936a1f7428502196b9f0ec55b4461e95641d66fa0689abeb659e6abf1c",
+      "byte_size": 102540,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 116,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md",
+      "blob_sha256": "bcb64e7d617ae13a35acef2aff1b7ecf83839f2d43693037ff370ccb1928df9c",
+      "byte_size": 108261,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 117,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md",
+      "blob_sha256": "abd5354720885bf572b8ef284a81a84171e10cdcdd0114a541e5b92e61ffa76d",
+      "byte_size": 113395,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 118,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md",
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "byte_size": 119524,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 119,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md",
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "byte_size": 124203,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 120,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_2.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_2.md",
+      "blob_sha256": "30e3168b77aa6bac8f4a5b5f32ab40d34adb063e43066e7e1f44b3c842fb936f",
+      "byte_size": 30182,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 121,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_3.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_3.md",
+      "blob_sha256": "d898c24c922f5074d571d02f2e6a0ed5e3609665b577b830802d85459af8c4f7",
+      "byte_size": 37015,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 122,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_4.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_4.md",
+      "blob_sha256": "22c6d9312aed8c6819c0b17161649373c6ee445564d8ce35a985f4ba441ab38a",
+      "byte_size": 43386,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 123,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_5.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_5.md",
+      "blob_sha256": "1c196516c95aadaf6f26b41e35bb4ceca2afcf7538a6196676c3c39e010a31a2",
+      "byte_size": 48530,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 124,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_6.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_6.md",
+      "blob_sha256": "eeff8d9333aadae5e09279a569f3eefda5f65be76bda93a69d6e018534d9536c",
+      "byte_size": 49641,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 125,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_7.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_7.md",
+      "blob_sha256": "4d3ac2ff67c72a85a70a8d7136883ea85899b320f9381e018af7ff6496a3257c",
+      "byte_size": 55515,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 126,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_8.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_8.md",
+      "blob_sha256": "c3c5634df829fad6bdbd66872dc84b7c7100d4ac691da7fa77442753da092a88",
+      "byte_size": 61789,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 127,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_9.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_9.md",
+      "blob_sha256": "70226693183f77e06e6c8dd411aca8612ff4fd36b987d8f85077d3f8d8de0d53",
+      "byte_size": 68937,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 128,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_LAB_v0_1.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_LAB_v0_1.md",
+      "blob_sha256": "ba42f3a4c46dea62a3bb0500cce9c906ed7853a62c54621a5473f8d28f997dd3",
+      "byte_size": 7956,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 129,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "COLD_WAR_RENAISSANCE_LAB_v0_2.md",
+      "archive_member": "COLD_WAR_RENAISSANCE_LAB_v0_2.md",
+      "blob_sha256": "958f9991632b02d583240602e5177e6f6f9a8427f81000236da2862eccaf0a17",
+      "byte_size": 3168,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 130,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md",
+      "archive_member": "CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md",
+      "blob_sha256": "ec10c4068406740b2b3f200ae342518f3eeff5208b9225c7da4d49c7164a3e63",
+      "byte_size": 11977,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 131,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md",
+      "archive_member": "CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md",
+      "blob_sha256": "223eed8b300aeb391740abcfe3bc9e1f0e1e6442effe1c98d1160be6e02090c6",
+      "byte_size": 10885,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 132,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md",
+      "archive_member": "CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md",
+      "blob_sha256": "2cc9752b2b98af6e000e8b0026847190a04f981871f0e39e204895261d79d598",
+      "byte_size": 11370,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 133,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md",
+      "blob_sha256": "d21678d68651e7155779d0b3fa5007d00a170a033efd82634e19d8dd9449303f",
+      "byte_size": 12127,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 134,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002C_PRIMITIVE_BLOCK_INFORMATION_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002C_PRIMITIVE_BLOCK_INFORMATION_HORIZON_2026-08-22.md",
+      "blob_sha256": "68e63bcf463522ff67c05bd38d9768c3756eaff3bab47a9e3382fb10c2336199",
+      "byte_size": 11542,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 135,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002D_SUBRECTANGULAR_WORD_LECAM_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002D_SUBRECTANGULAR_WORD_LECAM_HORIZON_2026-08-22.md",
+      "blob_sha256": "d260022f804009b41df6ec16f27a586740da2487ae88a1469e2264e61e549f1f",
+      "byte_size": 14736,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 136,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002E_WEIGHTED_PAIR_SYNCHRONIZATION_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": "CWR_CW002E_WEIGHTED_PAIR_SYNCHRONIZATION_UNDECIDABILITY_2026-08-22.md",
+      "blob_sha256": "275b537232f3c28b0057a3e9ff3c937a9f9a9340259a2ee99147e0b6d7ea5b5d",
+      "byte_size": 14681,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 137,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002F_STRICT_POSITIVITY_DECIDABILITY_ISLAND_2026-08-22.md",
+      "archive_member": "CWR_CW002F_STRICT_POSITIVITY_DECIDABILITY_ISLAND_2026-08-22.md",
+      "blob_sha256": "4bbf88804964ef7fc360870df11bbd12c58bb2658d403e6927c3200359e8f5f5",
+      "byte_size": 7438,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 138,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002G_LEAKTIGHT_SUPPORT_LIMIT_SYNCHRONIZATION_2026-08-22.md",
+      "archive_member": "CWR_CW002G_LEAKTIGHT_SUPPORT_LIMIT_SYNCHRONIZATION_2026-08-22.md",
+      "blob_sha256": "d2604ba1366fd57d0bfaf5fbefe865aef2253209fa9d973671e355f15cbce731",
+      "byte_size": 6880,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 139,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002H_STATIONARY_CUTPOINT_SINGULARITY_2026-08-22.md",
+      "archive_member": "CWR_CW002H_STATIONARY_CUTPOINT_SINGULARITY_2026-08-22.md",
+      "blob_sha256": "beb7315d909839dd0c73797937511487a1fd339534171b6ad66f945e447ecd2a",
+      "byte_size": 8291,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 140,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": "CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md",
+      "blob_sha256": "38a12e25d3b47967a38061dc3efa381919eef8ffe45894fec1018661c0913a40",
+      "byte_size": 13245,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 141,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002J_STATIONARY_CUTPOINT_LRS_DICTIONARY_2026-08-22.md",
+      "archive_member": "CWR_CW002J_STATIONARY_CUTPOINT_LRS_DICTIONARY_2026-08-22.md",
+      "blob_sha256": "5ef242228e38487af7555d4c24cd7efa6073658da27f457cb4974b53b1eddc98",
+      "byte_size": 13272,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 142,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002K_REVERSIBILITY_DECIDABILITY_PHASE_DIAGRAM_2026-08-22.md",
+      "archive_member": "CWR_CW002K_REVERSIBILITY_DECIDABILITY_PHASE_DIAGRAM_2026-08-22.md",
+      "blob_sha256": "a4cb14f07c14dd8234f8f9036ede8134567745c88a99179fa21f72e8788bbb97",
+      "byte_size": 13353,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 143,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md",
+      "archive_member": "CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md",
+      "blob_sha256": "71b2482d3050dd2833dff22f5ff7867371c0ce598e6555818833e8e9ff9cc550",
+      "byte_size": 12724,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 144,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md",
+      "archive_member": "CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md",
+      "blob_sha256": "56c8d32207e74112ef9fe705571d95a4573c4fa2e2da29c3e7de97da0a0e2240",
+      "byte_size": 13614,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 145,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md",
+      "archive_member": "CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md",
+      "blob_sha256": "9efef5deb4a4745427bf1a8b7fdbb51cb5e2512a3238044395029dcbb6d1eab9",
+      "byte_size": 13360,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 146,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md",
+      "archive_member": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md",
+      "blob_sha256": "3ee4d627e998459b2a64ac54b3ecc078139f1a5505e2b28e790ff02e440f459f",
+      "byte_size": 11655,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 147,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_CW002_DOBRUSHIN_LECAM_FUTURE_INFORMATION_HORIZON_2026-08-22.md",
+      "archive_member": "CWR_CW002_DOBRUSHIN_LECAM_FUTURE_INFORMATION_HORIZON_2026-08-22.md",
+      "blob_sha256": "a0deccd5593b092a76fa65e6866df06c6b290ad1ef2cd6f4ec45cfa7d9ceecb0",
+      "byte_size": 10394,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 148,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_DCSG_BACKUP_INTEGRITY_2026-08-22.txt",
+      "archive_member": "CWR_DCSG_BACKUP_INTEGRITY_2026-08-22.txt",
+      "blob_sha256": "f7afab92763ec32ee767f5bbf484c6069d8b9828caa96e2f3911aa901fef5a18",
+      "byte_size": 431,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 149,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_DCSG_FULL_ALL_FILES_MANIFEST_2026-08-22.txt",
+      "archive_member": "CWR_DCSG_FULL_ALL_FILES_MANIFEST_2026-08-22.txt",
+      "blob_sha256": "d8af62497302848e68a12e08881ccea15de2331334c22f6c0ec6006a4b1a0d56",
+      "byte_size": 14680,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 150,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_HANDOFF_MANIFEST_2026-08-22.txt",
+      "archive_member": "CWR_HANDOFF_MANIFEST_2026-08-22.txt",
+      "blob_sha256": "f7d3e29ba19fbd94cb5e55ba22f48baa82962367e06539f09d55e16b345bd314",
+      "byte_size": 428,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 151,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_NEW_CHAT_START_HERE_2026-08-22.md",
+      "archive_member": "CWR_NEW_CHAT_START_HERE_2026-08-22.md",
+      "blob_sha256": "9ac312c3c77cbc2aaab04829dea27a59c237f93cd39e1cdd4c405455dab51465",
+      "byte_size": 2163,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 152,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "CWR_SOURCE_READING_LEDGER_2026-08-22.md",
+      "archive_member": "CWR_SOURCE_READING_LEDGER_2026-08-22.md",
+      "blob_sha256": "b9a554f6fd3211fd293b00db38a995f3570113df9913c6a8c6c7f7330fff5aba",
+      "byte_size": 17723,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 153,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw001_zonotope_intersection_check.txt",
+      "archive_member": "cwr_cw001_zonotope_intersection_check.txt",
+      "blob_sha256": "03ea1f169ce48693470aea13e6b997ddf1520e694b72633d9e730fb4d0e8a28d",
+      "byte_size": 525,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 154,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002_dobrushin_lecam_sharpness_check.txt",
+      "archive_member": "cwr_cw002_dobrushin_lecam_sharpness_check.txt",
+      "blob_sha256": "9db4131818ecdc72b32a0020eeca4cbadee293642632c880513883438343d6d8",
+      "byte_size": 1343,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 155,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002b_pathwise_hilbert_filter_check.txt",
+      "archive_member": "cwr_cw002b_pathwise_hilbert_filter_check.txt",
+      "blob_sha256": "4836e6a5f5ccdcbe259ca286134dfe5143ee6e756e77a6a49e892bb9c6cd44b2",
+      "byte_size": 1229,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 156,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002c_primitive_block_check.txt",
+      "archive_member": "cwr_cw002c_primitive_block_check.txt",
+      "blob_sha256": "e437869592144f61530dcd3648c1a90c72bf5d106496baadbc80c19233592353",
+      "byte_size": 1322,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 157,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002d_subrectangular_word_check.txt",
+      "archive_member": "cwr_cw002d_subrectangular_word_check.txt",
+      "blob_sha256": "665b41c84ab7c7986559ad2bccbda585acbbfdf08405c52aca4a7c99ea82de62",
+      "byte_size": 1497,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 158,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002d_word_horizon_summary.txt",
+      "archive_member": "cwr_cw002d_word_horizon_summary.txt",
+      "blob_sha256": "04c4cbbcd4aa0b5e5bcdc5aba1058490000b506aab2606a40679ebe45091f658",
+      "byte_size": 376,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 159,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002e_pair_sync_reduction_check.txt",
+      "archive_member": "cwr_cw002e_pair_sync_reduction_check.txt",
+      "blob_sha256": "143c7669264cf7e7106c86dfe992ceeb11c387b62c01e442f7fd0803782fb4d6",
+      "byte_size": 1329,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 160,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002f_positive_generator_check.txt",
+      "archive_member": "cwr_cw002f_positive_generator_check.txt",
+      "blob_sha256": "c7003eb980cdd56604fc0521f16d2d952e18014e7b91cb946e4d98daa69d0698",
+      "byte_size": 927,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 161,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002h_stationary_margin_check.txt",
+      "archive_member": "cwr_cw002h_stationary_margin_check.txt",
+      "blob_sha256": "4865998e469f5540ae22dfafade3571b7c9829b8514678273f50b75af6c2d3e8",
+      "byte_size": 1453,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 162,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002i_mixing_shell_embedding_check.txt",
+      "archive_member": "cwr_cw002i_mixing_shell_embedding_check.txt",
+      "blob_sha256": "953b129c0b220fbb6ec7a1620caf8810fa69e9982ab648cceae9916111f61c92",
+      "byte_size": 969,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 163,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002j_tangent_order_check.txt",
+      "archive_member": "cwr_cw002j_tangent_order_check.txt",
+      "blob_sha256": "53369ff7a55ac6eac78e756fb5c690b86d49aaaca42f1366c02686da9fd109ca",
+      "byte_size": 871,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 164,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002k_reversible_symmetry_check.txt",
+      "archive_member": "cwr_cw002k_reversible_symmetry_check.txt",
+      "blob_sha256": "bd017178c1b98c278c841156f4c73c4024de94359885c17f1bd8fa6c0289ca41",
+      "byte_size": 878,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 165,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002l_reversible_microstep_lift_check.txt",
+      "archive_member": "cwr_cw002l_reversible_microstep_lift_check.txt",
+      "blob_sha256": "128f6f102a13638269b0d1319f50a4836fabf16391ae2e37af09c89aa5e957d4",
+      "byte_size": 1334,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 166,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002m_binary_bistochastic_phase_code_check.txt",
+      "archive_member": "cwr_cw002m_binary_bistochastic_phase_code_check.txt",
+      "blob_sha256": "78d88970f693e7c52988a64ead2fb8a4fbfb6f56c5b078720e1557605c377124",
+      "byte_size": 1128,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 167,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002n_hadamard_tangent_stochasticization_check.txt",
+      "archive_member": "cwr_cw002n_hadamard_tangent_stochasticization_check.txt",
+      "blob_sha256": "3f4d9feb67fed4a2112bc6e443204950e0d29e0eff16071b96ecc51e2a90aacb",
+      "byte_size": 1301,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 168,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip",
+      "display_name": "cwr_cw002o_psd_reversible_sign_inversion_check.txt",
+      "archive_member": "cwr_cw002o_psd_reversible_sign_inversion_check.txt",
+      "blob_sha256": "edce7224d93c34063157e091dec135567b199d5a39ec285654e353d91d604981",
+      "byte_size": 1188,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 169,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\CWR_LAB_SONRAKI_ARASTIRMA_DALGASI.txt",
+      "display_name": "CWR_LAB_SONRAKI_ARASTIRMA_DALGASI.txt",
+      "archive_member": null,
+      "blob_sha256": "b400d4102747928c09434b1fa9c43e5d749c05af913b9bccd348df0072071155",
+      "byte_size": 5500,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 170,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\DCSG_ALGEBRAIC_FOUNDATION_EXTERNAL_REVIEW.txt",
+      "display_name": "DCSG_ALGEBRAIC_FOUNDATION_EXTERNAL_REVIEW.txt",
+      "archive_member": null,
+      "blob_sha256": "e22e510948efabffbb30745bd4cd7b289654b1d192efd4c3f39f2c415b0ba050",
+      "byte_size": 31331,
+      "media_type": "text/plain"
+    },
+    {
+      "id": 171,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\DCSG_CWR_LAB_CONTINUATION_HANDOFF_2026-08-22 (1).md",
+      "display_name": "DCSG_CWR_LAB_CONTINUATION_HANDOFF_2026-08-22 (1).md",
+      "archive_member": null,
+      "blob_sha256": "853e7a59711cd29c47d3bd893d4bc7440dc46200fed072413345f8fa8d0c4aa5",
+      "byte_size": 21734,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 172,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\DCSG_CWR_LAB_CONTINUATION_HANDOFF_2026-08-22.md",
+      "display_name": "DCSG_CWR_LAB_CONTINUATION_HANDOFF_2026-08-22.md",
+      "archive_member": null,
+      "blob_sha256": "853e7a59711cd29c47d3bd893d4bc7440dc46200fed072413345f8fa8d0c4aa5",
+      "byte_size": 21734,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 173,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\LAB_BOOTSTRAP.md",
+      "display_name": "LAB_BOOTSTRAP.md",
+      "archive_member": null,
+      "blob_sha256": "96299d866efa340506b79f7a66b0eb0fcbde98b86528083306124527fdd9c514",
+      "byte_size": 1609,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 174,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\LAB_DB_SCHEMA.sql",
+      "display_name": "LAB_DB_SCHEMA.sql",
+      "archive_member": null,
+      "blob_sha256": "fe3687f7d7896301a8ca83b1a88275676437b8c8eb50ee3589731f3f7b621b57",
+      "byte_size": 2911,
+      "media_type": "application/octet-stream"
+    },
+    {
+      "id": 175,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\LAB_STATE.md",
+      "display_name": "LAB_STATE.md",
+      "archive_member": null,
+      "blob_sha256": "4bdabbfa458f3a1b6f52071e7744cf6317472640627b151a3e007778b91d0f7d",
+      "byte_size": 2030,
+      "media_type": "text/markdown"
+    },
+    {
+      "id": 176,
+      "source_path": "C:\\Users\\mertt\\OneDrive\\Belgeler\\ChatGPT\\LAB ARCHIVE AND REINSTALL\\CWR_LAB_YAN_DOSYALAR_2026-08-22\\README.md",
+      "display_name": "README.md",
+      "archive_member": null,
+      "blob_sha256": "170a1fb05e09335083ca3874d9de086b7b02d7c99054fe4e3e6f8da20388d26f",
+      "byte_size": 1773,
+      "media_type": "text/markdown"
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+      "occurrence_count": 8,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (11).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (13).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (14).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18 (1).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18 (2).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_18.md"
+    },
+    {
+      "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+      "occurrence_count": 7,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (12).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19 (1).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md"
+    },
+    {
+      "blob_sha256": "abd5354720885bf572b8ef284a81a84171e10cdcdd0114a541e5b92e61ffa76d",
+      "occurrence_count": 5,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (10).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (9).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_17.md"
+    },
+    {
+      "blob_sha256": "bcb64e7d617ae13a35acef2aff1b7ecf83839f2d43693037ff370ccb1928df9c",
+      "occurrence_count": 5,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (7).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (8).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_16.md"
+    },
+    {
+      "blob_sha256": "0cf419d4e224aaf73be199a3ef1e67ad33ccc5e783a2020f89d12d3b4b83b947",
+      "occurrence_count": 4,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (5).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (6).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_14.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_14.md"
+    },
+    {
+      "blob_sha256": "3ee4d627e998459b2a64ac54b3ecc078139f1a5505e2b28e790ff02e440f459f",
+      "occurrence_count": 4,
+      "names": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22 (1).md | CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md | CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md | CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "128f6f102a13638269b0d1319f50a4836fabf16391ae2e37af09c89aa5e957d4",
+      "occurrence_count": 3,
+      "names": "cwr_cw002l_reversible_microstep_lift_check.txt | cwr_cw002l_reversible_microstep_lift_check.txt | cwr_cw002l_reversible_microstep_lift_check.txt"
+    },
+    {
+      "blob_sha256": "19a5b65c9d55c2a75dc380592025651ad566a2e5b61e0125c967c41ba93da76f",
+      "occurrence_count": 3,
+      "names": "CWR_DCSG_FILELIST_2026-08-22 (1).txt | CWR_DCSG_FILELIST_2026-08-22 (2).txt | CWR_DCSG_FILELIST_2026-08-22.txt"
+    },
+    {
+      "blob_sha256": "38a12e25d3b47967a38061dc3efa381919eef8ffe45894fec1018661c0913a40",
+      "occurrence_count": 3,
+      "names": "CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md | CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md | CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "56c8d32207e74112ef9fe705571d95a4573c4fa2e2da29c3e7de97da0a0e2240",
+      "occurrence_count": 3,
+      "names": "CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md | CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md | CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "56e4a7184b10a12a45cb0052c55e12f01dee97c41b4653890d48f2e997c126ca",
+      "occurrence_count": 3,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (4).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_12.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_12.md"
+    },
+    {
+      "blob_sha256": "70226693183f77e06e6c8dd411aca8612ff4fd36b987d8f85077d3f8d8de0d53",
+      "occurrence_count": 3,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (2).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_9.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_9.md"
+    },
+    {
+      "blob_sha256": "71b2482d3050dd2833dff22f5ff7867371c0ce598e6555818833e8e9ff9cc550",
+      "occurrence_count": 3,
+      "names": "CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md | CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md | CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "78d88970f693e7c52988a64ead2fb8a4fbfb6f56c5b078720e1557605c377124",
+      "occurrence_count": 3,
+      "names": "cwr_cw002m_binary_bistochastic_phase_code_check.txt | cwr_cw002m_binary_bistochastic_phase_code_check.txt | cwr_cw002m_binary_bistochastic_phase_code_check.txt"
+    },
+    {
+      "blob_sha256": "c3c5634df829fad6bdbd66872dc84b7c7100d4ac691da7fa77442753da092a88",
+      "occurrence_count": 3,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (1).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_8.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_8.md"
+    },
+    {
+      "blob_sha256": "d21678d68651e7155779d0b3fa5007d00a170a033efd82634e19d8dd9449303f",
+      "occurrence_count": 3,
+      "names": "CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md | CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md | CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "de4e186c5a40744eebd97d97e13af1708b39ff285f0ec6e4e04b621ce5ba073f",
+      "occurrence_count": 3,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (3).md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_11.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_11.md"
+    },
+    {
+      "blob_sha256": "edce7224d93c34063157e091dec135567b199d5a39ec285654e353d91d604981",
+      "occurrence_count": 3,
+      "names": "cwr_cw002o_psd_reversible_sign_inversion_check.txt | cwr_cw002o_psd_reversible_sign_inversion_check.txt | cwr_cw002o_psd_reversible_sign_inversion_check.txt"
+    },
+    {
+      "blob_sha256": "eeff8d9333aadae5e09279a569f3eefda5f65be76bda93a69d6e018534d9536c",
+      "occurrence_count": 3,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_6.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_6.md"
+    },
+    {
+      "blob_sha256": "03ea1f169ce48693470aea13e6b997ddf1520e694b72633d9e730fb4d0e8a28d",
+      "occurrence_count": 2,
+      "names": "cwr_cw001_zonotope_intersection_check.txt | cwr_cw001_zonotope_intersection_check.txt"
+    },
+    {
+      "blob_sha256": "0435aaaede4e7cb15b9c30e2a51305521c3ea41cad7543b09c1b28fb30c20d84",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_1.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_1.md"
+    },
+    {
+      "blob_sha256": "04c4cbbcd4aa0b5e5bcdc5aba1058490000b506aab2606a40679ebe45091f658",
+      "occurrence_count": 2,
+      "names": "cwr_cw002d_word_horizon_summary.txt | cwr_cw002d_word_horizon_summary.txt"
+    },
+    {
+      "blob_sha256": "143c7669264cf7e7106c86dfe992ceeb11c387b62c01e442f7fd0803782fb4d6",
+      "occurrence_count": 2,
+      "names": "cwr_cw002e_pair_sync_reduction_check.txt | cwr_cw002e_pair_sync_reduction_check.txt"
+    },
+    {
+      "blob_sha256": "1c196516c95aadaf6f26b41e35bb4ceca2afcf7538a6196676c3c39e010a31a2",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_5.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_5.md"
+    },
+    {
+      "blob_sha256": "223eed8b300aeb391740abcfe3bc9e1f0e1e6442effe1c98d1160be6e02090c6",
+      "occurrence_count": 2,
+      "names": "CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md | CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "22c6d9312aed8c6819c0b17161649373c6ee445564d8ce35a985f4ba441ab38a",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_4.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_4.md"
+    },
+    {
+      "blob_sha256": "275b537232f3c28b0057a3e9ff3c937a9f9a9340259a2ee99147e0b6d7ea5b5d",
+      "occurrence_count": 2,
+      "names": "CWR_CW002E_WEIGHTED_PAIR_SYNCHRONIZATION_UNDECIDABILITY_2026-08-22.md | CWR_CW002E_WEIGHTED_PAIR_SYNCHRONIZATION_UNDECIDABILITY_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "2cc9752b2b98af6e000e8b0026847190a04f981871f0e39e204895261d79d598",
+      "occurrence_count": 2,
+      "names": "CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md | CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "30e3168b77aa6bac8f4a5b5f32ab40d34adb063e43066e7e1f44b3c842fb936f",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_2.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_2.md"
+    },
+    {
+      "blob_sha256": "33b81638173902cb8f16c69b5de0ee14bb4e4f5acde1956c43db89ea02d93b72",
+      "occurrence_count": 2,
+      "names": "CWR_DCSG_MANIFEST_SHA256_2026-08-22 (1).txt | CWR_DCSG_MANIFEST_SHA256_2026-08-22.txt"
+    },
+    {
+      "blob_sha256": "3f4d9feb67fed4a2112bc6e443204950e0d29e0eff16071b96ecc51e2a90aacb",
+      "occurrence_count": 2,
+      "names": "cwr_cw002n_hadamard_tangent_stochasticization_check.txt | cwr_cw002n_hadamard_tangent_stochasticization_check.txt"
+    },
+    {
+      "blob_sha256": "4836e6a5f5ccdcbe259ca286134dfe5143ee6e756e77a6a49e892bb9c6cd44b2",
+      "occurrence_count": 2,
+      "names": "cwr_cw002b_pathwise_hilbert_filter_check.txt | cwr_cw002b_pathwise_hilbert_filter_check.txt"
+    },
+    {
+      "blob_sha256": "4865998e469f5540ae22dfafade3571b7c9829b8514678273f50b75af6c2d3e8",
+      "occurrence_count": 2,
+      "names": "cwr_cw002h_stationary_margin_check.txt | cwr_cw002h_stationary_margin_check.txt"
+    },
+    {
+      "blob_sha256": "4a8b254e21f49a5496ccf998bd82d8abc777c48f9e94b9dd9301b658845ddac9",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_13.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_13.md"
+    },
+    {
+      "blob_sha256": "4bbf88804964ef7fc360870df11bbd12c58bb2658d403e6927c3200359e8f5f5",
+      "occurrence_count": 2,
+      "names": "CWR_CW002F_STRICT_POSITIVITY_DECIDABILITY_ISLAND_2026-08-22.md | CWR_CW002F_STRICT_POSITIVITY_DECIDABILITY_ISLAND_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "4d3ac2ff67c72a85a70a8d7136883ea85899b320f9381e018af7ff6496a3257c",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_7.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_7.md"
+    },
+    {
+      "blob_sha256": "53369ff7a55ac6eac78e756fb5c690b86d49aaaca42f1366c02686da9fd109ca",
+      "occurrence_count": 2,
+      "names": "cwr_cw002j_tangent_order_check.txt | cwr_cw002j_tangent_order_check.txt"
+    },
+    {
+      "blob_sha256": "5ef242228e38487af7555d4c24cd7efa6073658da27f457cb4974b53b1eddc98",
+      "occurrence_count": 2,
+      "names": "CWR_CW002J_STATIONARY_CUTPOINT_LRS_DICTIONARY_2026-08-22.md | CWR_CW002J_STATIONARY_CUTPOINT_LRS_DICTIONARY_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "665b41c84ab7c7986559ad2bccbda585acbbfdf08405c52aca4a7c99ea82de62",
+      "occurrence_count": 2,
+      "names": "cwr_cw002d_subrectangular_word_check.txt | cwr_cw002d_subrectangular_word_check.txt"
+    },
+    {
+      "blob_sha256": "68e63bcf463522ff67c05bd38d9768c3756eaff3bab47a9e3382fb10c2336199",
+      "occurrence_count": 2,
+      "names": "CWR_CW002C_PRIMITIVE_BLOCK_INFORMATION_HORIZON_2026-08-22.md | CWR_CW002C_PRIMITIVE_BLOCK_INFORMATION_HORIZON_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "74d1f47ab5ea46000789f2e1492c90a984e49e9fcbf06c06bc638fd14c51ea10",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_10.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_10.md"
+    },
+    {
+      "blob_sha256": "778452a490d72c1c1f979ca5b0e2476b7f38bb9fe99b2ada8940075229e8c9fb",
+      "occurrence_count": 2,
+      "names": "CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22 (1).md | CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "853e7a59711cd29c47d3bd893d4bc7440dc46200fed072413345f8fa8d0c4aa5",
+      "occurrence_count": 2,
+      "names": "DCSG_CWR_LAB_CONTINUATION_HANDOFF_2026-08-22 (1).md | DCSG_CWR_LAB_CONTINUATION_HANDOFF_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "953b129c0b220fbb6ec7a1620caf8810fa69e9982ab648cceae9916111f61c92",
+      "occurrence_count": 2,
+      "names": "cwr_cw002i_mixing_shell_embedding_check.txt | cwr_cw002i_mixing_shell_embedding_check.txt"
+    },
+    {
+      "blob_sha256": "958f9991632b02d583240602e5177e6f6f9a8427f81000236da2862eccaf0a17",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_LAB_v0_2.md | COLD_WAR_RENAISSANCE_LAB_v0_2.md"
+    },
+    {
+      "blob_sha256": "9ac312c3c77cbc2aaab04829dea27a59c237f93cd39e1cdd4c405455dab51465",
+      "occurrence_count": 2,
+      "names": "CWR_NEW_CHAT_START_HERE_2026-08-22.md | CWR_NEW_CHAT_START_HERE_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "9db4131818ecdc72b32a0020eeca4cbadee293642632c880513883438343d6d8",
+      "occurrence_count": 2,
+      "names": "cwr_cw002_dobrushin_lecam_sharpness_check.txt | cwr_cw002_dobrushin_lecam_sharpness_check.txt"
+    },
+    {
+      "blob_sha256": "9efef5deb4a4745427bf1a8b7fdbb51cb5e2512a3238044395029dcbb6d1eab9",
+      "occurrence_count": 2,
+      "names": "CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md | CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "a0deccd5593b092a76fa65e6866df06c6b290ad1ef2cd6f4ec45cfa7d9ceecb0",
+      "occurrence_count": 2,
+      "names": "CWR_CW002_DOBRUSHIN_LECAM_FUTURE_INFORMATION_HORIZON_2026-08-22.md | CWR_CW002_DOBRUSHIN_LECAM_FUTURE_INFORMATION_HORIZON_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "a4cb14f07c14dd8234f8f9036ede8134567745c88a99179fa21f72e8788bbb97",
+      "occurrence_count": 2,
+      "names": "CWR_CW002K_REVERSIBILITY_DECIDABILITY_PHASE_DIAGRAM_2026-08-22.md | CWR_CW002K_REVERSIBILITY_DECIDABILITY_PHASE_DIAGRAM_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "aa07e9936a1f7428502196b9f0ec55b4461e95641d66fa0689abeb659e6abf1c",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_15.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_15.md"
+    },
+    {
+      "blob_sha256": "b16e159ed7f9b12dda18f2d4de3e2dae7376224758bbafd123d23032fee3888d",
+      "occurrence_count": 2,
+      "names": "CWR_DCSG_LAB_HANDOFF_2026-08-22 (1).md | CWR_DCSG_LAB_HANDOFF_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "b9a554f6fd3211fd293b00db38a995f3570113df9913c6a8c6c7f7330fff5aba",
+      "occurrence_count": 2,
+      "names": "CWR_SOURCE_READING_LEDGER_2026-08-22.md | CWR_SOURCE_READING_LEDGER_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "ba42f3a4c46dea62a3bb0500cce9c906ed7853a62c54621a5473f8d28f997dd3",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_LAB_v0_1.md | COLD_WAR_RENAISSANCE_LAB_v0_1.md"
+    },
+    {
+      "blob_sha256": "bd017178c1b98c278c841156f4c73c4024de94359885c17f1bd8fa6c0289ca41",
+      "occurrence_count": 2,
+      "names": "cwr_cw002k_reversible_symmetry_check.txt | cwr_cw002k_reversible_symmetry_check.txt"
+    },
+    {
+      "blob_sha256": "beb7315d909839dd0c73797937511487a1fd339534171b6ad66f945e447ecd2a",
+      "occurrence_count": 2,
+      "names": "CWR_CW002H_STATIONARY_CUTPOINT_SINGULARITY_2026-08-22.md | CWR_CW002H_STATIONARY_CUTPOINT_SINGULARITY_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "c7003eb980cdd56604fc0521f16d2d952e18014e7b91cb946e4d98daa69d0698",
+      "occurrence_count": 2,
+      "names": "cwr_cw002f_positive_generator_check.txt | cwr_cw002f_positive_generator_check.txt"
+    },
+    {
+      "blob_sha256": "cb6c7359ce55353163bc2afb12b7f143ed0ac7755f3941b472d7e28e57224480",
+      "occurrence_count": 2,
+      "names": "ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt | ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt"
+    },
+    {
+      "blob_sha256": "cf2d2bba269c5a2cedb4f2eca91b44bf29d1df75bc2eb5e74bc618c9af925a6e",
+      "occurrence_count": 2,
+      "names": "CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip | CWR_LAB_SAFETY_BUNDLE_2026-08-22.zip"
+    },
+    {
+      "blob_sha256": "d260022f804009b41df6ec16f27a586740da2487ae88a1469e2264e61e549f1f",
+      "occurrence_count": 2,
+      "names": "CWR_CW002D_SUBRECTANGULAR_WORD_LECAM_HORIZON_2026-08-22.md | CWR_CW002D_SUBRECTANGULAR_WORD_LECAM_HORIZON_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "d2604ba1366fd57d0bfaf5fbefe865aef2253209fa9d973671e355f15cbce731",
+      "occurrence_count": 2,
+      "names": "CWR_CW002G_LEAKTIGHT_SUPPORT_LIMIT_SYNCHRONIZATION_2026-08-22.md | CWR_CW002G_LEAKTIGHT_SUPPORT_LIMIT_SYNCHRONIZATION_2026-08-22.md"
+    },
+    {
+      "blob_sha256": "d898c24c922f5074d571d02f2e6a0ed5e3609665b577b830802d85459af8c4f7",
+      "occurrence_count": 2,
+      "names": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_3.md | COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_3.md"
+    },
+    {
+      "blob_sha256": "d8af62497302848e68a12e08881ccea15de2331334c22f6c0ec6006a4b1a0d56",
+      "occurrence_count": 2,
+      "names": "CWR_DCSG_FULL_ALL_FILES_MANIFEST_2026-08-22.txt | CWR_DCSG_FULL_ALL_FILES_MANIFEST_2026-08-22.txt"
+    },
+    {
+      "blob_sha256": "e437869592144f61530dcd3648c1a90c72bf5d106496baadbc80c19233592353",
+      "occurrence_count": 2,
+      "names": "cwr_cw002c_primitive_block_check.txt | cwr_cw002c_primitive_block_check.txt"
+    },
+    {
+      "blob_sha256": "ec10c4068406740b2b3f200ae342518f3eeff5208b9225c7da4d49c7164a3e63",
+      "occurrence_count": 2,
+      "names": "CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md | CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md"
+    },
+    {
+      "blob_sha256": "f7afab92763ec32ee767f5bbf484c6069d8b9828caa96e2f3911aa901fef5a18",
+      "occurrence_count": 2,
+      "names": "CWR_DCSG_BACKUP_INTEGRITY_2026-08-22.txt | CWR_DCSG_BACKUP_INTEGRITY_2026-08-22.txt"
+    },
+    {
+      "blob_sha256": "f7d3e29ba19fbd94cb5e55ba22f48baa82962367e06539f09d55e16b345bd314",
+      "occurrence_count": 2,
+      "names": "CWR_HANDOFF_MANIFEST_2026-08-22.txt | CWR_HANDOFF_MANIFEST_2026-08-22.txt"
+    }
+  ],
+  "integrity_issues": [
+    {
+      "issue_key": "registry_tail_missing",
+      "severity": "WARNING",
+      "status": "OPEN",
+      "summary": "Confirmed state reaches BP-220, but available registry artifacts reach only BP-212.",
+      "evidence": "Full conversation turn 088 references registry v0.20 and CW-002P, while supplied physical registry snapshots stop at v0.19/BP-212."
+    },
+    {
+      "issue_key": "autonomy_disabled",
+      "severity": "INFO",
+      "status": "OPEN",
+      "summary": "Autonomous research macros are intentionally disabled in lab v1.",
+      "evidence": "Enable only after the staged validation gates in LAB_AUTOMATION_ROADMAP.md."
+    }
+  ]
+}

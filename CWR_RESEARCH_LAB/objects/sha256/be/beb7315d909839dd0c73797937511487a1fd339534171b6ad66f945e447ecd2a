@@ -1,0 +1,475 @@
+# COLD WAR RENAISSANCE — CW-002H
+## Dobrushin consensus × doubly-stochastic PFA undecidability
+### The stationary-cutpoint singularity
+Date: 2026-08-22
+Status: EXACT THEOREM + 2025 COLLISION/COROLLARY
+
+## 1. The apparent paradox
+
+CW-002F showed that a finite family of strictly positive stochastic matrices is uniformly contractive in total variation.
+
+Therefore all products forget their initial condition exponentially.
+
+One might expect this to make threshold reachability easy.
+
+A 2025 theorem of Günter Rote shows the opposite.
+
+There exist PFAs with:
+
+- only \(7\) states;
+- \(4\) strictly positive doubly-stochastic transition matrices;
+- a single accepting state;
+- cutpoint
+  \[
+  \lambda=\frac17;
+  \]
+
+for which emptiness is undecidable.
+
+An even stronger version fixes six positive doubly-stochastic transition matrices and leaves only the starting distribution as variable input.
+
+Thus:
+
+\[
+\boxed{
+\text{uniform exponential mixing does not imply decidable transient threshold reachability}.
+}
+\]
+
+The reason is a knife-edge threshold at the common stationary value.
+
+---
+
+## 2. General common-stationary margin theorem
+
+Let
+
+\[
+\Sigma=\{P_a:a\in A\}
+\]
+
+be a finite family of rational stochastic matrices.
+
+Assume:
+
+1. all generators share a common invariant distribution \(\nu\):
+   \[
+   \nu P_a=\nu;
+   \]
+2. they are uniformly Dobrushin-contracting:
+   \[
+   \rho:=\max_a\delta(P_a)<1.
+   \]
+
+Let \(\mu\) be an initial distribution and let \(f\) be a bounded reward/output vector.
+
+For a word \(w\) of length \(k\),
+
+\[
+|\mu P_wf-\nu f|
+\le
+\operatorname{osc}(f)
+TV(\mu P_w,\nu),
+\]
+
+where
+
+\[
+\operatorname{osc}(f)
+=
+\max_i f_i-\min_i f_i.
+\]
+
+By contraction,
+
+\[
+TV(\mu P_w,\nu)
+\le
+\rho^kTV(\mu,\nu).
+\]
+
+Therefore:
+
+### Theorem CW-002H.1 — Uniform stationary-envelope law
+
+\[
+\boxed{
+|\mu P_wf-\nu f|
+\le
+\operatorname{osc}(f)
+\rho^{|w|}
+TV(\mu,\nu)
+\qquad
+\forall w.
+}
+\]
+
+This is uniform over every switching word.
+
+---
+
+## 3. Off-stationary cutpoints are decidable
+
+Consider the strict cutpoint problem
+
+\[
+\exists w:
+\mu P_wf>\lambda.
+\]
+
+Define the stationary baseline
+
+\[
+b=\nu f.
+\]
+
+Suppose
+
+\[
+\lambda\ne b.
+\]
+
+Let
+
+\[
+\gamma=|\lambda-b|>0.
+\]
+
+Choose \(N\) such that
+
+\[
+\operatorname{osc}(f)\rho^N TV(\mu,\nu)<\gamma.
+\]
+
+For example,
+
+\[
+\boxed{
+N
+=
+\left\lceil
+\frac{
+\log\left(
+\gamma/(
+\operatorname{osc}(f)TV(\mu,\nu)
+)
+\right)
+}{
+\log\rho
+}
+\right\rceil
+}
+\]
+
+when the ratio is below \(1\).
+
+Then:
+
+### Case \(\lambda>b\)
+
+Every word with \(|w|\ge N\) satisfies
+
+\[
+\mu P_wf<\lambda.
+\]
+
+So one only needs to inspect finitely many words of length \(<N\).
+
+### Case \(\lambda<b\)
+
+Every sufficiently long word satisfies
+
+\[
+\mu P_wf>\lambda.
+\]
+
+Hence the answer is automatically yes once arbitrarily long words are allowed.
+
+Therefore:
+
+### Theorem CW-002H.2 — Margin-to-stationarity decidability
+
+For a finite uniformly contracting family with a common invariant law,
+
+\[
+\boxed{
+\lambda\ne\nu f
+\Longrightarrow
+\text{strict cutpoint emptiness is decidable by a finite horizon}.
+}
+\]
+
+The same principle applies to weak inequality with the expected boundary care.
+
+---
+
+## 4. The exact stationary cutpoint can remain undecidable
+
+Now specialize to positive doubly-stochastic \(n\times n\) matrices.
+
+The common invariant distribution is uniform:
+
+\[
+u=\frac1n\mathbf1.
+\]
+
+For a single accepting state \(j\),
+
+\[
+f=e_j,
+\qquad
+uf=\frac1n.
+\]
+
+Rote's theorem gives positive doubly-stochastic \(7\times7\) PFA instances for which deciding
+
+\[
+\exists w:
+(\mu P_w)_j>\frac17
+\]
+
+is undecidable.
+
+But every such finite positive generator family has
+
+\[
+\rho<1.
+\]
+
+Therefore:
+
+### Theorem CW-002H.3 — Stationary-cutpoint singularity
+
+There exist finite rational stochastic matrix families with a common stationary distribution and uniform exponential contraction such that:
+
+- every strict cutpoint problem
+  \[
+  \lambda\ne\nu f
+  \]
+  is decidable by a finite contraction horizon;
+- the exact stationary cutpoint
+  \[
+  \boxed{\lambda=\nu f}
+  \]
+  is undecidable.
+
+This is a genuine algorithmic phase transition at zero margin.
+
+---
+
+## 5. Why contraction does not help at zero margin
+
+Rote's construction makes the mechanism explicit.
+
+He starts from matrices whose relevant scalar sign encodes a Post Correspondence Problem instance, then forms positive doubly-stochastic matrices
+
+\[
+D_i
+=
+(1-\alpha)J+\alpha C_i,
+\]
+
+where \(J\) is the completely mixing matrix.
+
+For the relevant zero-sum deviation, products satisfy a relation of the form
+
+\[
+\text{deviation after }m\text{ letters}
+=
+\alpha^m
+\times
+\text{encoded algebraic signal}.
+\]
+
+After shifting the start vector into the probability simplex, the acceptance probability becomes
+
+\[
+\boxed{
+\frac17
++
+\alpha^{|w|}
+s(w),
+}
+\]
+
+where the sign of \(s(w)\) carries the undecidable PCP predicate.
+
+Thus the signal amplitude tends exponentially to zero, but its sign remains computationally meaningful.
+
+Dobrushin contraction controls the amplitude:
+
+\[
+|\alpha^{|w|}s(w)|\to0.
+\]
+
+It says nothing about deciding whether
+
+\[
+s(w)>0
+\]
+
+for some finite word.
+
+So:
+
+\[
+\boxed{
+\text{asymptotic stability}
+\not\Rightarrow
+\text{decidability of exact transient sign questions}.
+}
+\]
+
+---
+
+## 6. Vanishing-signal computation
+
+This motivates an independent concept.
+
+A **vanishing-signal computation** is a switched/iterated system with:
+
+1. a globally attracting reference state \(x_\ast\);
+2. a uniform contraction law
+   \[
+   \|x_w-x_\ast\|\le C\rho^{|w|};
+   \]
+3. an exact predicate encoded only in the sign or side of a hyperplane:
+   \[
+   \ell(x_w-x_\ast)>0.
+   \]
+
+Rote's positive doubly-stochastic PFA construction is an explicit undecidable example.
+
+The computational content survives only in an exponentially shrinking direction.
+
+This phenomenon is potentially relevant far beyond automata:
+
+- consensus systems;
+- analog computation;
+- switched linear systems;
+- robust verification;
+- numerical precision barriers.
+
+---
+
+## 7. A robustness corollary
+
+Suppose the threshold has declared tolerance/margin \(\gamma>0\).
+
+Then the undecidable stationary-cutpoint behavior disappears beyond a computable horizon.
+
+Therefore any verification contract that asks only whether
+
+\[
+\mu P_wf\ge b+\gamma
+\]
+
+for fixed \(\gamma>0\) has finite search depth under uniform contraction.
+
+The algorithmic pathology resides exactly in arbitrarily small deviations around the limiting boundary.
+
+This gives a structural principle:
+
+\[
+\boxed{
+\text{uniform contraction + nonzero decision margin}
+\Rightarrow
+\text{finite-horizon verification}.
+}
+\]
+
+\[
+\boxed{
+\text{zero margin}
+\text{ can retain undecidable sign complexity}.
+}
+\]
+
+---
+
+## 8. Positive doubly-stochastic computational core with one terminal readout
+
+Rote's Theorem 1(a) can also be converted directly into a pair-synchronization threshold problem.
+
+Take the \(7\)-state positive doubly-stochastic PFA with initial distribution \(\pi\), matrices \(D_i\), and single accepting state \(j\).
+
+Add two absorbing states \(z,r\) and one deterministic terminal readout \(F\):
+
+- accepting state \(j\to z\);
+- every other PFA state \(\to r\);
+- \(z,r\) fixed.
+
+Extend every \(D_i\) by an identity block on \(z,r\).
+
+Let
+
+\[
+p=(\pi,0,0),
+\qquad
+q=e_z.
+\]
+
+Then for every PFA word \(w\),
+
+\[
+\boxed{
+TV(pD_wF,q)
+=
+1-\pi D_we_j.
+}
+\]
+
+Words without \(F\) have distance \(1\), and after the first \(F\) the distance freezes.
+
+Hence:
+
+\[
+\boxed{
+\exists v:
+TV(pP_v,qP_v)<\frac67
+}
+\]
+
+is undecidable.
+
+So a single deterministic readout interface is enough to recover undecidability even when all computational dynamics generators are positive doubly-stochastic.
+
+This isolates the source of hardness:
+
+\[
+\text{contracting dynamics}
++
+\text{exact terminal threshold/readout}.
+\]
+
+---
+
+# Verdict
+
+The correct boundary is not "positive matrices are easy."
+
+Positive common-stationary dynamics make **asymptotic coalescence** easy.
+
+But exact transient half-space/cutpoint questions can remain undecidable at the stationary baseline.
+
+The sharp principle is:
+
+\[
+\boxed{
+\lambda\ne\nu f
+\Rightarrow
+\text{finite-horizon decidability},
+}
+\]
+
+while Rote gives:
+
+\[
+\boxed{
+\lambda=\nu f
+\Rightarrow
+\text{undecidability can persist despite exponential mixing}.
+}
+\]
+
+This is one of the strongest standalone byproducts of the CWR program so far.

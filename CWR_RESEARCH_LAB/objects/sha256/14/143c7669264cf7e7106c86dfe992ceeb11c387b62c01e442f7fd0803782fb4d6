@@ -1,0 +1,33 @@
+CWR CW-002E probabilistic-automaton -> stochastic pair synchronization check
+
+Toy PFA: A absorbing accepting, R --a--> A with 1/2 and R with 1/2.
+Acceptance after a^k from R = 1 - 2^{-k}.
+Extended stochastic synchronization gadget predicts:
+  TV(e_s P_start P_a^k P_stop, e_z) = 2^{-k}.
+
+k | computed TV | expected 2^-k | abs error
+ 0 | 1.000000000000 | 1.000000000000 | 0.000e+00
+ 1 | 0.500000000000 | 0.500000000000 | 0.000e+00
+ 2 | 0.250000000000 | 0.250000000000 | 0.000e+00
+ 3 | 0.125000000000 | 0.125000000000 | 0.000e+00
+ 4 | 0.062500000000 | 0.062500000000 | 0.000e+00
+ 5 | 0.031250000000 | 0.031250000000 | 0.000e+00
+ 6 | 0.015625000000 | 0.015625000000 | 0.000e+00
+ 7 | 0.007812500000 | 0.007812500000 | 0.000e+00
+ 8 | 0.003906250000 | 0.003906250000 | 0.000e+00
+ 9 | 0.001953125000 | 0.001953125000 | 0.000e+00
+10 | 0.000976562500 | 0.000976562500 | 0.000e+00
+11 | 0.000488281250 | 0.000488281250 | 0.000e+00
+12 | 0.000244140625 | 0.000244140625 | 0.000e+00
+
+Representative global Dobrushin coefficients:
+k | delta(start a^k stop)
+ 0 | 1.000000000000
+ 1 | 1.000000000000
+ 2 | 1.000000000000
+ 4 | 1.000000000000
+ 8 | 1.000000000000
+12 | 1.000000000000
+
+The designated pair approaches TV 0 but never reaches it at finite k.
+The full state set never globally synchronizes because z and r remain distinct absorbing states.

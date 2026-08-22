@@ -1,0 +1,9 @@
+CWR / DCSG BACKUP INTEGRITY
+archive: CWR_DCSG_FULL_ALL_FILES_BACKUP_2026-08-22.zip
+archive_sha256: 921aebad5f0fdaf1656459e00457b8a445133334ae2668fdcb341aef08767086
+included_files_plus_manifest: 123
+canonical_registry_source: COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_19.md
+latest_registry_id: CWR-BP-212
+next_registry_id: CWR-BP-213
+start_here: CWR_NEW_CHAT_START_HERE_2026-08-22.md
+handoff: CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md
