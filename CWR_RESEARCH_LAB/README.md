@@ -47,3 +47,7 @@ Mevcut fiziksel registry v0.19, CWR-BP-212'de biter. Tam konuşmanın son cevab�
 ## Otomasyon sınırı
 
 Makrolar/autonomous waves bu sürümde varsayılan olarak kapalıdır. Önce deterministik ingest, source ledger, status geçişleri, checkpoint ve rehydration güvenilir hale getirilmiştir. Sonraki aşama [LAB_AUTOMATION_ROADMAP.md](LAB_AUTOMATION_ROADMAP.md) içindeki kapılara bağlıdır.
+
+## ChatGPT ve Codex plugin bağlantısı
+
+Repo kökündeki `plugins/cwr-research-lab/` paketi bu laboratuvara salt-okunur MCP erişimi verir. Codex için yerel stdio, ChatGPT için aynı araçları sunan Streamable HTTP taşıması bulunur. Plugin araştırma kaydı üretmez, veritabanını değiştirmez ve GitLab'a otomatik push yapmaz; `gitlab_backup_status` yalnız yerel yedek durumunu denetler.

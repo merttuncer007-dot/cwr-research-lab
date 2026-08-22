@@ -1,0 +1,19 @@
+{
+  "name": "cwr-research-lab-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP connector for the persistent CWR research lab",
+  "scripts": {
+    "start": "node scripts/server.mjs --stdio",
+    "start:http": "node scripts/server.mjs --http",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^4.3.6"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}

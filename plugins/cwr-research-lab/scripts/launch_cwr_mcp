@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -eu
+PLUGIN_ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+NODE_EXE=${CODEX_MCP_NODE_PATH:-node}
+exec "$NODE_EXE" "$PLUGIN_ROOT/scripts/server.mjs" --stdio
