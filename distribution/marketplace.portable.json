@@ -1,0 +1,21 @@
+{
+  "name": "cwr-private",
+  "interface": {
+    "displayName": "CWR Private"
+  },
+  "plugins": [
+    {
+      "name": "cwr-research-lab",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cwr-research-lab"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}
+
