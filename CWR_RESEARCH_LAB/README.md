@@ -17,6 +17,7 @@ Laboratuvar üç şeyi birbirine karıştırmadan saklar:
 PowerShell'de bu klasöre geçin:
 
 ```powershell
+.\rehydrate.cmd
 .\lab.ps1 status
 .\lab.ps1 search "rank two PSD"
 .\lab.ps1 context --query "rank two PSD scalar sign" --output .\exports\NEXT_CONTEXT.md
@@ -27,6 +28,7 @@ Yeni bir GPT/Codex oturumunda önce [AGENTS.md](AGENTS.md), [LAB_KERNEL.md](LAB_
 ## Komutlar
 
 ```text
+rehydrate                    Arşiv hashlerini ve working-state capsule'ını tek pass doğrular
 init                         Veritabanını ve dizinleri kurar
 ingest PATH...               Dosya/klasörleri ve ZIP üyelerini içerir
 status                       Laboratuvarın kanonik durumunu gösterir
@@ -56,9 +58,9 @@ Repo kökündeki `plugins/cwr-research-lab/` paketi bu laboratuvara salt-okunur 
 
 Yeni bir ChatGPT sohbetinde repo kökündeki `CHATGPT_GIT_START_PROMPT.txt`
 metnini kullanın. Bu prompt `CHATGPT_START_HERE.md` kanonik yükleyicisine gider;
-ChatGPT yalnız gerekli kernel, state ve session-context dosyalarını public
+ChatGPT tek bir statik `REHYDRATION_BOOTSTRAP.json` capsule'ını public
 `https://github.com/merttuncer007-dot/cwr-research-lab` mirror'ının `main`
-dalından sırayla okur ve başlamadan önce doğrulanabilir `CWR LAB LOADED` raporu
-verir. Public mirror erişimi de yoksa Matroyshka paketindeki doğrulanmış offline
-snapshot'a düşer; okunmamış içeriği varmış gibi göstermez.
+dalından okur ve `CWR INSTANCE READY` raporu verir. Public mirror erişimi de yoksa
+Matroyshka paketindeki aynı doğrulanmış offline capsule'a düşer. Canlı MCP 404
+yalnız bağlantı durumudur; doğrulanmış snapshot için readiness engeli değildir.
 
