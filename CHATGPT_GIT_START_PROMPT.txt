@@ -1,9 +1,13 @@
-CWR Research Lab'i public GitHub mirror'dan eklentisiz yükle.
+CWR Research Lab'i eklentisiz ve tek adımda rehidre et.
 
-`merttuncer007-dot/cwr-research-lab` projesinin `main` dalını aç. İlk ve kanonik giriş dosyası `CHATGPT_START_HERE.md` dosyasıdır. Dosyayı tamamen oku ve içindeki repository access order, Mandatory load order, source-of-truth, integrity ve initialization response kurallarını uygula.
+Şu dosyayı tamamen aç:
+https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CWR_RESEARCH_LAB/exports/REHYDRATION_BOOTSTRAP.json
 
-Doğrudan bağlantı:
-https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md
+GitHub commit araması veya repository taraması yapma. Capsule içindeki readiness,
+hash, coverage, research pointer, integrity, kernel/state ve locator alanlarını
+çalışma state'i olarak yükle. `archive_integrity=verified`,
+`research_state_ready=true` ve `blocking_failures=[]` ise canlı plugin/MCP/tunnel
+yokluğunu engel sayma; `CWR INSTANCE READY` ve `ready_for_instruction: yes` raporu
+ver. Exact arşiv metnini yalnız sonraki sorgu gerektirdiğinde locator ile getir.
 
-GitHub erişemezse ve bağlı GitLab kaynağı varsa `merttuncer07/cwr-research-lab` main dalını dene. İkisine de erişemezsen içeriği okumuş gibi davranma; Matroyshka paketindeki offline snapshot'ı kullan. Başarılıysan araştırmaya başlamadan önce protokoldeki `CWR LAB LOADED` raporunu ver.
 
