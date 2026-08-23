@@ -1,6 +1,6 @@
 {
   "name": "cwr-research-lab",
-  "version": "0.1.0",
+  "version": "0.2.0+codex.20260823014543",
   "description": "Connects ChatGPT and Codex to the persistent CWR research archive through a controlled MCP interface.",
   "author": {
     "name": "Mert Tuncer"
@@ -9,16 +9,19 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "CWR Research Lab",
-    "shortDescription": "Connect to the persistent CWR archive.",
-    "longDescription": "Gives ChatGPT and Codex controlled, provenance-aware access to the existing CWR SQLite archive without making chat history the source of truth.",
+    "shortDescription": "Rehydrate and query the persistent CWR archive.",
+    "longDescription": "Rehydrates ChatGPT and Codex in one verified, bounded pass and gives provenance-aware access to the existing CWR SQLite archive without making chat history the source of truth.",
     "developerName": "Mert Tuncer",
     "category": "Developer Tools",
-    "capabilities": ["Read"],
+    "capabilities": [
+      "Read"
+    ],
     "defaultPrompt": [
-      "Show the current CWR lab state.",
+      "Rehydrate the current CWR lab instance.",
       "Search the CWR archive for a concept.",
       "Build a sourced context pack for the frontier."
     ]
   },
   "mcpServers": "./.mcp.json"
 }
+
