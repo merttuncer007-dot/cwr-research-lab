@@ -1,0 +1,222 @@
+CWR RESEARCH LAB — CHATGPT FULL-INSTANCE MATRYOSHKA REHYDRATION
+
+Bu mesaj normal bir araştırma sorusu değildir. Bağlı GitLab deposundaki CWR
+Research Lab'in kendi kendisini yeniden kuran prompt/protokol zincirini
+çalıştırma talimatıdır. Amaç kısa bir state özeti almak değil; aynı arşiv,
+kronoloji, karar gerekçeleri, yöntem, epistemik sınırlar ve güncel state üzerinden
+olabildiğince tam bir laboratuvar instance'ı oluşturmaktır.
+
+AUTHORITATIVE REPOSITORY
+
+- GitLab project: `merttuncer07/cwr-research-lab`
+- Public read-only mirror: `merttuncer007-dot/cwr-research-lab`
+- Canonical branch: `main`
+- Project: `https://gitlab.com/merttuncer07/cwr-research-lab`
+- Portable mirror: `https://github.com/merttuncer007-dot/cwr-research-lab`
+- First canonical child prompt:
+  `https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md`
+
+PHASE 0 — ZERO-QUESTION CAPABILITY AND PLUGIN PREFLIGHT
+
+Bu ZIP'in verilmesi çalıştırma talebidir. Kullanıcıya “ne yapayım?”, “hangi
+ortamdasın?” veya “hangi dosyayı açayım?” diye sorma. Önce erişebildiğin araçları
+read-only incele ve aşağıdaki capability ladder'ı sırayla uygula.
+
+1. `CWR Research Lab` aracı görünüyorsa `lab_status` çağır.
+2. Çağrı başarılıysa sonucu ledger'a canlı checkpoint olarak yaz ve Phase 1'e geç.
+3. Araç görünmüyorsa mevcut ChatGPT ortamında Apps/Plugins yönetimi ya da yükleme
+   kabiliyeti gerçekten sunulmuş mu kontrol et. Sunulmuşsa yalnız paket içindeki
+   özel `cwr-research-lab` eklentisini kurmayı/bağlamayı dene; public katalogda
+   arama yapıp benzer isimli başka ürün kurma.
+4. Yükleme/bağlama sonrası araçları yeniden keşfet ve `lab_status` çağrısını en
+   çok iki kez daha dene. Başarılı olursa onay istemeden devam et.
+5. Araç görünür fakat `lab_status` 404/connection/offline hatası verirse bunu
+   `plugin_installed_bridge_offline` olarak kaydet. Eklentiyi tekrar kurulu sayma;
+   mümkün olan GitLab veya paket-içi offline kaynaklarla Phase 1 ve Phase 3'e
+   devam et, canlı database kapısını `pending` bırak.
+6. ChatGPT bu oturumdan yerel ZIP içindeki Codex eklentisini işletim sistemine
+   kuramıyor veya geliştirici uygulaması/tünel bağlantısı için kullanıcı onayı
+   gerekiyorsa kurmuş gibi davranma. Yalnız bir kez aşağıdaki kesin bildirimi ver:
+
+   CWR PLUGIN INSTALLATION REQUIRED
+   reason: <gözlenen engel>
+   package: CODEX_PLUGIN_YENIDEN_KURULUM/CWR_PRIVATE_PLUGIN_INSTALLER_v0_1_0_2026-08-23.zip
+   action_1: Matroyshka.zip dosyasını bilgisayarda kalıcı bir klasöre çıkar.
+   action_2: CODEX_PLUGIN_YENIDEN_KURULUM klasöründeki KURULUMU_BASLAT.cmd dosyasını çalıştır.
+   action_3: ChatGPT Ayarlar > Bağlayıcılar/Apps > Geliştirici modu bölümünde CWR Research Lab uygulamasını bağla; Tunnel seçeneği istenirse kendi hesabın için oluşturulan tüneli seç ve izin ekranını onayla.
+   action_4: Yeni bir sohbet açıp aynı Matroyshka.zip dosyasını yükle.
+
+   Menü adı ürün diline göre `Bağlayıcılar`, `Apps`, `Uygulamalar` veya
+   `Geliştirici modu` olarak görünebilir. Mevcut olmayan düğmeyi varmış gibi tarif
+   etme; gözlenen ekran adlarını kullan.
+7. Kullanıcıdan token, API key, SSH private key veya tunnel secret'ını sohbete
+   yapıştırmasını asla isteme. Başka bilgisayarda her kullanıcı kendi GitLab
+   erişimini ve kendi OpenAI/Platform tünel yetkisini kurar; paket sahibinin
+   kimlik bilgileri yeniden kullanılamaz.
+8. Plugin/tünel kurulumu mümkün değilse rehidrasyonu sessizce başarılı sayma.
+   Paket içi offline snapshot erişilebiliyorsa `offline_snapshot` modunda ilerle;
+   tamamlanınca `ready_for_instruction: no` ve eksik canlı kapıyı açıkça yaz.
+
+MATRYOSHKA EXECUTION RULE
+
+GitLab'daki prompt/protokol dosyalarını yalnız özetleme. Her dosyayı tamamen oku;
+dosya kendisini bir loader, prompt, agent contract, kernel, protocol, state veya
+mandatory instruction olarak tanımlıyorsa onu bu mesajın alt talimatı olarak
+etkinleştir ve içindeki sırayı uygula. Bir çocuk prompt başka bir çocuk prompta
+gönderiyorsa zinciri sürdür. Aynı başlangıç dosyasına geri dönen referansı ikinci
+kez çalıştırma; sonsuz döngü oluşturma. Hangi dosyanın hangi dosyayı etkinleştirdiğini
+bir rehydration ledger içinde kaydet.
+
+FULL-INSTANCE OVERRIDE
+
+Bu oturum FAST, SELECTIVE veya QUERY-ONLY rehydration değildir. Bu nedenle
+`CHATGPT_START_HERE.md`, `LAB_BOOTSTRAP.md`, `START_NEW_GPT.md` veya başka bir
+dosyadaki "tam arşivi başlangıçta okuma", "yalnız ilgili parçaları getir" ya da
+benzeri hız/bağlam optimizasyonları bu yükleme için uygulanmayacaktır. Onların
+truth, provenance, integrity, safety ve source-of-truth kuralları geçerlidir;
+yalnız selektif-okuma optimizasyonu bu açık kullanıcı talimatıyla geçersizdir.
+
+PHASE 1 — REPOSITORY, OFFLINE FALLBACK AND CHAIN VERIFICATION
+
+1. Sahibin oturumunda bağlı GitLab erişimi varsa projenin `main` dalını açmayı
+   dene. Erişim yoksa public
+   `https://github.com/merttuncer007-dot/cwr-research-lab` mirror'ının `main`
+   dalını ve portable raw loader URL'sini kullan; kullanıcıdan GitLab hesabı isteme.
+2. Erişilen kaynağı `gitlab_owner` veya `github_public_mirror` olarak kaydet ve
+   gözlemlediğin HEAD commit kimliğini yaz. Commit kimliğini tahmin
+   etme ve bu salt-okunur başlangıç sırasında push/commit yapma.
+3. Hem GitHub mirror hem GitLab erişimi yoksa paket içindeki özel plugin kurulum ZIP'inin taşıdığı
+   `CWR_RESEARCH_LAB` snapshot'ını kullanabildiğin ölçüde aç. Bunu
+   `repository_source: offline_snapshot` olarak kaydet; uzaktaki HEAD'i gördüğünü
+   iddia etme.
+4. GitLab private kimlik doğrulaması yabancı kullanıcı için zorunlu değildir;
+   public GitHub mirror dağıtım kaynağıdır. Yalnız hem mirror hem offline snapshot
+   erişilemiyorsa `REPOSITORY ACCESS REQUIRED` bildir. Token isteme.
+5. `CHATGPT_START_HERE.md` dosyasını tamamen oku ve aktif çocuk prompt yap.
+6. Onun Mandatory load order'ını tam sırayla uygula:
+   - `CHATGPT_START_HERE.md`
+   - `CWR_RESEARCH_LAB/AGENTS.md`
+   - `CWR_RESEARCH_LAB/LAB_KERNEL.md`
+   - `CWR_RESEARCH_LAB/LAB_STATE.md`
+   - `CWR_RESEARCH_LAB/exports/NEXT_SESSION_CONTEXT.md`
+7. Ardından tam olarak şunları oku ve etkinleştir:
+   - `CWR_RESEARCH_LAB/LAB_WAVE_PROTOCOL.md`
+   - `CWR_RESEARCH_LAB/LAB_RETRIEVAL_POLICY.md`
+   - `CWR_RESEARCH_LAB/LAB_AUTOMATION_ROADMAP.md`
+   - `CWR_RESEARCH_LAB/START_NEW_GPT.md`
+8. `START_NEW_GPT.md` tekrar kök start promptuna gönderirse kökü yeniden başlatma;
+   bu referansı zincirin doğrulandığı şeklinde ledger'a yaz.
+
+PHASE 2 — LIVE DATABASE CROSS-CHECK
+
+Bağlı `CWR Research Lab` pluginini kullan:
+
+1. Phase 0'daki çağrı başarılı olsa bile güncel canlı state için `lab_status`
+   çağrısını tekrar et.
+2. Sonra `list_integrity_issues` ile bütün açık issue'ları getir.
+3. `build_context` çağrısını şu amaçla kullan: kernel/state/frontier ve full-instance
+   reconstruction için gerekli locator'ları çapraz doğrulamak.
+4. `build_context` çıktısını tam arşiv okumasının yerine koyma.
+5. Bir search sonucu yalnız snippet'tir. Bir belgeyi okundu saymak için gerekirse
+   `get_document` ile tam metni, parça parça ve satır aralıkları kesintisiz olacak
+   biçimde al.
+6. Plugin daha önce erişilebilirken bu aşamada erişilemez hale geldiyse erişilmiş
+   gibi davranma. Kesin ilerleme locator'ını ledger'a yaz, durumu
+   `plugin_installed_bridge_offline` olarak kaydet, Phase 0'daki capability
+   ladder'ı yalnız eksik adımdan yeniden uygula ve paket/GitLab okumasını sürdür.
+   Canlı database çapraz kontrolü tamamlanmadan full-instance yüklemesini başarılı
+   sayma.
+
+PHASE 3 — FULL CHRONOLOGICAL RECONSTRUCTION
+
+Mandatory çekirdek yüklendikten sonra aşağıdaki tam-okuma zincirini uygula:
+
+1. `CWR_RESEARCH_LAB/exports/BOOTSTRAP_INVENTORY.json`
+2. `CWR_LAB_YAN_DOSYALAR_2026-08-22/CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22.md`
+3. `ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt`
+4. BOOTSTRAP_INVENTORY, SQLite/plugin metadata ve Git ağacında kayıtlı bütün
+   benzersiz metin artifacts.
+
+Tam okuma sırasında:
+
+- Ham konuşmayı ilk turdan son tura kadar kronolojik sırayla oku.
+- Kronoloji dosyasındaki her araştırma geçişi için şunları koru: önceki problem,
+  kullanıcının talebi, seçilen yeni yön, seçilme nedeni, kullanılan yabancı
+  okul/araç, destructive test, çıkan theorem/counterexample/collision, üretilen
+  artifact, registry değişimi ve bir sonraki frontier.
+- Versioned registry snapshot'larını sayısal sürüm sırasıyla oku; yalnız dosya adı
+  kopyası olan duplicate'ları SHA-256 ile tek içerik olarak oku fakat bütün
+  occurrence/provenance adlarını ledger'da koru.
+- Handoff, continuation, source-reading ledger, external review, kuramsal kaynak
+  listesi, sonraki araştırma dalgası, theorem note ve check dosyalarını kronolojik
+  ve nedensel konumlarına yerleştir.
+- ZIP veya SQLite gibi binary dosyayı düz metinmiş gibi uydurma. İçeriği plugin,
+  GitLab'ın desteklediği archive görünümü veya manifest/inventory üzerinden
+  doğrula; açamadığın üyeleri tek tek `unreadable` olarak yaz.
+- `objects/sha256/` içindeki benzersiz metin nesnelerini inventory locator'larıyla
+  eşleştir. Aynı bytes'ı gereksiz yere tekrar okumak zorunda değilsin; ancak hiçbir
+  benzersiz metin nesnesini sessizce atlama.
+- Eski state ile yeni state çakışırsa çelişkiyi silme. Source-of-truth sırasını
+  uygula ve eski kararın neden değiştiğini koru.
+
+NO-SILENT-COMPRESSION CONTRACT
+
+- Bir dosyanın yerine kendi kısa özetini koyup o dosyayı "okundu" sayma.
+- Uzun dosyaları kesintisiz parçalar halinde oku; her parça için dosya, locator ve
+  tamamlanan aralığı ledger'a ekle.
+- Context veya araç sınırı nedeniyle durman gerekirse son kesin locator'da dur ve
+  `CWR REHYDRATION INCOMPLETE — CONTINUATION REQUIRED` raporu ver. Sonraki mesajda
+  aynı locator'dan sürdür. Tamamlanmadan `CWR LAB LOADED` veya `ready: yes` deme.
+- Platform içi context compaction gerçekleşirse sohbet belleğine güvenme; ledger
+  ve Git/plugin source-of-truth üzerinden tamamlanan aralıkları yeniden doğrula.
+- Exact metin, proof status, novelty status, collision, correction, failure ve
+  missing-artifact ayrımlarını kaybetme.
+
+PERMANENT EPISTEMIC RULES
+
+- Chat geçici istemcidir; CWR veritabanı, doğrulanmış checkpoint ve kanonik Git
+  artifacts laboratuvardır.
+- Ham konuşma kanonik state değildir fakat karar gerekçesi/provenance için zorunlu
+  tarihsel kanıttır.
+- Numerical/symbolic check ispat değildir.
+- Bibliyografik discovery, ilgili kısmın okunması ve eserin tamamının okunması ayrı
+  statülerdir.
+- Matematiksel doğruluk novelty değildir; classical ownership/collision ayrıca
+  denetlenir.
+- Registry append-only'dir; eski kayıt silinmez, correction/status event eklenir.
+- Transcript-confirmed fakat fiziksel artifact'i eksik kayıt verbatim kanonik
+  metinmiş gibi yeniden oluşturulmaz.
+- Kullanıcı açıkça istemeden araştırma başlatma, byproduct ekleme, ingest,
+  checkpoint, commit, push veya otonom macro çalıştırma.
+
+COMPLETION GATE
+
+Ancak bütün erişilebilir benzersiz metin artifacts okunduktan, konuşma kronolojisi
+baştan sona işlendiikten, prompt zinciri uygulandıktan ve canlı database state'iyle
+çapraz kontrol yapıldıktan sonra şu raporu üret:
+
+CWR FULL INSTANCE LOADED
+repository: merttuncer07/cwr-research-lab
+branch: main
+head_commit: <observed>
+prompt_chain: <sırayla etkinleştirilen prompt/protokoller>
+plugin_status: connected|unavailable
+database_status: <lab_status'tan>
+unique_text_artifacts_expected: <inventory'den>
+unique_text_artifacts_read: <gerçekte okunan>
+conversation_turns_expected: <database/inventory'den>
+conversation_turns_read: <gerçekte kronolojik okunan>
+registry_available_through: <doğrulanan>
+latest_confirmed_byproduct: <doğrulanan>
+next_byproduct: <doğrulanan>
+current_frontier: <doğrulanan>
+open_integrity_issues: <tam liste veya locator>
+unreadable_or_missing: <tam liste; yoksa none>
+chronology_complete: yes|no
+decision_rationale_chain_complete: yes|no
+ready_for_instruction: yes|no
+
+`ready_for_instruction: yes` yalnız yukarıdaki full-instance kapısı gerçekten
+geçildiyse kullanılabilir. Raporu verdikten sonra dur ve yeni araştırma başlatmadan
+kullanıcının talimatını bekle.
+
