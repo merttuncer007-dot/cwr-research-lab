@@ -1,0 +1,908 @@
+{
+  "schema": "cwr.rehydration-capsule.v2",
+  "engine_version": "0.2.0",
+  "snapshot": {
+    "snapshot_id": "2de3676e40b54a9117351ad755db85a859614520c60e98c51ff3560d3b5f7720",
+    "checkpoint_label": "bootstrap-v1",
+    "checkpoint_created_at": "2026-08-23T00:18:31+03:00",
+    "checkpoint_database_sha256": "eb9afdd48758beefd0a0d1f00059eab12d046fcd52912a0c0550d98ee3fc52ce",
+    "source_hashes": {
+      "database": "34ec6f1df2d012727fd2392f4f7ce8bf2be7867861f3539d72544aee96d2a006",
+      "kernel": "31cf0f45d4dab0624b839ad74c1e7e33bcd0e7afc870a5921d4b7f46e36e3081",
+      "state": "ed1de21352083527b3b323d15cbedfc41fe96a91dfe56b7b28b15132ea154a65",
+      "next_session_context": "139e582228fcc49d3c467f55bfbefd2091d13284aae8da3f273fdf068ecbd661"
+    }
+  },
+  "authority": {
+    "live_canonical": "local CWR database and content-addressed object store",
+    "owner_backup": "private GitLab (not required for runtime readiness)",
+    "public_distribution": "public GitHub static mirror (not canonical write state)",
+    "chat_memory_is_source_of_truth": false
+  },
+  "connectivity": {
+    "live_bridge_available": "not_checked",
+    "bridge_is_readiness_gate": false,
+    "remote_commit_search_required": false
+  },
+  "readiness": {
+    "archive_integrity": "verified",
+    "research_state_ready": true,
+    "ready_for_instruction": true,
+    "working_mode": "verified_snapshot",
+    "blocking_failures": []
+  },
+  "coverage": {
+    "blobs_expected": 75,
+    "blobs_verified": 75,
+    "occurrences_indexed": 176,
+    "documents_indexed": 75,
+    "chunks_indexed": 524,
+    "conversation_turns_indexed": 88,
+    "byproducts_indexed": 220,
+    "registry_max": 212,
+    "confirmed_max": 220,
+    "papers_indexed": 0,
+    "source_ledger_entries": 38,
+    "chronology_index_complete": true,
+    "artifact_catalog_complete": true
+  },
+  "research_pointer": {
+    "latest_confirmed_byproduct": "CWR-BP-220",
+    "next_byproduct": "CWR-BP-221",
+    "last_completed_wave": "CW-002P — Rank-one PSD sign reachability as a finite signed-walk problem",
+    "current_frontier": "rank-two PSD / symmetric matrix-semigroup scalar-sign reachability",
+    "immediate_attack": "rank ≤ 2 PSD projective normal form; collide with 2×2 rational semigroups, Möbius dynamics, zero-in-corner and mortality.",
+    "autonomy": "disabled"
+  },
+  "integrity": {
+    "verification_failures": [],
+    "open_issues": [
+      {
+        "issue_key": "registry_tail_missing",
+        "severity": "WARNING",
+        "status": "OPEN",
+        "summary": "Confirmed state reaches BP-220, but available registry artifacts reach only BP-212.",
+        "evidence": "Full conversation turn 088 references registry v0.20 and CW-002P, while supplied physical registry snapshots stop at v0.19/BP-212."
+      },
+      {
+        "issue_key": "autonomy_disabled",
+        "severity": "INFO",
+        "status": "OPEN",
+        "summary": "Autonomous research macros are intentionally disabled in lab v1.",
+        "evidence": "Enable only after the staged validation gates in LAB_AUTOMATION_ROADMAP.md."
+      }
+    ],
+    "warnings_block_readiness": false,
+    "note": "Known missing canonical artifacts remain explicit evidence limits; they do not erase the verified transcript-confirmed state."
+  },
+  "active_nodes": [
+    {
+      "code": "CWR-BP-213",
+      "title": "PSD/symmetric semigroup literature collision frontier",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    },
+    {
+      "code": "CWR-BP-214",
+      "title": "Positive determinant and bounded positive-definite factorization warning",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    },
+    {
+      "code": "CWR-BP-215",
+      "title": "Rank-one PSD rational normal form",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    },
+    {
+      "code": "CWR-BP-216",
+      "title": "Rank-one PSD scalar-sign signed-walk reduction",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    },
+    {
+      "code": "CWR-BP-217",
+      "title": "Polynomial-time parity-graph reachability",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    },
+    {
+      "code": "CWR-BP-218",
+      "title": "Finite strict-sign witness bound |w| <= 2k",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    },
+    {
+      "code": "CWR-BP-219",
+      "title": "Exact-zero witness bound |w| <= 2",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    },
+    {
+      "code": "CWR-BP-220",
+      "title": "Rank-one PSD classification and rank-two frontier",
+      "status": "TRANSCRIPT-CONFIRMED",
+      "evidence_level": "TRANSCRIPT_SUMMARY",
+      "artifact_state": "CANONICAL_ARTIFACT_MISSING"
+    }
+  ],
+  "provenance": {
+    "document_catalog": [
+      {
+        "id": 1,
+        "blob_sha256": "cb6c7359ce55353163bc2afb12b7f143ed0ac7755f3941b472d7e28e57224480",
+        "preferred_name": "ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt",
+        "kind": "CONVERSATION",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW_PROVENANCE",
+        "line_count": 16112
+      },
+      {
+        "id": 2,
+        "blob_sha256": "fa2e6747e048fcc45c041198f014e506809897733e9b783fa9e39eb0ce9e6bce",
+        "preferred_name": "ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.zip",
+        "kind": "ARCHIVE_CONTAINER",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW_PROVENANCE",
+        "line_count": null
+      },
+      {
+        "id": 3,
+        "blob_sha256": "c3c5634df829fad6bdbd66872dc84b7c7100d4ac691da7fa77442753da092a88",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (1).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 1364
+      },
+      {
+        "id": 4,
+        "blob_sha256": "abd5354720885bf572b8ef284a81a84171e10cdcdd0114a541e5b92e61ffa76d",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (10).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 2502
+      },
+      {
+        "id": 5,
+        "blob_sha256": "4db19785a50711d5891e44c8e3eb78f395cd305e7f539478d4a085e4c4391241",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (11).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 2630
+      },
+      {
+        "id": 6,
+        "blob_sha256": "83b47ca0fd8c6f3b8bc35ea6ccf10cd50f2dba97ec0624b849324363768a0d7b",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (12).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 2745
+      },
+      {
+        "id": 7,
+        "blob_sha256": "70226693183f77e06e6c8dd411aca8612ff4fd36b987d8f85077d3f8d8de0d53",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (2).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 1520
+      },
+      {
+        "id": 8,
+        "blob_sha256": "de4e186c5a40744eebd97d97e13af1708b39ff285f0ec6e4e04b621ce5ba073f",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (3).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 1737
+      },
+      {
+        "id": 9,
+        "blob_sha256": "56e4a7184b10a12a45cb0052c55e12f01dee97c41b4653890d48f2e997c126ca",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (4).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 1883
+      },
+      {
+        "id": 10,
+        "blob_sha256": "0cf419d4e224aaf73be199a3ef1e67ad33ccc5e783a2020f89d12d3b4b83b947",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (5).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 2136
+      },
+      {
+        "id": 11,
+        "blob_sha256": "bcb64e7d617ae13a35acef2aff1b7ecf83839f2d43693037ff370ccb1928df9c",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY (7).md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 2389
+      },
+      {
+        "id": 12,
+        "blob_sha256": "eeff8d9333aadae5e09279a569f3eefda5f65be76bda93a69d6e018534d9536c",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": null,
+        "canonicality": "SNAPSHOT",
+        "line_count": 1089
+      },
+      {
+        "id": 13,
+        "blob_sha256": "778452a490d72c1c1f979ca5b0e2476b7f38bb9fe99b2ada8940075229e8c9fb",
+        "preferred_name": "CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22 (1).md",
+        "kind": "CONVERSATION",
+        "title": "COLD WAR RENAISSANCE LAB — KRONOLOJİK SOHBET / ARAŞTIRMA DEVİR DOSYASI",
+        "version_label": null,
+        "canonicality": "RAW_PROVENANCE",
+        "line_count": 1765
+      },
+      {
+        "id": 14,
+        "blob_sha256": "d21678d68651e7155779d0b3fa5007d00a170a033efd82634e19d8dd9449303f",
+        "preferred_name": "CWR_CW002B_BIRKHOFF_LECAM_PATHWISE_HORIZON_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002B",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 731
+      },
+      {
+        "id": 15,
+        "blob_sha256": "38a12e25d3b47967a38061dc3efa381919eef8ffe45894fec1018661c0913a40",
+        "preferred_name": "CWR_CW002I_TRIVIAL_SUPPORT_ZERO_MARGIN_UNDECIDABILITY_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002I",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 766
+      },
+      {
+        "id": 16,
+        "blob_sha256": "128f6f102a13638269b0d1319f50a4836fabf16391ae2e37af09c89aa5e957d4",
+        "preferred_name": "cwr_cw002l_reversible_microstep_lift_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 30
+      },
+      {
+        "id": 17,
+        "blob_sha256": "71b2482d3050dd2833dff22f5ff7867371c0ce598e6555818833e8e9ff9cc550",
+        "preferred_name": "CWR_CW002L_REVERSIBLE_MICROSTEP_UNDECIDABILITY_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002L",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 780
+      },
+      {
+        "id": 18,
+        "blob_sha256": "56c8d32207e74112ef9fe705571d95a4573c4fa2e2da29c3e7de97da0a0e2240",
+        "preferred_name": "CWR_CW002M_BINARY_BISTOCHASTIC_PHASE_CODE_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002M",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 774
+      },
+      {
+        "id": 19,
+        "blob_sha256": "78d88970f693e7c52988a64ead2fb8a4fbfb6f56c5b078720e1557605c377124",
+        "preferred_name": "cwr_cw002m_binary_bistochastic_phase_code_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 29
+      },
+      {
+        "id": 20,
+        "blob_sha256": "3ee4d627e998459b2a64ac54b3ecc078139f1a5505e2b28e790ff02e440f459f",
+        "preferred_name": "CWR_CW002O_JORDAN_SIGN_INVERSION_REVERSIBLE_SWITCHING_2026-08-22 (1).md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002O",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 714
+      },
+      {
+        "id": 21,
+        "blob_sha256": "edce7224d93c34063157e091dec135567b199d5a39ec285654e353d91d604981",
+        "preferred_name": "cwr_cw002o_psd_reversible_sign_inversion_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 29
+      },
+      {
+        "id": 22,
+        "blob_sha256": "19a5b65c9d55c2a75dc380592025651ad566a2e5b61e0125c967c41ba93da76f",
+        "preferred_name": "CWR_DCSG_FILELIST_2026-08-22 (1).txt",
+        "kind": "DOCUMENT",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 115
+      },
+      {
+        "id": 23,
+        "blob_sha256": "b16e159ed7f9b12dda18f2d4de3e2dae7376224758bbafd123d23032fee3888d",
+        "preferred_name": "CWR_DCSG_LAB_HANDOFF_2026-08-22 (1).md",
+        "kind": "HANDOFF",
+        "title": "CWR / DCSG LAB HANDOFF — 2026-08-22",
+        "version_label": null,
+        "canonicality": "STATE_SNAPSHOT",
+        "line_count": 85
+      },
+      {
+        "id": 24,
+        "blob_sha256": "33b81638173902cb8f16c69b5de0ee14bb4e4f5acde1956c43db89ea02d93b72",
+        "preferred_name": "CWR_DCSG_MANIFEST_SHA256_2026-08-22 (1).txt",
+        "kind": "DOCUMENT",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 115
+      },
+      {
+        "id": 25,
+        "blob_sha256": "87ce491a950db8c9b4c6e9544441ddc9dac7d562b41cb85262cfdbd5060c628c",
+        "preferred_name": "CWR_LAB_KURAMSAL_KAYNAK_LISTESI.txt",
+        "kind": "DOCUMENT",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 161
+      },
+      {
+        "id": 26,
+        "blob_sha256": "cf2d2bba269c5a2cedb4f2eca91b44bf29d1df75bc2eb5e74bc618c9af925a6e",
+        "preferred_name": "CWR_LAB_SAFETY_BUNDLE_2026-08-22 (1).zip",
+        "kind": "ARCHIVE_CONTAINER",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW_PROVENANCE",
+        "line_count": null
+      },
+      {
+        "id": 27,
+        "blob_sha256": "0435aaaede4e7cb15b9c30e2a51305521c3ea41cad7543b09c1b28fb30c20d84",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_1.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "1",
+        "canonicality": "SNAPSHOT",
+        "line_count": 544
+      },
+      {
+        "id": 28,
+        "blob_sha256": "74d1f47ab5ea46000789f2e1492c90a984e49e9fcbf06c06bc638fd14c51ea10",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_10.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "10",
+        "canonicality": "SNAPSHOT",
+        "line_count": 1646
+      },
+      {
+        "id": 29,
+        "blob_sha256": "4a8b254e21f49a5496ccf998bd82d8abc777c48f9e94b9dd9301b658845ddac9",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_13.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "13",
+        "canonicality": "SNAPSHOT",
+        "line_count": 2000
+      },
+      {
+        "id": 30,
+        "blob_sha256": "aa07e9936a1f7428502196b9f0ec55b4461e95641d66fa0689abeb659e6abf1c",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_15.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "15",
+        "canonicality": "SNAPSHOT",
+        "line_count": 2268
+      },
+      {
+        "id": 31,
+        "blob_sha256": "30e3168b77aa6bac8f4a5b5f32ab40d34adb063e43066e7e1f44b3c842fb936f",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_2.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "2",
+        "canonicality": "SNAPSHOT",
+        "line_count": 657
+      },
+      {
+        "id": 32,
+        "blob_sha256": "d898c24c922f5074d571d02f2e6a0ed5e3609665b577b830802d85459af8c4f7",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_3.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "3",
+        "canonicality": "SNAPSHOT",
+        "line_count": 802
+      },
+      {
+        "id": 33,
+        "blob_sha256": "22c6d9312aed8c6819c0b17161649373c6ee445564d8ce35a985f4ba441ab38a",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_4.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "4",
+        "canonicality": "SNAPSHOT",
+        "line_count": 945
+      },
+      {
+        "id": 34,
+        "blob_sha256": "1c196516c95aadaf6f26b41e35bb4ceca2afcf7538a6196676c3c39e010a31a2",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_5.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "5",
+        "canonicality": "SNAPSHOT",
+        "line_count": 1073
+      },
+      {
+        "id": 35,
+        "blob_sha256": "4d3ac2ff67c72a85a70a8d7136883ea85899b320f9381e018af7ff6496a3257c",
+        "preferred_name": "COLD_WAR_RENAISSANCE_BYPRODUCT_REGISTRY_v0_7.md",
+        "kind": "BYPRODUCT_REGISTRY",
+        "title": "COLD WAR RENAISSANCE — BYPRODUCT RESEARCH REGISTRY",
+        "version_label": "7",
+        "canonicality": "SNAPSHOT",
+        "line_count": 1222
+      },
+      {
+        "id": 36,
+        "blob_sha256": "ba42f3a4c46dea62a3bb0500cce9c906ed7853a62c54621a5473f8d28f997dd3",
+        "preferred_name": "COLD_WAR_RENAISSANCE_LAB_v0_1.md",
+        "kind": "DOCUMENT",
+        "title": "COLD WAR RENAISSANCE LAB — v0.1",
+        "version_label": "1",
+        "canonicality": "RAW",
+        "line_count": 254
+      },
+      {
+        "id": 37,
+        "blob_sha256": "958f9991632b02d583240602e5177e6f6f9a8427f81000236da2862eccaf0a17",
+        "preferred_name": "COLD_WAR_RENAISSANCE_LAB_v0_2.md",
+        "kind": "DOCUMENT",
+        "title": "COLD WAR RENAISSANCE LAB — v0.2",
+        "version_label": "2",
+        "canonicality": "RAW",
+        "line_count": 94
+      },
+      {
+        "id": 38,
+        "blob_sha256": "ec10c4068406740b2b3f200ae342518f3eeff5208b9225c7da4d49c7164a3e63",
+        "preferred_name": "CWR_CHAT_HANDOFF_2026-08-22_CURRENT.md",
+        "kind": "HANDOFF",
+        "title": "COLD WAR RENAISSANCE / DCSG RESEARCH LAB — CHAT HANDOFF",
+        "version_label": null,
+        "canonicality": "STATE_SNAPSHOT",
+        "line_count": 395
+      },
+      {
+        "id": 39,
+        "blob_sha256": "223eed8b300aeb391740abcfe3bc9e1f0e1e6442effe1c98d1160be6e02090c6",
+        "preferred_name": "CWR_CW001B_BLACKWELL_MACNEILLE_COMPLETION_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-001B",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 522
+      },
+      {
+        "id": 40,
+        "blob_sha256": "2cc9752b2b98af6e000e8b0026847190a04f981871f0e39e204895261d79d598",
+        "preferred_name": "CWR_CW001_DECISION_SYSTEM_COMPLETION_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-001 DEEPENING",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 545
+      },
+      {
+        "id": 41,
+        "blob_sha256": "68e63bcf463522ff67c05bd38d9768c3756eaff3bab47a9e3382fb10c2336199",
+        "preferred_name": "CWR_CW002C_PRIMITIVE_BLOCK_INFORMATION_HORIZON_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002C",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 678
+      },
+      {
+        "id": 42,
+        "blob_sha256": "d260022f804009b41df6ec16f27a586740da2487ae88a1469e2264e61e549f1f",
+        "preferred_name": "CWR_CW002D_SUBRECTANGULAR_WORD_LECAM_HORIZON_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002D",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 814
+      },
+      {
+        "id": 43,
+        "blob_sha256": "275b537232f3c28b0057a3e9ff3c937a9f9a9340259a2ee99147e0b6d7ea5b5d",
+        "preferred_name": "CWR_CW002E_WEIGHTED_PAIR_SYNCHRONIZATION_UNDECIDABILITY_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002E",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 734
+      },
+      {
+        "id": 44,
+        "blob_sha256": "4bbf88804964ef7fc360870df11bbd12c58bb2658d403e6927c3200359e8f5f5",
+        "preferred_name": "CWR_CW002F_STRICT_POSITIVITY_DECIDABILITY_ISLAND_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002F",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 424
+      },
+      {
+        "id": 45,
+        "blob_sha256": "d2604ba1366fd57d0bfaf5fbefe865aef2253209fa9d973671e355f15cbce731",
+        "preferred_name": "CWR_CW002G_LEAKTIGHT_SUPPORT_LIMIT_SYNCHRONIZATION_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002G",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 294
+      },
+      {
+        "id": 46,
+        "blob_sha256": "beb7315d909839dd0c73797937511487a1fd339534171b6ad66f945e447ecd2a",
+        "preferred_name": "CWR_CW002H_STATIONARY_CUTPOINT_SINGULARITY_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002H",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 475
+      },
+      {
+        "id": 47,
+        "blob_sha256": "5ef242228e38487af7555d4c24cd7efa6073658da27f457cb4974b53b1eddc98",
+        "preferred_name": "CWR_CW002J_STATIONARY_CUTPOINT_LRS_DICTIONARY_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002J",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 626
+      },
+      {
+        "id": 48,
+        "blob_sha256": "a4cb14f07c14dd8234f8f9036ede8134567745c88a99179fa21f72e8788bbb97",
+        "preferred_name": "CWR_CW002K_REVERSIBILITY_DECIDABILITY_PHASE_DIAGRAM_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002K",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 666
+      },
+      {
+        "id": 49,
+        "blob_sha256": "9efef5deb4a4745427bf1a8b7fdbb51cb5e2512a3238044395029dcbb6d1eab9",
+        "preferred_name": "CWR_CW002N_HADAMARD_TANGENT_STOCHASTICIZATION_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002N",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 833
+      },
+      {
+        "id": 50,
+        "blob_sha256": "a0deccd5593b092a76fa65e6866df06c6b290ad1ef2cd6f4ec45cfa7d9ceecb0",
+        "preferred_name": "CWR_CW002_DOBRUSHIN_LECAM_FUTURE_INFORMATION_HORIZON_2026-08-22.md",
+        "kind": "THEOREM_NOTE",
+        "title": "COLD WAR RENAISSANCE — CW-002",
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 629
+      },
+      {
+        "id": 51,
+        "blob_sha256": "f7afab92763ec32ee767f5bbf484c6069d8b9828caa96e2f3911aa901fef5a18",
+        "preferred_name": "CWR_DCSG_BACKUP_INTEGRITY_2026-08-22.txt",
+        "kind": "DOCUMENT",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 9
+      },
+      {
+        "id": 52,
+        "blob_sha256": "d8af62497302848e68a12e08881ccea15de2331334c22f6c0ec6006a4b1a0d56",
+        "preferred_name": "CWR_DCSG_FULL_ALL_FILES_MANIFEST_2026-08-22.txt",
+        "kind": "DOCUMENT",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 127
+      },
+      {
+        "id": 53,
+        "blob_sha256": "f7d3e29ba19fbd94cb5e55ba22f48baa82962367e06539f09d55e16b345bd314",
+        "preferred_name": "CWR_HANDOFF_MANIFEST_2026-08-22.txt",
+        "kind": "HANDOFF",
+        "title": null,
+        "version_label": null,
+        "canonicality": "STATE_SNAPSHOT",
+        "line_count": 9
+      },
+      {
+        "id": 54,
+        "blob_sha256": "9ac312c3c77cbc2aaab04829dea27a59c237f93cd39e1cdd4c405455dab51465",
+        "preferred_name": "CWR_NEW_CHAT_START_HERE_2026-08-22.md",
+        "kind": "HANDOFF",
+        "title": "CWR / DCSG LAB — NEW CHAT START HERE",
+        "version_label": null,
+        "canonicality": "STATE_SNAPSHOT",
+        "line_count": 50
+      },
+      {
+        "id": 55,
+        "blob_sha256": "b9a554f6fd3211fd293b00db38a995f3570113df9913c6a8c6c7f7330fff5aba",
+        "preferred_name": "CWR_SOURCE_READING_LEDGER_2026-08-22.md",
+        "kind": "SOURCE_LEDGER",
+        "title": "COLD WAR RENAISSANCE — SOURCE / READING LEDGER FOR CHAT HANDOFF",
+        "version_label": null,
+        "canonicality": "LEDGER",
+        "line_count": 483
+      },
+      {
+        "id": 56,
+        "blob_sha256": "03ea1f169ce48693470aea13e6b997ddf1520e694b72633d9e730fb4d0e8a28d",
+        "preferred_name": "cwr_cw001_zonotope_intersection_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 24
+      },
+      {
+        "id": 57,
+        "blob_sha256": "9db4131818ecdc72b32a0020eeca4cbadee293642632c880513883438343d6d8",
+        "preferred_name": "cwr_cw002_dobrushin_lecam_sharpness_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 28
+      },
+      {
+        "id": 58,
+        "blob_sha256": "4836e6a5f5ccdcbe259ca286134dfe5143ee6e756e77a6a49e892bb9c6cd44b2",
+        "preferred_name": "cwr_cw002b_pathwise_hilbert_filter_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 29
+      },
+      {
+        "id": 59,
+        "blob_sha256": "e437869592144f61530dcd3648c1a90c72bf5d106496baadbc80c19233592353",
+        "preferred_name": "cwr_cw002c_primitive_block_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 33
+      },
+      {
+        "id": 60,
+        "blob_sha256": "665b41c84ab7c7986559ad2bccbda585acbbfdf08405c52aca4a7c99ea82de62",
+        "preferred_name": "cwr_cw002d_subrectangular_word_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 39
+      },
+      {
+        "id": 61,
+        "blob_sha256": "04c4cbbcd4aa0b5e5bcdc5aba1058490000b506aab2606a40679ebe45091f658",
+        "preferred_name": "cwr_cw002d_word_horizon_summary.txt",
+        "kind": "THEOREM_NOTE",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RESEARCH_ARTIFACT",
+        "line_count": 13
+      },
+      {
+        "id": 62,
+        "blob_sha256": "143c7669264cf7e7106c86dfe992ceeb11c387b62c01e442f7fd0803782fb4d6",
+        "preferred_name": "cwr_cw002e_pair_sync_reduction_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 33
+      },
+      {
+        "id": 63,
+        "blob_sha256": "c7003eb980cdd56604fc0521f16d2d952e18014e7b91cb946e4d98daa69d0698",
+        "preferred_name": "cwr_cw002f_positive_generator_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 20
+      },
+      {
+        "id": 64,
+        "blob_sha256": "4865998e469f5540ae22dfafade3571b7c9829b8514678273f50b75af6c2d3e8",
+        "preferred_name": "cwr_cw002h_stationary_margin_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 26
+      },
+      {
+        "id": 65,
+        "blob_sha256": "953b129c0b220fbb6ec7a1620caf8810fa69e9982ab648cceae9916111f61c92",
+        "preferred_name": "cwr_cw002i_mixing_shell_embedding_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 25
+      },
+      {
+        "id": 66,
+        "blob_sha256": "53369ff7a55ac6eac78e756fb5c690b86d49aaaca42f1366c02686da9fd109ca",
+        "preferred_name": "cwr_cw002j_tangent_order_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 29
+      },
+      {
+        "id": 67,
+        "blob_sha256": "bd017178c1b98c278c841156f4c73c4024de94359885c17f1bd8fa6c0289ca41",
+        "preferred_name": "cwr_cw002k_reversible_symmetry_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 29
+      },
+      {
+        "id": 68,
+        "blob_sha256": "3f4d9feb67fed4a2112bc6e443204950e0d29e0eff16071b96ecc51e2a90aacb",
+        "preferred_name": "cwr_cw002n_hadamard_tangent_stochasticization_check.txt",
+        "kind": "COMPUTATIONAL_CHECK",
+        "title": null,
+        "version_label": null,
+        "canonicality": "EVIDENCE",
+        "line_count": 33
+      },
+      {
+        "id": 69,
+        "blob_sha256": "b400d4102747928c09434b1fa9c43e5d749c05af913b9bccd348df0072071155",
+        "preferred_name": "CWR_LAB_SONRAKI_ARASTIRMA_DALGASI.txt",
+        "kind": "DOCUMENT",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 159
+      },
+      {
+        "id": 70,
+        "blob_sha256": "e22e510948efabffbb30745bd4cd7b289654b1d192efd4c3f39f2c415b0ba050",
+        "preferred_name": "DCSG_ALGEBRAIC_FOUNDATION_EXTERNAL_REVIEW.txt",
+        "kind": "DOCUMENT",
+        "title": null,
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 1027
+      },
+      {
+        "id": 71,
+        "blob_sha256": "853e7a59711cd29c47d3bd893d4bc7440dc46200fed072413345f8fa8d0c4aa5",
+        "preferred_name": "DCSG_CWR_LAB_CONTINUATION_HANDOFF_2026-08-22 (1).md",
+        "kind": "HANDOFF",
+        "title": "DCSG / COLD WAR RENAISSANCE — LAB CONTINUATION HANDOFF",
+        "version_label": null,
+        "canonicality": "STATE_SNAPSHOT",
+        "line_count": 784
+      },
+      {
+        "id": 72,
+        "blob_sha256": "96299d866efa340506b79f7a66b0eb0fcbde98b86528083306124527fdd9c514",
+        "preferred_name": "LAB_BOOTSTRAP.md",
+        "kind": "DOCUMENT",
+        "title": "LAB_BOOTSTRAP — new Chat / new device loader",
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 26
+      },
+      {
+        "id": 73,
+        "blob_sha256": "fe3687f7d7896301a8ca83b1a88275676437b8c8eb50ee3589731f3f7b621b57",
+        "preferred_name": "LAB_DB_SCHEMA.sql",
+        "kind": "SCHEMA",
+        "title": null,
+        "version_label": null,
+        "canonicality": "REFERENCE",
+        "line_count": 124
+      },
+      {
+        "id": 74,
+        "blob_sha256": "4bdabbfa458f3a1b6f52071e7744cf6317472640627b151a3e007778b91d0f7d",
+        "preferred_name": "LAB_STATE.md",
+        "kind": "LAB_STATE",
+        "title": "LAB_STATE — authoritative operational checkpoint",
+        "version_label": null,
+        "canonicality": "STATE_SNAPSHOT",
+        "line_count": 50
+      },
+      {
+        "id": 75,
+        "blob_sha256": "170a1fb05e09335083ca3874d9de086b7b02d7c99054fe4e3e6f8da20388d26f",
+        "preferred_name": "README.md",
+        "kind": "DOCUMENT",
+        "title": "CWR / DCSG LAB ENTITY v1",
+        "version_label": null,
+        "canonicality": "RAW",
+        "line_count": 38
+      }
+    ],
+    "exact_retrieval_contract": "Use get_document/search_archive/build_context for query-specific exact bytes and locators. Search excerpts never count as full-document reading."
+  },
+  "core": {
+    "kernel": "# CWR Lab Kernel v1\n\n## Amaç\n\n20. yüzyılın birbirinden kopuk güçlü araştırma programlarını çağdaş matematik, hesaplama ve AI araçlarıyla kontrollü interaction cell'lere sokmak; terk edilmiş veya sınırda kalmış fikirlerden exact, bağımsız değeri olan byproduct'lar üretmek.\n\nÜretim hedefin kendisidir; byproduct sözcüğü “önemsiz yan ürün” değil, ana teoriden bağımsız yaşayabilen kalıcı araştırma düğümü anlamına gelir.\n\n## Epistemik omurga\n\nHer araştırma dalgası şu döngüyü izler:\n\n1. **Frontier seç:** Tek cümlelik, karar verilebilir bir hedef ve açık sözleşme belirle.\n2. **Interaction hypothesis:** Eski program A'nın mekanizması ile program B'nin sınırlamasının nerede temas ettiğini yaz.\n3. **Cheap destructive test:** En küçük boyut, uç durum, degeneracy, commutativity/rank/support/margin ayrımı veya bilgisayar cebiriyle adayı öldürmeye çalış.\n4. **Exact core:** Hayatta kalan ifadeyi varsayımlarıyla teorem/lemma/reduction biçiminde ispatla.\n5. **Finite check:** Kanıtın yerine geçmeyecek sembolik/sayısal kontrol üret; seed, kod, exact arithmetic ve beklenen invariant'ı kaydet.\n6. **Collision/ownership audit:** Birincil kaynaklarda aynı çekirdeği ara. Klasik motor, CWR çıkarımı ve unresolved novelty parçalarını ayrı yaz.\n7. **Status:** `SEED`, `ACTIVE`, `PROVISIONAL`, `PROVED`, `EXACT`, `CLASSICAL-COLLISION`, `CORRECTION`, `PROMOTE` veya `RETIRED` statüsünü kanıt düzeyine göre ata.\n8. **Harvest:** Sonuç ana teoriden bağımsız değer taşıyorsa append-only byproduct olarak kaydet. Başarısız dalı da neden başarısız olduğuyla koru.\n9. **State transition:** Frontier, next ID, source ledger, artifact ve integrity kayıtlarını güncelle; checkpoint al.\n\n## Exactness-last, interaction-first\n\nExactness laboratuvarın vazgeçilmez bitiş kriteridir; başlangıç filtresi değildir. Önce verimli interaction kurulur, sonra yanlış iddia en ucuz testle öldürülür, kalan çekirdek exact hale getirilir. Bu, “constraint'e erken düşüp” olası byproduct alanını kapatmayı engeller.\n\n## Kalıcı ayrımlar\n\n- Ham konuşma ≠ kanonik state.\n- Sayısal doğrulama ≠ ispat.\n- Bibliyografik keşif ≠ kaynak okuma.\n- Klasik teorem ≠ CWR'nin yeni çıkarımı.\n- Matematiksel doğruluk ≠ novelty.\n- Yerel reversible adım ≠ composition-stable reversibility.\n- Support davranışı ≠ vanishing signed tangent davranışı.\n- Generalized output ≠ tek accepting-coordinate sözleşmesi.\n\n## Veri ilkeleri\n\n- Registry append-only'dir; düzeltme eski kaydı silmez, status event ekler.\n- Aynı bytes tek içerik nesnesidir; her isim/kopya ayrı provenance occurrence'dır.\n- Her iddia mümkünse source locator, okuma kapsamı, proof artifact ve collision statüsüne bağlanır.\n- Son state eski handoff'a üstün gelir, fakat çelişki kayıt altına alınır.\n- Rehydration önce kernel/state, sonra kanonik registry/source ledger, sonra yalnız ilgili artifacts; tam transkript en son provenance kurtarma içindir.\n",
+    "state": "# CWR Lab State — Recovered 2026-08-23\n\n## Confirmed research pointer\n\n- Latest confirmed byproduct: `CWR-BP-220`.\n- Next byproduct: `CWR-BP-221`.\n- Last completed wave: `CW-002P — Rank-one PSD sign reachability as a finite signed-walk problem`.\n- Current frontier: `rank-two PSD / symmetric matrix-semigroup scalar-sign reachability`.\n- Immediate attack: rank ≤ 2 PSD projective normal form; collide with 2×2 rational semigroups, Möbius dynamics, zero-in-corner and mortality.\n\n## Active high-value nodes\n\n- `CWR-BP-198`: rational symmetric matrix-semigroup scalar-sign reachability.\n- `CWR-BP-201`: generalized-output versus single-target reversible reachability gap.\n- `CWR-BP-211`: PSD symmetric-semigroup scalar-sign frontier.\n- `CWR-BP-220`: rank-one PSD signed-walk classification and finite witnesses.\n\n## Available canonical-material boundary\n\n- Available registry snapshot: v0.19 through `CWR-BP-212`.\n- BP-213–220 are confirmed by the full conversation's final assistant turn and summarized there.\n- The referenced v0.20 registry, CW-002P full theorem note, exact check file and refreshed handoff/bundle are not physically present in the supplied archive.\n- Until recovered, BP-213–220 must be marked `TRANSCRIPT-CONFIRMED / CANONICAL-ARTIFACT-MISSING`, not reconstructed as verbatim canonical entries.\n\n## Safety and truth conditions\n\n- Do not claim pre-account-switch raw transcript recovery beyond files actually present.\n- Do not claim books/papers were read cover-to-cover unless the source ledger explicitly says so.\n- Preserve failed branches and classical collisions.\n- The latest confirmed state wins over older handoffs, but every conflict remains queryable.\n- Autonomous macros remain disabled.\n"
+  },
+  "context_policy": {
+    "canonical_bytes_preserved_outside_model_context": true,
+    "capsule_is_evidence_replacement": false,
+    "eager_full_archive_tool_loop_required": false,
+    "query_specific_exact_retrieval_required": true,
+    "silent_context_compression_permitted": false
+  },
+  "terminal_report": {
+    "marker": "CWR INSTANCE READY",
+    "ready_for_instruction": "yes",
+    "live_database_status": "optional_not_available"
+  }
+}
+
