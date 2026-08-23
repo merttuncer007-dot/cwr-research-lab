@@ -1,29 +1,31 @@
-# Start a New GPT/Codex Session
+# Start a New CWR Instance v2
 
-## ChatGPT: public mirror'dan eklentisiz yükleme
+## ChatGPT
 
-Yeni ChatGPT sohbetine repo kökündeki `CHATGPT_GIT_START_PROMPT.txt` içeriğini
-gönderin. ChatGPT önce `CHATGPT_START_HERE.md` dosyasını, ardından orada yazan
-zorunlu kanonik dosyaları public GitHub mirror `main` dalından yükler. Sahibin
-bağlı GitLab kaynağı varsa onu kanonik yazma kaynağı olarak ayrıca doğrular. Başarılı yüklemenin
-kanıtı `CWR LAB LOADED` raporudur; erişemediği dosyayı okumuş saymasına izin
-verilmez.
+Upload only `Matroyshka.zip` and write `Başlat.` The loader first tries one
+`rehydrate_lab` call. If the live bridge is unavailable it uses the verified
+offline bootstrap in the ZIP; live connectivity is optional, not a readiness
+gate.
 
-Tek giriş bağlantısı:
+Without the ZIP, send `CHATGPT_GIT_START_PROMPT.txt`. It fetches one static public
+bootstrap file and does not walk the Git history or content-object tree.
 
-`https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md`
+## Codex
 
-## Yerel Codex/GPT oturumu
+Open the extracted package/workspace and run:
 
-Yeni oturumda bu klasörü çalışma alanı olarak açın ve modele şunu söyleyin:
-
-> Bu klasördeki CWR laboratuvarını kaldığı yerden devral. Önce `AGENTS.md`, `LAB_KERNEL.md`, `LAB_STATE.md` ve `exports/NEXT_SESSION_CONTEXT.md` dosyalarını oku. Ardından `./lab.ps1 doctor` çalıştır. Sohbet geçmişini source-of-truth sayma; SQLite ve hash'li artifacts kanoniktir. Registry'nin fiziksel kopyası BP-212'de bittiği için BP-213–220'yi yalnız transcript-confirmed/missing-artifact statüsüyle kullan. Sonraki ID BP-221, frontier rank-two PSD scalar-sign reachability. Yeni wave başlamadan `LAB_WAVE_PROTOCOL.md` sözleşmesini uygula.
-
-Başka bir konu için önce context paketi üretin:
-
-```powershell
-.\lab.ps1 context --query "aranacak konu" --output .\exports\MY_CONTEXT.md
+```cmd
+CWR_RESEARCH_LAB\rehydrate.cmd
 ```
 
-Tam konuşma yalnız eksik provenance kurtarma için okunur; normal devamda yeniden baştan okutulmaz.
+or ask Codex to execute the `MATRYOSHKA.txt` CODEX route. The deterministic pass
+verifies every content object and the chronology index without loading every byte
+into model context. Exact evidence remains retrievable from SQLite by locator.
+
+## Success criterion
+
+The instance is ready when archive integrity and the research pointer pass. Open
+integrity warnings remain visible. Plugin/tunnel/Git availability affects working
+mode, not the validity of a verified local/static snapshot.
+
 
