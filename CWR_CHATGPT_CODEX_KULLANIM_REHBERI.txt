@@ -1,0 +1,77 @@
+CWR RESEARCH LAB — TEK ZIP KULLANIM REHBERİ
+============================================
+
+KULLANICI DENEYİMİ
+
+Her yeni ChatGPT sohbetinde veya Codex görevinde yalnız `Matroyshka.zip` dosyasını
+yükle ve `Başlat.` yaz. Başka ZIP, prompt veya plugin dosyası yükleme.
+
+Paket kökündeki `00_AUTORUN_CWR.txt` ve `MATRYOSHKA.txt` ortamı kendileri ayırır:
+
+- yerel workspace + terminal varsa CODEX;
+- yalnız ChatGPT sohbeti/Apps/Plugins varsa CHATGPT.
+
+Sistem kullanıcıya “hangi ortam?”, “hangi dosya?” veya “ne yapayım?” diye
+sormaz. Yalnız işletim sistemi, hesap girişi, izin ekranı veya yeni task gerektiren
+gerçek bir sınır varsa kesin uyarı verir.
+
+CHATGPT
+
+1. Yeni normal ChatGPT sohbeti aç.
+2. Yalnız `Matroyshka.zip` dosyasını ekle.
+3. `Başlat.` yaz.
+4. ChatGPT CWR aracını kontrol eder. Bağlıysa rehidrasyona geçer.
+5. Plugin yoksa ChatGPT'nin sunduğu app/plugin bağlantı yolunu dener. Sohbet
+   yerel kurucuyu çalıştıramıyorsa `CWR PLUGIN INSTALLATION REQUIRED` raporundaki
+   dört kesin adımı uygula. Bu, web güvenlik sınırı nedeniyle kaçınılmaz kullanıcı
+   onayıdır; sistem kurmuş gibi davranmaz.
+6. Plugin kurulu ama tunnel offline ise paket/GitLab okuması devam eder; canlı
+   database kapısı pending kalır.
+7. `CWR FULL INSTANCE LOADED` ve `ready_for_instruction: yes` gelmeden araştırma
+   talimatı verme.
+
+CODEX
+
+1. Yeni Codex görevi aç.
+2. Yalnız `Matroyshka.zip` dosyasını ekle.
+3. `Başlat.` yaz.
+4. Codex plugin yoksa içteki tek kurucu ZIP'i SHA-256 ile doğrular, çıkarır ve
+   `INSTALL_CWR_PRIVATE_PLUGIN.ps1` scriptini çalıştırır. Kurucu paketi
+   LOCALAPPDATA altında kalıcı dizine taşır ve `cwr-private` kaynağından kurar.
+5. Plugin araçları yalnız yeni task'ta yüklenebiliyorsa mevcut görev offline
+   snapshot/SQLite üzerinden rehidrasyona devam eder ve
+   `installed_pending_new_task` kaydeder. Sonraki task'ta yine aynı ZIP kullanılır.
+6. `CWR FULL INSTANCE LOADED` ve `ready_for_instruction: yes` sonucunu bekle.
+
+YABANCI BİLGİSAYAR VE KULLANICI
+
+- ZIP, CWR arşivinin offline snapshot'ını taşır; ilk açılış GitLab olmadan da
+  başlayabilir.
+- Yabancı kullanıcı önce public, read-only GitHub mirror'ını kullanır:
+  `https://github.com/merttuncer007-dot/cwr-research-lab`
+- Portable raw loader:
+  `https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md`
+- GitLab private erişimi alıcı için gerekli değildir; GitLab sahibin kanonik
+  yazma/source-of-truth deposu olarak kalır.
+- Token, parola veya SSH private key sohbete yazılmaz ve ZIP'e gömülmez.
+- ChatGPT canlı CWR bağlantısı için her alıcı kendi OpenAI/Platform workspace
+  yetkisi, geliştirici modu uygulaması ve kendi Secure MCP Tunnel kimliğini kurar.
+  Paket sahibinin DPAPI secret'ı veya tunnel key'i paylaşılmaz.
+- Offline snapshot uzak `main` dalının güncelliğini kanıtlamaz. Git erişimi
+  geldiğinde HEAD ve hash'ler karşılaştırılır.
+
+PAKET İÇERİĞİ
+
+- `00_AUTORUN_CWR.txt`: sıfır-soru başlangıç emri.
+- `MATRYOSHKA.txt`: ortam router'ı ve tam rehidrasyon sözleşmesi.
+- ChatGPT/Codex ayrı promptları: bakım kopyaları.
+- `PORTABLE_ACCESS_POLICY.txt`: Git/tünel/kimlik sınırları.
+- `CODEX_PLUGIN_YENIDEN_KURULUM/`: yalnız bir özel plugin installer ZIP'i, SHA
+  dosyası, tek-tık manuel fallback ve kısa kurulum açıklaması.
+
+GÜVENLİK
+
+Paket public katalogda yayın yapmaz ve otomatik Git push/commit çalıştırmaz.
+Ancak ZIP şifreli değildir; dosyaya sahip kişi içindeki offline CWR arşivini
+okuyabilir. Dağıtımı yalnız güvenilen kişilerle sınırla.
+
