@@ -12,6 +12,7 @@ import {
 } from "../scripts/rehydration.mjs";
 
 const TEST_DIR = dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = resolve(TEST_DIR, "..", "..", "..");
 const LAB_ROOT = resolve(TEST_DIR, "..", "..", "..", "CWR_RESEARCH_LAB");
 
 test("rehydration is deterministic, complete, and leaves the canonical database unchanged", () => {
@@ -67,5 +68,18 @@ test("static exports are reproducible and self-describing", () => {
   assert.equal(manifest.ready_for_instruction, true);
   assert.equal(manifest.snapshot_id, second.capsule.snapshot.snapshot_id);
   assert.ok(manifest.files.some((item) => item.path.endsWith("REHYDRATION_BOOTSTRAP.json")));
+});
+
+test("the ChatGPT loader cannot regress to commit search or an eager archive loop", () => {
+  const rootLoader = readFileSync(resolve(REPO_ROOT, "MATRYOSHKA.txt"), "utf8");
+  const chatEntry = readFileSync(resolve(REPO_ROOT, "CHATGPT_START_HERE.md"), "utf8");
+  for (const text of [rootLoader, chatEntry]) {
+    assert.match(text, /REHYDRATION_BOOTSTRAP\.json/);
+    assert.match(text, /not a blocking failure|readiness\s+engeli değildir|geçersiz kılmaz/i);
+    assert.doesNotMatch(text, /FULL-INSTANCE OVERRIDE/i);
+    assert.doesNotMatch(text, /search_commits|Search commits\s+İstek/i);
+  }
+  assert.match(rootLoader, /GitHub commit araması bootstrap için yasaktır/i);
+  assert.match(rootLoader, /ayrı ayrı araç çağrısı yapma|tek tek araç çağrısı yapma/i);
 });
 
