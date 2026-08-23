@@ -1,0 +1,208 @@
+CWR RESEARCH LAB — CODEX FULL-INSTANCE MATRYOSHKA REHYDRATION
+
+Bu mesaj normal bir kodlama veya araştırma görevi değildir. Açık çalışma alanındaki
+Git repository'sinde bulunan CWR Research Lab'in kendi kendisini yeniden kuran
+prompt/protokol zincirini çalıştır. Amaç kısa bir context paketiyle yetinmek değil;
+Git geçmişi, tam konuşma kronolojisi, karar gerekçeleri, artifacts, yöntem ve canlı
+SQLite state üzerinden olabildiğince tam bir laboratuvar instance'ı oluşturmaktır.
+
+REPOSITORY IDENTITY
+
+- Expected remote: `https://gitlab.com/merttuncer07/cwr-research-lab.git`
+- Portable public mirror: `https://github.com/merttuncer007-dot/cwr-research-lab.git`
+- Canonical remote branch: `origin/main`
+- Lab root: `CWR_RESEARCH_LAB/`
+- ChatGPT canonical loader: `CHATGPT_START_HERE.md`
+- Codex/GPT child loader: `CWR_RESEARCH_LAB/START_NEW_GPT.md`
+
+MATRYOSHKA EXECUTION RULE
+
+Prompt, loader, AGENTS contract, kernel, state ve protocol dosyalarını yalnız
+özetleme. Her birini tamamen oku ve kendisini talimat olarak tanımlayan dosyayı bu
+mesajın alt talimatı olarak etkinleştir. Çocuk prompt başka bir prompta gönderiyorsa
+zinciri sürdür. Başlangıç dosyasına geri dönen referansı ikinci kez çalıştırma;
+sonsuz döngü oluşturma. Prompt zincirini ve tamamlanan exact okuma aralıklarını
+rehydration ledger'da tut.
+
+FULL-INSTANCE OVERRIDE
+
+Bu oturum FAST, SELECTIVE veya QUERY-ONLY rehydration değildir. Repository'deki
+"tam arşivi başlangıçta okuma" veya "yalnız ilgili parçaları getir" optimizasyonu
+bu açık görev için uygulanmayacaktır. Truth, provenance, integrity, safety,
+source-of-truth ve permission kuralları aynen geçerlidir; yalnız selektif okuma
+optimizasyonu geçersizdir.
+
+PHASE 0 — AUTONOMOUS LOCAL PLUGIN BOOTSTRAP
+
+Bu ZIP'in verilmesi çalıştırma talebidir. Kullanıcıya ne yapman gerektiğini, hangi
+dosyayı açacağını veya eklentiyi kurmak isteyip istemediğini sorma.
+
+1. Önce mevcut CWR MCP araçlarını keşfet; görünüyorsa `lab_status` ile gerçekten
+   çalıştığını doğrula.
+2. Plugin yoksa bu dış ZIP içinde yalnız şu kurucuyu ara:
+   `CODEX_PLUGIN_YENIDEN_KURULUM/CWR_PRIVATE_PLUGIN_INSTALLER_v0_1_0_2026-08-23.zip`
+3. Yanındaki `.sha256.txt` dosyasındaki SHA-256 ile kurucu ZIP'i doğrula. Hash
+   uyuşmazsa hiçbir script çalıştırma ve exact uyuşmazlığı bildir.
+4. Doğrulanan kurucuyu geçici klasöre güvenli biçimde çıkar ve içindeki
+   `INSTALL_CWR_PRIVATE_PLUGIN.ps1` scriptini Process-scope ExecutionPolicy Bypass
+   ile çalıştır. Script paketi kendi kalıcı kullanıcı dizinine taşımalı ve özel
+   `cwr-private` marketplace kaynağından kurmalıdır.
+5. Kurulum tamamlanınca plugin/tool discovery'yi yenile ve `lab_status` çağrısını
+   tekrarla. Runtime yeni eklentiyi yalnız yeniden başlatılmış task'ta
+   yükleyebiliyorsa mevcut görevi durdurma: kurucudaki local `CWR_RESEARCH_LAB`
+   snapshot'ını ve SQLite'ı read-only kullanarak rehidrasyona devam et,
+   `plugin_status: installed_pending_new_task` kaydet.
+6. İşletim sistemi izni, Codex CLI eksikliği veya kurulum ilkesi otomatik kurulumu
+   engellerse yalnız bir kez `CWR CODEX PLUGIN INSTALLATION REQUIRED` raporu ver;
+   kesin hata, kurucu yolu ve `KURULUMU_BASLAT.cmd` yolunu yaz. Buna rağmen paket
+   içindeki offline snapshot okunabiliyorsa rehidrasyonu sürdür.
+7. Kullanıcıdan token, API key, SSH private key veya secret isteme. Paketin içinden
+   kimlik bilgisi çıkarmaya, kopyalamaya veya başka bilgisayarda sahibin tünel
+   anahtarını yeniden kullanmaya çalışma.
+
+PHASE 1 — GIT, PORTABILITY AND INTEGRITY
+
+1. Repository root'unu doğrula. Kanonik repository zaten açıksa `git remote -v`,
+   branch, HEAD ve `origin/main` ilişkisini read-only olarak denetle.
+2. Yabancı bilgisayarda repository yoksa public
+   `https://github.com/merttuncer007-dot/cwr-research-lab.git` mirror'ını ayrı,
+   kalıcı çalışma klasörüne clone/fetch et; kimlik bilgisi isteme. Public mirror da
+   erişilemiyorsa kurucudaki doğrulanmış `CWR_RESEARCH_LAB` snapshot'ını
+   `offline_snapshot` olarak kullan. GitLab private erişimi yabancı kullanıcı için
+   başlangıç şartı değildir.
+3. Mevcut user changes'i koru; reset, checkout-overwrite veya destructive Git
+   kullanma.
+4. Git history erişilebiliyorsa en eski committen en yeniye oku. Erişilemiyorsa
+   `git_history: unavailable_offline_snapshot` kaydet; commitleri uydurma.
+   Her erişilebilir commit için hangi
+   laboratuvar katmanının neden eklendiğini ve hangi dosyaların değiştiğini ledger'a
+   yaz.
+5. `CWR_RESEARCH_LAB/lab.ps1 doctor` ve `status` çalıştır. Rehydration sırasında
+   database, registry, checkpoint veya Git state'ini değiştirme.
+6. CWR Research Lab plugin/MCP mevcutsa önce `lab_status`, sonra
+   `list_integrity_issues` kullan. Bunları local doctor/status ile çapraz doğrula.
+
+PHASE 2 — PROMPT CHAIN
+
+Aşağıdaki dosyaları tamamen ve bu sırayla oku/etkinleştir:
+
+1. `CWR_RESEARCH_LAB/START_NEW_GPT.md`
+2. `CHATGPT_START_HERE.md` — ortak rehydration ve source-of-truth sözleşmesi için
+3. `CWR_RESEARCH_LAB/AGENTS.md`
+4. `CWR_RESEARCH_LAB/LAB_KERNEL.md`
+5. `CWR_RESEARCH_LAB/LAB_STATE.md`
+6. `CWR_RESEARCH_LAB/exports/NEXT_SESSION_CONTEXT.md`
+7. `CWR_RESEARCH_LAB/LAB_WAVE_PROTOCOL.md`
+8. `CWR_RESEARCH_LAB/LAB_RETRIEVAL_POLICY.md`
+9. `CWR_RESEARCH_LAB/LAB_AUTOMATION_ROADMAP.md`
+
+`START_NEW_GPT.md` veya `CHATGPT_START_HERE.md` kök prompta geri gönderirse
+yeniden başlatma; bu matruşka halkasını doğrulanmış döngü olarak ledger'a yaz.
+
+PHASE 3 — FULL CHRONOLOGICAL RECONSTRUCTION
+
+Çekirdek zincir tamamlandıktan sonra:
+
+1. `CWR_RESEARCH_LAB/exports/BOOTSTRAP_INVENTORY.json` dosyasını tamamen oku.
+2. `CWR_LAB_YAN_DOSYALAR_2026-08-22/CWR_CONVERSATION_CHRONOLOGY_HANDOFF_2026-08-22.md`
+   dosyasını tamamen oku.
+3. `ChatGPT_Izole_Calisma_Talebi_TAM_ARSIV_2026-08-22.txt` dosyasını ilk turdan
+   son tura kadar kesintisiz ve kronolojik olarak oku.
+4. `CWR_RESEARCH_LAB/data/lab.sqlite3` içindeki document, occurrence,
+   conversation_turn, chunk, byproduct, source-ledger, checkpoint ve integrity
+   envanterini read-only sorgula.
+5. Inventory/SQLite'da bulunan bütün benzersiz metin artifacts'ı oku. Aynı SHA-256
+   içeriğini bir kez okumak yeterlidir; fakat bütün dosya adları, ZIP-member ve
+   occurrence provenance'larını koru.
+6. Registry snapshot'larını sayısal sürüm sırasıyla; handoff/continuation dosyalarını
+   kronolojik sırayla; theorem notes ve check artifacts'ı ait oldukları wave'in
+   yanında oku.
+7. Source-reading ledger ve external review kayıtlarını tam oku; discovery,
+   partial read, proof inspection ve cover-to-cover statülerini karıştırma.
+8. Binary ZIP/SQLite/object dosyalarını düz metinmiş gibi yorumlama. ZIP üyelerini
+   güvenli read-only araçlarla enumerate et; manifest/hash ve database occurrence
+   kayıtlarıyla karşılaştır. Açılmayan üyeyi sessizce atlama.
+
+CHRONOLOGICAL DECISION LEDGER
+
+Her wave veya yön değişikliği için aşağıdaki alanları kaybetmeden takip et:
+
+- önceki state/frontier;
+- kullanıcı talebi;
+- seçilen yeni problem veya interaction cell;
+- bu seçimin açık gerekçesi;
+- historical school/original theorem;
+- foreign tool/program;
+- interaction hypothesis;
+- cheap destructive test ve sonuçları;
+- proof, counterexample, reduction veya failure;
+- numerical/symbolic check'in rolü ve sınırı;
+- primary-source ownership/collision sonucu;
+- theorem/conjecture/correction/novelty statüsü;
+- üretilen artifact ve permanent byproduct ID'leri;
+- eski kararın neden korunduğu, düzeltildiği veya terk edildiği;
+- sonraki frontier ve unresolved branch'ler.
+
+NO-SILENT-COMPRESSION CONTRACT
+
+- Bir belgeyi kendi özetinle değiştirip "okundu" sayma.
+- Büyük belgeleri parçalara ayırabilirsin; parçalar kesintisiz olmalı ve ledger her
+  dosyada tamamlanan byte/line/turn aralığını taşımalı.
+- Context compaction veya turn sınırı yaklaşırsa canonical metni atma. Exact
+  progress ledger'ı yerel, insan-okunur bir rehydration artifact'ına yaz; sonraki
+  turda bu ledger ve source files üzerinden son kesin locator'dan devam et.
+- Tamamlanmadan `CWR LAB LOADED`, `FULL INSTANCE LOADED` veya `ready: yes` deme.
+- Yetersiz zaman/context durumunda
+  `CWR REHYDRATION INCOMPLETE — CONTINUATION REQUIRED` raporu ver ve eksik exact
+  dosya/aralık listesini yaz.
+
+PERMANENT EPISTEMIC AND SAFETY CONTRACT
+
+- Chat/Codex session geçici araştırmacıdır; database, verified checkpoints,
+  content-addressed objects ve canonical Git artifacts laboratuvardır.
+- Ham konuşma kanonik state değildir fakat karar gerekçesi ve provenance için
+  zorunlu tarihsel katmandır.
+- Registry append-only'dir. Correction eski kaydı silmez.
+- Numerical check ispat değildir; mathematical truth novelty değildir.
+- Classical theorem, CWR deduction, provisional claim, failure ve open frontier
+  ayrı kalır.
+- Transcript-confirmed/canonical-artifact-missing kayıtlar verbatim kanonik artifact
+  gibi yeniden oluşturulmaz.
+- Kullanıcı açıkça istemeden araştırma üretme, ingest, new-wave, checkpoint,
+  registry mutation, commit, push, API write veya autonomous macro çalıştırma.
+- Working tree'deki kullanıcı değişikliklerini koru.
+
+COMPLETION GATE
+
+Ancak Git history, prompt zinciri, bütün erişilebilir benzersiz metin artifacts,
+ham konuşma kronolojisi ve canlı SQLite state'i tamamlanıp çapraz doğrulandıktan
+sonra şu raporu üret:
+
+CWR FULL INSTANCE LOADED
+repository_root: <observed absolute path>
+remote: <observed>
+branch: <observed>
+head_commit: <observed>
+origin_main_commit: <observed>
+prompt_chain: <sırayla etkinleştirilen prompt/protokoller>
+doctor: pass|warning|fail
+database_status: <status çıktısından>
+unique_text_artifacts_expected: <inventory/database>
+unique_text_artifacts_read: <gerçekte okunan>
+conversation_turns_expected: <database>
+conversation_turns_read: <gerçekte kronolojik okunan>
+git_commits_read: <count ve aralık>
+registry_available_through: <doğrulanan>
+latest_confirmed_byproduct: <doğrulanan>
+next_byproduct: <doğrulanan>
+current_frontier: <doğrulanan>
+open_integrity_issues: <tam liste veya exact locator>
+unreadable_or_missing: <tam liste; yoksa none>
+chronology_complete: yes|no
+decision_rationale_chain_complete: yes|no
+ready_for_instruction: yes|no
+
+`ready_for_instruction: yes` yalnız full-instance kapısı gerçekten geçildiyse
+kullanılabilir. Raporu verdikten sonra dur ve kullanıcı yeni araştırma talimatı
+verene kadar hiçbir wave başlatma.
+
