@@ -1,16 +1,17 @@
 # Start a New GPT/Codex Session
 
-## ChatGPT: GitLab'dan eklentisiz yükleme
+## ChatGPT: public mirror'dan eklentisiz yükleme
 
 Yeni ChatGPT sohbetine repo kökündeki `CHATGPT_GIT_START_PROMPT.txt` içeriğini
 gönderin. ChatGPT önce `CHATGPT_START_HERE.md` dosyasını, ardından orada yazan
-zorunlu kanonik dosyaları GitLab `main` dalından yükler. Başarılı yüklemenin
+zorunlu kanonik dosyaları public GitHub mirror `main` dalından yükler. Sahibin
+bağlı GitLab kaynağı varsa onu kanonik yazma kaynağı olarak ayrıca doğrular. Başarılı yüklemenin
 kanıtı `CWR LAB LOADED` raporudur; erişemediği dosyayı okumuş saymasına izin
 verilmez.
 
 Tek giriş bağlantısı:
 
-`https://gitlab.com/merttuncer07/cwr-research-lab/-/raw/main/CHATGPT_START_HERE.md`
+`https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md`
 
 ## Yerel Codex/GPT oturumu
 
@@ -25,3 +26,4 @@ Başka bir konu için önce context paketi üretin:
 ```
 
 Tam konuşma yalnız eksik provenance kurtarma için okunur; normal devamda yeniden baştan okutulmaz.
+
