@@ -13,10 +13,12 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import * as z from "zod/v4";
 
+import { buildRehydrationCapsule, workingCapsuleView } from "./rehydration.mjs";
+
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_LAB_ROOT = resolve(SCRIPT_DIR, "..", "..", "..", "CWR_RESEARCH_LAB");
 const SERVER_NAME = "cwr-research-lab";
-const SERVER_VERSION = "0.1.0";
+const SERVER_VERSION = "0.2.0";
 const MAX_TEXT = 50_000;
 
 export function resolveLabRoot(value = process.env.CWR_LAB_ROOT) {
@@ -131,6 +133,40 @@ function registerReadTools(server, labRoot) {
     openWorldHint: false,
     destructiveHint: false,
   };
+
+  server.registerTool(
+    "rehydrate_lab",
+    {
+      title: "Rehydrate the CWR lab",
+      description:
+        "Perform one deterministic, idempotent verification pass and return a bounded working-state capsule. A missing live bridge is reported as connectivity state, not as a rehydration failure.",
+      inputSchema: {},
+      annotations,
+    },
+    async () => {
+      try {
+        const capsule = workingCapsuleView(
+          buildRehydrationCapsule(labRoot, { liveBridgeAvailable: true }),
+        );
+        const report = [
+          capsule.terminal_report.marker,
+          `snapshot_id: ${capsule.snapshot.snapshot_id}`,
+          `working_mode: ${capsule.readiness.working_mode}`,
+          `archive_integrity: ${capsule.readiness.archive_integrity}`,
+          `blobs_verified: ${capsule.coverage.blobs_verified}/${capsule.coverage.blobs_expected}`,
+          `conversation_turns_indexed: ${capsule.coverage.conversation_turns_indexed}`,
+          `latest_confirmed_byproduct: ${capsule.research_pointer.latest_confirmed_byproduct}`,
+          `next_byproduct: ${capsule.research_pointer.next_byproduct}`,
+          `current_frontier: ${capsule.research_pointer.current_frontier}`,
+          `live_database_status: ${capsule.terminal_report.live_database_status}`,
+          `ready_for_instruction: ${capsule.terminal_report.ready_for_instruction}`,
+        ].join("\n");
+        return textResult(capsule, report);
+      } catch (error) {
+        return errorResult(`CWR rehydration failed: ${error.message}`);
+      }
+    },
+  );
 
   server.registerTool(
     "lab_status",
@@ -486,7 +522,7 @@ export function createCwrServer(labRoot = resolveLabRoot()) {
     { name: SERVER_NAME, version: SERVER_VERSION },
     {
       instructions:
-        "Use this server as the read-only source of truth for the persistent CWR lab. Check lab_status before continuation. Search snippets are not full-document reading. Never invent missing canonical artifacts or imply that this server performed a Git push.",
+        "Use this server as the read-only source of truth for the persistent CWR lab. Call rehydrate_lab once when creating a new instance; do not loop over every archive artifact. Search snippets are not full-document reading. Missing bridge connectivity never invalidates a separately verified snapshot. Never invent missing canonical artifacts or imply that this server performed a Git push.",
     },
   );
   registerReadTools(server, labRoot);
@@ -574,3 +610,4 @@ if (import.meta.url === entry) {
     process.exit(1);
   });
 }
+
