@@ -1,12 +1,14 @@
 [CmdletBinding()]
 param(
     [switch]$SkipCodexRegistration,
-    [switch]$VerifyOnly
+    [switch]$VerifyOnly,
+    [string]$InstallRoot
 )
 
 $ErrorActionPreference = 'Stop'
 
-$bundleRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+$sourceBundleRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+$bundleRoot = $sourceBundleRoot
 $labRoot = Join-Path $bundleRoot 'CWR_RESEARCH_LAB'
 $pluginRoot = Join-Path $bundleRoot 'plugins\cwr-research-lab'
 $marketplacePath = Join-Path $bundleRoot '.agents\plugins\marketplace.json'
@@ -55,6 +57,32 @@ if ($VerifyOnly) {
     return
 }
 
+if ([string]::IsNullOrWhiteSpace($InstallRoot)) {
+    if ([string]::IsNullOrWhiteSpace($env:LOCALAPPDATA)) {
+        throw 'LOCALAPPDATA bulunamadı; kalıcı özel plugin dizini seçilemiyor.'
+    }
+    $manifestHash = (Get-FileHash -Algorithm SHA256 -LiteralPath $manifestPath).Hash.Substring(0, 12).ToLowerInvariant()
+    $InstallRoot = Join-Path $env:LOCALAPPDATA "CWR Research Lab\private-plugin\v0.1.0-$manifestHash"
+}
+
+$sourceResolved = (Resolve-Path -LiteralPath $sourceBundleRoot).Path
+$installParent = Split-Path -Parent $InstallRoot
+New-Item -ItemType Directory -Path $installParent -Force | Out-Null
+New-Item -ItemType Directory -Path $InstallRoot -Force | Out-Null
+$installResolved = (Resolve-Path -LiteralPath $InstallRoot).Path
+
+if ($sourceResolved -ne $installResolved) {
+    Write-Host "Paket kalıcı kullanıcı dizinine kopyalanıyor: $installResolved"
+    foreach ($item in Get-ChildItem -LiteralPath $sourceResolved -Force) {
+        Copy-Item -LiteralPath $item.FullName -Destination $installResolved -Recurse -Force
+    }
+}
+
+$bundleRoot = $installResolved
+$labRoot = Join-Path $bundleRoot 'CWR_RESEARCH_LAB'
+$pluginRoot = Join-Path $bundleRoot 'plugins\cwr-research-lab'
+$marketplacePath = Join-Path $bundleRoot '.agents\plugins\marketplace.json'
+
 [Environment]::SetEnvironmentVariable('CWR_LAB_ROOT', $labRoot, 'User')
 $env:CWR_LAB_ROOT = $labRoot
 Write-Host "CWR_LAB_ROOT ayarlandı: $labRoot"
@@ -66,17 +94,18 @@ if (-not $SkipCodexRegistration) {
     }
 
     & $codex.Source plugin marketplace add $bundleRoot
-    if ($LASTEXITCODE -ne 0) {
-        throw "Yerel marketplace eklenemedi (çıkış kodu $LASTEXITCODE)."
-    }
+    $marketplaceExit = $LASTEXITCODE
 
-    & $codex.Source plugin add 'cwr-research-lab@personal'
+    & $codex.Source plugin add 'cwr-research-lab@cwr-private'
     if ($LASTEXITCODE -ne 0) {
-        throw "CWR plugin kurulamadı (çıkış kodu $LASTEXITCODE)."
+        throw "CWR plugin kurulamadı (çıkış kodu $LASTEXITCODE; marketplace add kodu $marketplaceExit)."
     }
 }
 
 Write-Host ''
 Write-Host 'CWR Research Lab özel plugin kurulumu tamamlandı.'
-Write-Host 'ChatGPT/Codex masaüstü uygulamasını tamamen kapatıp yeniden açın ve yeni bir task başlatın.'
+Write-Host "Kalıcı paket yolu: $bundleRoot"
+Write-Host 'Codex plugin araçlarını bu task içinde görmezse yeni bir task başlatın.'
+Write-Host 'ChatGPT için geliştirici uygulaması ve kullanıcıya özel Secure MCP Tunnel bağlantısı ayrıca gerekir.'
 Write-Host 'Bu işlem public Plugins Directory üzerinde yayın veya paylaşım yapmadı.'
+
