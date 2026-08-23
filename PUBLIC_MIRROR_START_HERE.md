@@ -1,23 +1,15 @@
-# CWR Public Mirror Entry
+# CWR Public Mirror Entry v2
 
-This repository is the public, read-only distribution mirror of CWR Research Lab.
+This is the public, read-only distribution mirror. It is not the live research
+database and is not authorization to write, push, or start autonomous research.
 
-Canonical portable loader:
+Bootstrap with one static file:
 
-`https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md`
+`https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CWR_RESEARCH_LAB/exports/REHYDRATION_BOOTSTRAP.json`
 
-Open `CHATGPT_START_HERE.md`, read it completely, and follow its repository access
-order and mandatory load order. Do not treat this mirror as authorization to push,
-commit, mutate the database, or start autonomous research.
+Verify it, when possible, with `CWR_RESEARCH_LAB/exports/RELEASE_MANIFEST.json`.
+Do not search commit history or serially fetch the archive during rehydration.
+The owner's private GitLab remains the backup/canonical publication source; a
+local SQLite/object store remains the runtime source of truth.
 
-Repository roles:
-
-- owner write/source-of-truth repository: private GitLab
-  `merttuncer07/cwr-research-lab`;
-- portable read distribution: this public GitHub mirror;
-- no-network fallback: the verified snapshot inside `Matroyshka.zip`.
-
-If the public mirror and the package snapshot disagree, record both observed hashes
-and do not guess which is newer. The owner reconciles the mirror from the canonical
-GitLab state.
 
