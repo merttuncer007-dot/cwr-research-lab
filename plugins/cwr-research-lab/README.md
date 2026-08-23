@@ -8,7 +8,7 @@ Codex ------\
 ChatGPT ----/                         \\-- GitLab-backed repository
 ```
 
-The first release exposes read-only tools. It does not ingest files, append byproducts, create waves, checkpoint, commit, or push.
+Version 0.2 exposes a one-call deterministic rehydration capsule plus read-only retrieval tools. It does not ingest files, append byproducts, create waves, checkpoint, commit, or push.
 
 ## Local Codex transport
 
@@ -34,6 +34,7 @@ The MCP endpoint is `http://127.0.0.1:8787/mcp`. ChatGPT requires a reachable HT
 
 ## Tools
 
+- `rehydrate_lab`
 - `lab_status`
 - `search_archive`
 - `get_document`
@@ -44,3 +45,8 @@ The MCP endpoint is `http://127.0.0.1:8787/mcp`. ChatGPT requires a reachable HT
 - `gitlab_backup_status`
 
 All database connections are opened read-only.
+
+`rehydrate_lab` verifies the content-addressed archive and chronology index in one
+bounded call. Tunnel/plugin connectivity is reported separately and does not
+invalidate an independently verified snapshot.
+
