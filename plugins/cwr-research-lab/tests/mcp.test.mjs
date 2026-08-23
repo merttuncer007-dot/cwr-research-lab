@@ -14,7 +14,7 @@ const LAB_ROOT = resolve(PLUGIN_ROOT, "..", "..", "CWR_RESEARCH_LAB");
 const SERVER = resolve(PLUGIN_ROOT, "scripts", "server.mjs");
 
 async function connectedClient() {
-  const client = new Client({ name: "cwr-plugin-test", version: "0.1.0" });
+  const client = new Client({ name: "cwr-plugin-test", version: "0.2.0" });
   const transport = new StdioClientTransport({
     command: process.execPath,
     args: [SERVER, "--stdio"],
@@ -26,7 +26,7 @@ async function connectedClient() {
 }
 
 async function connectedLauncherClient() {
-  const client = new Client({ name: "cwr-launcher-test", version: "0.1.0" });
+  const client = new Client({ name: "cwr-launcher-test", version: "0.2.0" });
   const transport = new StdioClientTransport({
     command: "cmd.exe",
     args: ["/d", "/s", "/c", "call", "./scripts/launch_cwr_mcp.cmd"],
@@ -51,6 +51,7 @@ test("publishes only the intended read-only tool surface", async (t) => {
     "gitlab_backup_status",
     "lab_status",
     "list_integrity_issues",
+    "rehydrate_lab",
     "search_archive",
   ]);
   for (const tool of listing.tools) {
@@ -89,6 +90,21 @@ test("reads the canonical lab state and archived records", async (t) => {
   });
   assert.equal(byproduct.structuredContent.byproduct.code, "CWR-BP-220");
   assert.match(byproduct.structuredContent.byproduct.artifact_state, /MISSING|AVAILABLE/);
+});
+
+test("rehydrates in one bounded call and does not gate readiness on remote connectivity", async (t) => {
+  const client = await connectedClient();
+  t.after(() => client.close());
+
+  const result = await client.callTool({ name: "rehydrate_lab", arguments: {} });
+  assert.equal(result.isError, undefined);
+  assert.equal(result.structuredContent.readiness.archive_integrity, "verified");
+  assert.equal(result.structuredContent.readiness.ready_for_instruction, true);
+  assert.equal(result.structuredContent.connectivity.bridge_is_readiness_gate, false);
+  assert.equal(result.structuredContent.coverage.blobs_verified, 75);
+  assert.equal(result.structuredContent.coverage.conversation_turns_indexed, 88);
+  assert.equal(result.structuredContent.research_pointer.next_byproduct, "CWR-BP-221");
+  assert.match(result.content[0].text, /CWR INSTANCE READY/);
 });
 
 test("builds an in-memory sourced context without adding a file", async (t) => {
@@ -131,7 +147,7 @@ test("serves the same tools over Streamable HTTP for ChatGPT", async (t) => {
   }
   assert.equal(ready, true, "HTTP MCP server did not become healthy");
 
-  const client = new Client({ name: "cwr-http-test", version: "0.1.0" });
+  const client = new Client({ name: "cwr-http-test", version: "0.2.0" });
   t.after(() => client.close());
   await client.connect(
     new StreamableHTTPClientTransport(new URL(`http://127.0.0.1:${port}/mcp`)),
@@ -139,3 +155,4 @@ test("serves the same tools over Streamable HTTP for ChatGPT", async (t) => {
   const status = await client.callTool({ name: "lab_status", arguments: {} });
   assert.ok(status.structuredContent.counts.byproducts >= 220);
 });
+
