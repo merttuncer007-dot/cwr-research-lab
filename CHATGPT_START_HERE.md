@@ -1,20 +1,30 @@
 # CWR ChatGPT Git Rehydration Protocol
 
 Bu dosya, CWR Research Lab'i **özel CWR eklentisi olmadan** yeni bir ChatGPT
-sohbetine GitLab üzerinden yüklemek için tek kanonik giriş noktasıdır.
+sohbetine public GitHub dağıtım mirror'ı veya sahibin GitLab kaynağı üzerinden
+yüklemek için tek kanonik giriş noktasıdır.
 
 ## Repository identity
 
 - GitLab project: `merttuncer07/cwr-research-lab`
+- Public read-only mirror: `merttuncer007-dot/cwr-research-lab`
 - Canonical branch: `main`
 - Project URL: `https://gitlab.com/merttuncer07/cwr-research-lab`
-- This loader's raw URL:
+- Public mirror URL: `https://github.com/merttuncer007-dot/cwr-research-lab`
+- Portable raw loader URL:
+  `https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md`
+- Owner GitLab raw URL:
   `https://gitlab.com/merttuncer07/cwr-research-lab/-/raw/main/CHATGPT_START_HERE.md`
 
-ChatGPT GitLab'a bağlıysa projeyi bağlı GitLab kaynağından aç. Bağlı kaynak
-yoksa yukarıdaki proje/raw URL'lerini dene. Erişim başarısızsa dosyaları okumuş
-gibi davranma; kullanıcıdan bu dosyayı veya aşağıdaki zorunlu dosyaları
-yüklemesini iste.
+Erişim sırası:
+
+1. Sahibin oturumunda bağlı GitLab erişimi varsa GitLab `main`.
+2. GitLab yoksa herkesçe okunabilen GitHub mirror `main` ve portable raw URL.
+3. İkisi de yoksa yüklenen Matroyshka paketindeki doğrulanmış offline snapshot.
+
+GitHub mirror salt-okunur dağıtım kaynağıdır; GitLab kanonik yazma kaynağıdır.
+Mirror commit'i ile gözlenen GitLab HEAD farklıysa farkı ledger'a yaz ve daha yeni
+olduğunu tahmin etme. Erişim başarısızsa dosyaları okumuş gibi davranma.
 
 ## Mandatory load order
 
