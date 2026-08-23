@@ -1,0 +1,32 @@
+{
+  "schema": "cwr.release-manifest.v1",
+  "snapshot_id": "2de3676e40b54a9117351ad755db85a859614520c60e98c51ff3560d3b5f7720",
+  "ready_for_instruction": true,
+  "files": [
+    {
+      "path": "CWR_RESEARCH_LAB/exports/REHYDRATION_CAPSULE.json",
+      "sha256": "0fd5c6f0e33e746a0e27d2d6e8586333bd45e07a32392305cc2156dd83686108"
+    },
+    {
+      "path": "CWR_RESEARCH_LAB/exports/REHYDRATION_BOOTSTRAP.json",
+      "sha256": "2ddef06c29b2af3c8cb99e936dade563871f234ad1e6360f84742958aad7f390"
+    },
+    {
+      "path": "CWR_RESEARCH_LAB/exports/REHYDRATION_CAPSULE.md",
+      "sha256": "2ca1e08a63a754bd7f3a531439bc9d83a942e5633aabf7b1c0aeb4e355f601e2"
+    },
+    {
+      "path": "CWR_RESEARCH_LAB/LAB_KERNEL.md",
+      "sha256": "31cf0f45d4dab0624b839ad74c1e7e33bcd0e7afc870a5921d4b7f46e36e3081"
+    },
+    {
+      "path": "CWR_RESEARCH_LAB/LAB_STATE.md",
+      "sha256": "ed1de21352083527b3b323d15cbedfc41fe96a91dfe56b7b28b15132ea154a65"
+    },
+    {
+      "path": "CWR_RESEARCH_LAB/exports/NEXT_SESSION_CONTEXT.md",
+      "sha256": "139e582228fcc49d3c467f55bfbefd2091d13284aae8da3f273fdf068ecbd661"
+    }
+  ]
+}
+
