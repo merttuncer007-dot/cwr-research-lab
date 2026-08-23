@@ -7,7 +7,7 @@ description: Continue or rehydrate the Cold War Renaissance research lab from it
 
 Treat the chat as a temporary client of the persistent lab.
 
-Before continuing research, read the workspace `LAB_KERNEL.md` and `LAB_STATE.md`, run `cwr_lab.py doctor`, then generate a query-specific context pack with `cwr_lab.py context --query ...`. Do not read the full transcript unless recovering provenance or missing canonical material.
+Before continuing research, run `rehydrate.cmd` (or the bundled deterministic rehydration engine), then generate a query-specific context pack with `cwr_lab.py context --query ...`. The capsule verifies the archive, chronology index, kernel and state without loading every source byte into model context. Do not read the full transcript unless recovering provenance or missing canonical material.
 
 For a research wave, follow `LAB_WAVE_PROTOCOL.md`. Preserve these non-obvious invariants:
 
@@ -23,3 +23,4 @@ For a research wave, follow `LAB_WAVE_PROTOCOL.md`. Preserve these non-obvious i
 When transferring the method to another domain, retain the epistemic protocol and provenance model, but create a new domain namespace, vocabulary, frontier, and source ledger. Do not copy CWR mathematical claims into an unrelated domain as assumptions.
 
 Autonomous macros are disabled unless the user explicitly authorizes a later automation stage and its stopping/approval conditions.
+
