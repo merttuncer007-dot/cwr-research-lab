@@ -1,0 +1,36 @@
+CWR RESEARCH LAB — CHATGPT CANLI BAĞLANTI KURULUM SINIRI
+========================================================
+
+Bu belge yalnız ChatGPT `plugin_installed_bridge_offline` veya
+`CWR PLUGIN INSTALLATION REQUIRED` bildirirse kullanılır.
+
+NEDEN TAM OTOMATİK DEĞİL?
+
+ChatGPT sohbeti, yüklenen ZIP içinden Windows'ta program çalıştırma veya kullanıcının
+OpenAI/Platform hesabında geliştirici uygulaması yaratma iznine sahip değildir.
+Secure MCP Tunnel bağlantısı kullanıcı hesabı/workspace izni ve kullanıcıya özel
+runtime anahtarı gerektirir. Bu onay bir prompt tarafından güvenli biçimde atlanamaz.
+
+YENİ BİLGİSAYAR / YENİ KULLANICI İÇİN
+
+1. `Matroyshka.zip` dosyasını bilgisayarda kalıcı bir klasöre çıkar.
+2. `CODEX_PLUGIN_YENIDEN_KURULUM\KURULUMU_BASLAT.cmd` dosyasını çalıştır. Bu,
+   private Codex pluginini ve offline snapshot'ı kullanıcı hesabına kurar.
+3. Kullanıcı kendi OpenAI Platform organization/workspace hesabıyla giriş yapar.
+4. Platform'da kendi Secure MCP Tunnel'ını oluşturur ve kendi yerel CWR MCP
+   runtime'ına bağlar.
+5. ChatGPT Ayarlar içindeki Apps/Bağlayıcılar/Geliştirici modu ekranından CWR
+   Research Lab uygulamasını bu tünele bağlar ve izin ekranını onaylar.
+6. Yeni ChatGPT sohbetinde aynı `Matroyshka.zip` dosyasını yükleyip `Başlat.` yazar.
+
+GÜVENLİK
+
+- Tunnel/runtime anahtarı yalnız ilgili kullanıcının makinesinde güvenli secret
+  deposunda tutulur; ZIP'e veya sohbete konmaz.
+- Paket sahibinin DPAPI dosyası başka Windows kullanıcısında veya makinede
+  kullanılamaz ve paylaşılmamalıdır.
+- Hesap/organization yetkisi yoksa yöneticinin kullanıcıyı ilgili workspace'e
+  eklemesi gerekir.
+- ChatGPT bağlantısı tamamlanmasa bile Codex, paket içindeki offline snapshot ile
+  çalışabilir; ChatGPT `ready_for_instruction: yes` diyemez.
+
