@@ -1,6 +1,6 @@
 {
   "name": "cwr-research-lab-plugin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "description": "MCP connector for the persistent CWR research lab",
@@ -17,3 +17,4 @@
     "node": ">=22.5.0"
   }
 }
+
