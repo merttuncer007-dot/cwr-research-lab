@@ -1,0 +1,43 @@
+CWR MATRYOSHKA — TAŞINABİLİR ERİŞİM POLİTİKASI
+===============================================
+
+MODLAR
+
+owner_machine
+  Mevcut CWR plugin ve kullanıcıya özel Secure MCP Tunnel hazırsa canlı database
+  kullanılır. Tunnel key/DPAPI secret paketin parçası değildir.
+
+portable_codex
+  Codex, içteki doğrulanmış özel kurucuyu çalıştırır. Kurucu CWR snapshot ve plugin
+  kodunu LOCALAPPDATA altında kalıcı bir kullanıcı dizinine kopyalar ve
+  `cwr-private` yerel kaynağından kurar. Plugin yeni task gerektirirse mevcut task
+  offline snapshot üzerinden read-only rehidrasyona devam eder.
+
+foreign_chatgpt
+  ChatGPT sohbeti yerel PowerShell kurucusunu kendi başına çalıştıramaz. Ortam
+  plugin/app yönetim aracı sunuyorsa CWR bağlantısını kurmayı dener. Sunmuyorsa
+  kullanıcı kendi hesabında geliştirici modu uygulamasını ve kendi Secure MCP
+  Tunnel bağlantısını onaylamalıdır.
+
+GITLAB KURALI
+
+- Sahibin yazma/source-of-truth deposu canonical
+  `merttuncer07/cwr-research-lab` GitLab main dalıdır.
+- Taşınabilir dağıtım ve yabancı kullanıcı erişimi public read-only
+  `https://github.com/merttuncer007-dot/cwr-research-lab` mirror main dalından
+  yapılır; GitHub hesabı veya token gerekmez.
+- GitLab erişimi yabancı kullanıcı için zorunlu değildir. Yazma/senkronizasyon
+  gerekiyorsa yalnız sahibi kendi GitLab credential manager/OAuth/SSH oturumunu
+  kullanır.
+- Token, parola, SSH private key veya access key sohbet içine yapıştırılmaz ve ZIP'e
+  gömülmez.
+- Public GitHub da yokken paket içindeki snapshot `offline_snapshot` olarak kullanılabilir.
+  Bu state uzak HEAD ile eşitmiş gibi sunulmaz; sonradan erişim gelince hash/HEAD
+  karşılaştırması yapılır.
+
+GÜVEN SINIRI
+
+Bu paket şifreli değildir. ZIP'e sahip kişi içindeki CWR arşiv snapshot'ını
+okuyabilir. “Yalnız dosyaya sahip olan kullanabilir” dağıtım kısıtıdır; kimlik
+doğrulama veya DRM değildir.
+
