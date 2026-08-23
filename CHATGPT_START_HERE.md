@@ -1,96 +1,43 @@
-# CWR ChatGPT Git Rehydration Protocol
+# CWR ChatGPT Rehydration Entry v2
 
-Bu dosya, CWR Research Lab'i **özel CWR eklentisi olmadan** yeni bir ChatGPT
-sohbetine public GitHub dağıtım mirror'ı veya sahibin GitLab kaynağı üzerinden
-yüklemek için tek kanonik giriş noktasıdır.
+This repository is a distribution/backup layer, not the runtime memory of the lab.
+The canonical working state is the local SQLite database plus content-addressed
+objects. ChatGPT should load a verified working capsule and retrieve exact evidence
+on demand; it must not serially read the whole archive into one model turn.
 
-## Repository identity
+## One-step load order
 
-- GitLab project: `merttuncer07/cwr-research-lab`
-- Public read-only mirror: `merttuncer007-dot/cwr-research-lab`
-- Canonical branch: `main`
-- Project URL: `https://gitlab.com/merttuncer07/cwr-research-lab`
-- Public mirror URL: `https://github.com/merttuncer007-dot/cwr-research-lab`
-- Portable raw loader URL:
-  `https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CHATGPT_START_HERE.md`
-- Owner GitLab raw URL:
-  `https://gitlab.com/merttuncer07/cwr-research-lab/-/raw/main/CHATGPT_START_HERE.md`
+1. If the CWR MCP tool `rehydrate_lab` exists, call it once.
+2. Otherwise fetch exactly
+   `CWR_RESEARCH_LAB/exports/REHYDRATION_BOOTSTRAP.json`.
+3. Optionally verify it against
+   `CWR_RESEARCH_LAB/exports/RELEASE_MANIFEST.json`.
+4. Do not search commits and do not enumerate `objects/sha256/` during bootstrap.
 
-Erişim sırası:
+Public raw bootstrap:
 
-1. Sahibin oturumunda bağlı GitLab erişimi varsa GitLab `main`.
-2. GitLab yoksa herkesçe okunabilen GitHub mirror `main` ve portable raw URL.
-3. İkisi de yoksa yüklenen Matroyshka paketindeki doğrulanmış offline snapshot.
+`https://raw.githubusercontent.com/merttuncer007-dot/cwr-research-lab/main/CWR_RESEARCH_LAB/exports/REHYDRATION_BOOTSTRAP.json`
 
-GitHub mirror salt-okunur dağıtım kaynağıdır; GitLab kanonik yazma kaynağıdır.
-Mirror commit'i ile gözlenen GitLab HEAD farklıysa farkı ledger'a yaz ve daha yeni
-olduğunu tahmin etme. Erişim başarısızsa dosyaları okumuş gibi davranma.
+## Readiness rule
 
-## Mandatory load order
+`archive_integrity=verified`, `research_state_ready=true`, and an empty
+`blocking_failures` list are sufficient for `ready_for_instruction: yes`.
+An unavailable plugin, tunnel, GitLab connection, GitHub connector, or live MCP
+cross-check changes only `working_mode`/connectivity. It is not a blocking failure
+when the packaged/static snapshot is verified.
 
-Aşağıdaki dosyaları `main` dalından ve tam olarak bu sırayla oku:
+Open integrity warnings must remain visible. In particular,
+`TRANSCRIPT-CONFIRMED / CANONICAL-ARTIFACT-MISSING` is an evidence boundary, not
+a reason to erase the confirmed research pointer.
 
-1. `CHATGPT_START_HERE.md`
-2. `CWR_RESEARCH_LAB/AGENTS.md`
-3. `CWR_RESEARCH_LAB/LAB_KERNEL.md`
-4. `CWR_RESEARCH_LAB/LAB_STATE.md`
-5. `CWR_RESEARCH_LAB/exports/NEXT_SESSION_CONTEXT.md`
+## After load
 
-Yeni araştırma dalgası başlatılacaksa ayrıca şunları oku:
+- Treat chat memory as temporary.
+- Keep snapshot ID, source hashes, coverage, kernel/state, pointer, open issues,
+  active nodes, and document locators from the capsule.
+- For a new query use query-specific context/search and exact document retrieval.
+- Search snippets are not full-document reading.
+- Do not mutate the lab, commit/push, or start autonomous research unless asked.
+- Emit the terminal report specified by `MATRYOSHKA.txt`, then wait.
 
-6. `CWR_RESEARCH_LAB/LAB_WAVE_PROTOCOL.md`
-7. `CWR_RESEARCH_LAB/LAB_RETRIEVAL_POLICY.md`
-
-Tam arşivi, bütün konuşmayı, `objects/sha256/` ağacını veya tüm eski registry
-sürümlerini başlangıçta okuma. Bunları yalnız zorunlu dosyaların işaret ettiği
-somut provenance/kanıt ihtiyacında aç.
-
-## Source-of-truth order
-
-Çelişki halinde öncelik sırası:
-
-1. `CWR_RESEARCH_LAB/data/lab.sqlite3` içindeki kanonik kayıtlar ve doğrulanmış
-   checkpoint'ler (erişilebilir ve sorgulanabilir olduğunda),
-2. `CWR_RESEARCH_LAB/LAB_STATE.md`,
-3. `CWR_RESEARCH_LAB/exports/NEXT_SESSION_CONTEXT.md`,
-4. kanonik registry/source artifacts,
-5. eski handoff dosyaları,
-6. sohbet belleği.
-
-SQLite GitLab arayüzünden sorgulanamıyorsa bunu belirt; metin dosyalarındaki
-kanıt sınırını aşma. `TRANSCRIPT-CONFIRMED / CANONICAL-ARTIFACT-MISSING`
-kayıtlarını kesin/verbatim kanonik kayıt gibi yeniden üretme.
-
-## Required initialization response
-
-Zorunlu dosyaları okuduktan sonra araştırmaya hemen başlama. Önce yalnız şu
-yükleme raporunu üret:
-
-```text
-CWR LAB LOADED
-repository: merttuncer07/cwr-research-lab
-branch: main
-files_read: [gerçekte okunan dosyalar]
-latest_confirmed_byproduct: ...
-next_byproduct: ...
-current_frontier: ...
-integrity_limit: ...
-ready_for_instruction: yes|no
-```
-
-Her alanı okunan dosyalardan çıkar. Erişilemeyen veya doğrulanamayan alanı
-`unknown` yaz; tahmin etme. `files_read` listesine yalnız içeriği gerçekten
-alınmış dosyaları koy.
-
-## Operating contract after loading
-
-- Sohbet geçmişini laboratuvarın kendisi veya source-of-truth sayma.
-- Kaynak bulundu, ilgili bölüm okundu, kanıt denetlendi ve eser baştan sona
-  okundu iddialarını ayır.
-- Yeni iddia için önce ucuz yıkıcı test, sonra exact core, finite check ve
-  collision/ownership audit uygula.
-- Kullanıcı açıkça istemeden GitLab'a yazma, commit/push yapma, dış sisteme veri
-  gönderme veya otonom araştırma makrolarını başlatma.
-- Oturum sonunda kalıcılaştırılacak değişiklikleri kullanıcıya dosya bazında
-  listele; yazma yetkisi yoksa uygulanabilir patch/handoff üret.
 
